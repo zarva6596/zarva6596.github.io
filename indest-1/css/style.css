@@ -1,7 +1,7 @@
 @font-face {
   font-family: "IvyMode";
   font-display: swap;
-  src: url("../../fonts/IvyMode-Bold.woff") format("woff"), url("../../fonts/IvyMode-Bold.woff2") format("woff2");
+  src: url("../fonts/IvyMode-Bold.woff") format("woff"), url("../fonts/IvyMode-Bold.woff2") format("woff2");
   font-weight: 600;
   font-style: bold;
 }
@@ -9,7 +9,7 @@
 @font-face {
   font-family: "IvyMode";
   font-display: swap;
-  src: url("../../fonts/IvyMode-Regular.woff") format("woff"), url("../../fonts/IvyMode-Regular.woff2") format("woff2");
+  src: url("../fonts/IvyMode-Regular.woff") format("woff"), url("../fonts/IvyMode-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -17,7 +17,7 @@
 @font-face {
   font-family: "Mont";
   font-display: swap;
-  src: url("../../fonts/Mont-Regular.woff") format("woff"), url("../../fonts/Mont-Regular.woff2") format("woff2");
+  src: url("../fonts/Mont-Regular.woff") format("woff"), url("../fonts/Mont-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -25,7 +25,7 @@
 @font-face {
   font-family: "Mont";
   font-display: swap;
-  src: url("../../fonts/Mont-Light.woff") format("woff"), url("../../fonts/Mont-Light.woff2") format("woff2");
+  src: url("../fonts/Mont-Light.woff") format("woff"), url("../fonts/Mont-Light.woff2") format("woff2");
   font-weight: 200;
   font-style: light;
 }
@@ -88,8 +88,8 @@ body {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../../icons/icomoon.eot?3dzqq7");
-  src: url("../../icons/icomoon.eot?3dzqq7#iefix") format("embedded-opentype"), url("../../icons/icomoon.ttf?3dzqq7") format("truetype"), url("../../icons/icomoon.woff?3dzqq7") format("woff"), url("../../icons/icomoon.svg?3dzqq7#icomoon") format("svg");
+  src: url("../icons/icomoon.eot?3dzqq7");
+  src: url("../icons/icomoon.eot?3dzqq7#iefix") format("embedded-opentype"), url("../icons/icomoon.ttf?3dzqq7") format("truetype"), url("../icons/icomoon.woff?3dzqq7") format("woff"), url("../icons/icomoon.svg?3dzqq7#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -930,7 +930,7 @@ body {
   content: "";
   height: 30px;
   width: 13px;
-  background-image: url("../../img/icons/arrow-down.svg");
+  background-image: url("../img/icons/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
   position: absolute;
