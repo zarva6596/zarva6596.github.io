@@ -1,1 +1,1 @@
-[inDest](https://zarva6596.github.io/inDest/)
+[inDest](https://zarva6596.github.io/indest-1/)
