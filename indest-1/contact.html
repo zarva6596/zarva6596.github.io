@@ -35,33 +35,37 @@
                Log In </a> </div>
       </div>
    </header>
-   <main class="main"> </main>
-   <footer class="footer">
-      <div class="footer__navBar"> <a href="./index.html"> <span class="icon-logo footer__logo"></span> </a>
-         <div class="footer__navBar-last">
-            <ul class="footer__menu menu">
-               <li class="menu-item footer__menu-item"> <a href="./about.html" class="menu-item__link"> About </a>
-               </li>
-               <li class="menu-item footer__menu-item"> <a href="#" class="menu-item__link"> Services </a> </li>
-               <li class="menu-item footer__menu-item"> <a href="./insights.html" class="menu-item__link"> Blog </a>
-               </li>
-               <li class="menu-item footer__menu-item"> <a href="./contact.html" class="menu-item__link"> Contact Us
-                  </a> </li>
-            </ul>
-            <div class="footer__followUs">
-               <p class="footer__paragraph"> Follow Us on LinkedIn: </p> <a href="#"> <span
-                     class="icon-linkedin footer__linkedin"></span> </a>
+   <main class="main">
+      <section class="section contact">
+         <p class="opacity-text contact__opacity-text"> Contact<br> us </p>
+         <div class="contact__content">
+            <div class="form contact__form">
+               <form action="" class="form contact__form form--dark"> <label for="name" class="form__title"> Your full
+                     name </label>
+                  <div class="input application__input form__input"> <input name="name" type="text"
+                        placeholder="Your Name"> </div> <label for="email" class="form__title"> Email </label>
+                  <div class="input application__input form__input"> <input name="email" type="email"
+                        placeholder="Your Email"> </div> <label for="companyName" class="form__title"> Your Company Name
+                  </label>
+                  <div class="input application__input form__input"> <input name="companyName" type="text"
+                        placeholder="Your Company Name"> </div> <label for="message" class="form__title"> Message
+                  </label>
+                  <div class="input application__input form__input textarea"> <textarea name="message" cols="30"
+                        rows="10" placeholder="Your Message"></textarea> </div> <button type="submit"
+                     class="button button--dark form__button"> Send </button>
+               </form>
+            </div>
+            <div class="contact__info">
+               <p>Email</p> <a href="mailto: your@email.com" class="contact__link">your@email.com</a>
+               <p>Phone</p> <a href="tel: +123 456 789" class="contact__link">+123 456 789</a>
+               <p>Follow us</p> <a href="#" class="contact__link"> <span class="icon-linkedin"></span> </a>
             </div>
          </div>
-      </div>
-      <div class="footer__row">
-         <p class="footer__copyright"> © INDEST, 2020 </p>
-         <p class="footer__mateBy"> Created by <b><a href="https://webtune.com.ua/">WebTune</a></b> </p>
-      </div>
-   </footer>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script src="./js/jquery.simplePagination.js"></script>
-   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      </section>
+   </main>
+   <script src="./js/jquery-3.5.1.min.js"></script>
+   <script src="./js/jquery.simplePagination.min.js"></script>
+   <script src="./js/slick.min.js"></script>
    <script src="./js/script.min.js"></script>
 </body>
 

@@ -1,3 +1,13 @@
+let colorTop = $('.main > section').css('background-color');
+let color = colorTop.split("(")[1].split(")")[0]
+   .split(',').map(a => +a).reduce((a, b) => a + b);
+
+$(document).ready(function () {
+   if (color === 765) {
+      $('.header').addClass('header--scroll');
+      $('.header__mobile').addClass('header__mobile--scroll');
+   }
+});;
 function testWebP(callback) {
    var webP = new Image();
    webP.onload = webP.onerror = function () {
@@ -22,7 +32,7 @@ $('body').scroll(function() {
    if ($(this).scrollTop() >= 100) {
       $('.header').addClass('header--scroll');
       $('.header__mobile').addClass('header__mobile--scroll');
-   } else {
+   } else if (color !== 765) {
       $('.header').removeClass('header--scroll');
       $('.header__mobile').removeClass('header__mobile--scroll');
    }
@@ -90,10 +100,18 @@ $(function() {
    $('input').blur(function() {
       $(this).parent().removeClass('input--active');
    });
+
+   $('textarea').focus(function() {
+      $(this).parent().addClass('input--active');
+   });
+
+   $('textarea').blur(function() {
+      $(this).parent().removeClass('input--active');
+   });
 });;
 let items = $(".posts__list .posts__item");
 let numItems = items.length;
-let perPage = 4;
+let perPage = 3;
 
 items.slice(perPage).hide();
 
