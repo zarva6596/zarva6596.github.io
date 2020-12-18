@@ -1034,6 +1034,7 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  position: relative;
 }
 
 .header .nav__item {
@@ -1042,14 +1043,16 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
-  -webkit-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
 }
 
 .header .nav__item:hover {
   background-color: #fff;
   height: 80px;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
 }
 
 .header .nav__item:hover > a {
@@ -1891,7 +1894,7 @@ body {
 
 .popular {
   margin: 0 auto;
-  color: #333333;
+  color: #333;
 }
 
 .popular__list {
@@ -1912,6 +1915,11 @@ body {
   -webkit-transform: all 1s;
       -ms-transform: all 1s;
           transform: all 1s;
+}
+
+.popular__photo img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .popular__item {
@@ -1958,7 +1966,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 28px;
-  color: #777777;
+  color: #777;
 }
 
 .popular__info {
