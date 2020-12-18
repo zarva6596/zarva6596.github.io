@@ -1910,11 +1910,15 @@ body {
   font-size: 11px;
   line-height: 13px;
   letter-spacing: 3px;
+  border: 1px solid #fff;
   text-transform: uppercase;
   color: #000000;
   border-radius: 3px;
   background-color: #fff;
   position: relative;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
 }
 
 .help__button::before {
@@ -1925,10 +1929,28 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: scaleX(1) translate(-50%, -50%);
+      -ms-transform: scaleX(1) translate(-50%, -50%);
+          transform: scaleX(1) translate(-50%, -50%);
   background-color: #fff;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+}
+
+.help__button:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+}
+
+.help__button:hover::before {
+  -webkit-transform: scaleX(0) translate(-50%, -50%);
+      -ms-transform: scaleX(0) translate(-50%, -50%);
+          transform: scaleX(0) translate(-50%, -50%);
 }
 
 .popular {
