@@ -44,17 +44,25 @@ $(document).ready(function() {
    // infinite: false,
  });
 
- $('.photo-slider__slider .slick-active').next().addClass('none-right');
- $('.photo-slider__slider .slick-active').prev().addClass('none-left');
+   $('.photo-slider__slider .slick-active').next().addClass('none-right');
+   $('.photo-slider__slider .slick-active').prev().addClass('none-left'); 
+   $('.photo-slider__slider .slick-slide').addClass('slick-slide--none');
+   $('.photo-slider__slider .slick-active').next().removeClass('slick-slide--none');
+   $('.photo-slider__slider .slick-active').prev().removeClass('slick-slide--none');
+   $('.photo-slider__slider .slick-active').removeClass('slick-slide--none');
 
  $('.photo-slider__slider .slick-arrow').click(function () {
    $('.photo-slider__slider .slick-slide').removeClass('none-left');
    $('.photo-slider__slider .slick-slide').removeClass('none-right');
+
+   $('.photo-slider__slider .slick-slide').addClass('slick-slide--none');
+
+   $('.photo-slider__slider .slick-active').next().removeClass('slick-slide--none');
+   $('.photo-slider__slider .slick-active').prev().removeClass('slick-slide--none');
+   $('.photo-slider__slider .slick-active').removeClass('slick-slide--none');
    $('.photo-slider__slider .slick-active').next().addClass('none-right');
    $('.photo-slider__slider .slick-active').prev().addClass('none-left');
  });
-
- 
 });
 
 ;
@@ -101,6 +109,44 @@ $('.header__mobile').click(function() {
    } else {
       $('.header__mobile p').text('menu');
    }
+});;
+$('.vacancy__item:last-of-type .vacancy__info').slideDown();
+
+$('.vacancy__detail').on('click', function(e) {
+   if ($(this).children('.vacancy__open').hasClass('vacancy__open--active')) {
+      $(this).children('.vacancy__open').removeClass('vacancy__open--active');
+      $(this).parent().parent().children('.vacancy__info').slideUp();
+   } else {
+      $('.vacancy__open').removeClass('vacancy__open--active');
+      $('.vacancy__info').slideUp();
+      $(this).children('.vacancy__open').addClass('vacancy__open--active');
+      $(this).parent().parent().children('.vacancy__info').slideDown();
+   }
+});
+
+$('.vacancy__item button').on('click', function(e) {
+   let title = $(this).parent().prev().find('.vacancy__title p').text();
+   title = title.trim();
+
+   $('.form__head p').text(title);
+
+   $('.form__popup-overly').fadeIn();
+});
+
+$('.form').on('click', function(e) {
+   $('.form__popup-overly').fadeOut();
+});
+
+$('.form__popup-overly').on('click', function(e) {
+   if (e.target.id === 'vacancy-popup-overly') {
+      $('.form__popup-overly').fadeOut();
+   }
+});;
+$(document).ready(function() {
+   let last = $(this).find('.main-heading').text();
+   last = last.trim();
+
+   $(this).find('.path__item:last-of-type a').text(last);
 });;
 
 $('.menu-item').hover(function() {
