@@ -359,6 +359,92 @@ body {
   color: #333;
 }
 
+.simple-pagination ul {
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.simple-pagination li {
+  height: 47px;
+  width: 47px;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  margin: 0 5px;
+}
+
+.simple-pagination li:hover {
+  cursor: pointer;
+  border-color: #333;
+}
+
+.simple-pagination li a,
+.simple-pagination li span {
+  font-size: 16px;
+  line-height: 47px;
+}
+
+.simple-pagination li:first-of-type,
+.simple-pagination li:last-of-type {
+  position: absolute;
+  width: 20px;
+  background-image: url("../img/icons/arrow-slider.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.simple-pagination li:first-of-type:hover,
+.simple-pagination li:last-of-type:hover {
+  border-color: transparent;
+}
+
+.simple-pagination li:first-of-type a,
+.simple-pagination li:first-of-type span,
+.simple-pagination li:last-of-type a,
+.simple-pagination li:last-of-type span {
+  display: inline-block;
+  position: absolute;
+  font-size: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.simple-pagination li:first-of-type {
+  left: 20%;
+}
+
+.simple-pagination li:last-of-type {
+  right: 20%;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.simple-pagination .active {
+  border-color: #333;
+}
+
+.simple-pagination .active a,
+.simple-pagination .active span {
+  color: #333;
+}
+
+.simple-pagination .disabled {
+  display: none;
+}
+
 .form__head {
   width: 100%;
   display: -webkit-box;
@@ -2011,6 +2097,32 @@ body {
 
 .similar__slider .slick-prev {
   left: 0;
+}
+
+.gallery {
+  padding-bottom: 75px;
+}
+
+.gallery__list {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.gallery__item {
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.gallery__item img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
 }
 
 @media (min-width: 767px) {

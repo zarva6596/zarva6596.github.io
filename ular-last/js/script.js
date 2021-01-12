@@ -163,6 +163,25 @@ $(document).ready(function() {
 
    $(this).find('.path__item:last-of-type a').text(last);
 });;
+let items = $(".gallery__list .gallery__item");
+let numItems = items.length;
+let perPage = 9;
+
+items.slice(perPage).hide();
+
+$('.gallery__pagination-container').pagination({
+   items: numItems,
+   itemsOnPage: perPage,
+   displayedPages: 5,
+   edges: 1,
+
+   onPageClick: function (pageNumber) {
+      let showFrom = perPage * (pageNumber - 1);
+      let showTo = showFrom + perPage;
+
+      items.hide().slice(showFrom, showTo).show();
+   }
+});;
 
 $('.menu-item').hover(function() {
    $(this).children().children().children('.sub-menu__item:first-of-type').addClass('sub-menu__item--active');
