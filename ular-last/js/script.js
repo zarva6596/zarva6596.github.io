@@ -163,23 +163,65 @@ $(document).ready(function() {
 
    $(this).find('.path__item:last-of-type a').text(last);
 });;
-let items = $(".gallery__list .gallery__item");
-let numItems = items.length;
-let perPage = 9;
+let gallery_items = $(".gallery__list .gallery__item");
+let gallery_numItems = gallery_items.length;
+let gallery_perPage = 12;
 
-items.slice(perPage).hide();
+gallery_items.slice(gallery_perPage).hide();
 
 $('.gallery__pagination-container').pagination({
-   items: numItems,
-   itemsOnPage: perPage,
-   displayedPages: 5,
+   items: gallery_numItems,
+   itemsOnPage: gallery_perPage,
+   displayedPages: 2,
    edges: 1,
 
    onPageClick: function (pageNumber) {
-      let showFrom = perPage * (pageNumber - 1);
-      let showTo = showFrom + perPage;
+      let showFrom = gallery_perPage * (pageNumber - 1);
+      let showTo = showFrom + gallery_perPage;
 
-      items.hide().slice(showFrom, showTo).show();
+      gallery_items.hide().slice(showFrom, showTo).show();
+   }
+});;
+let products_items = $(".products__list .products__item");
+let products_numItems = products_items.length;
+let products_perPage = 12;
+
+products_items.slice(products_perPage).hide();
+
+$('.products__pagination-container').pagination({
+   items: products_numItems,
+   itemsOnPage: products_perPage,
+   displayedPages: 2,
+   edges: 1,
+
+   onPageClick: function (pageNumber) {
+      let showFrom = products_perPage * (pageNumber - 1);
+      let showTo = showFrom + products_perPage;
+
+      products_items.hide().slice(showFrom, showTo).show();
+   }
+});;
+$('.filter__item' || '.filter__item p').on('click', function (e) {
+   if ($(this).hasClass('active') 
+      && !$(e.target).hasClass('sub-filter') 
+      && !$(e.target).parents().hasClass('sub-filter')) {
+      $(this).children('.sub-filter').slideUp();
+      $(this).removeClass('active');
+   } else {
+      $(this).children('.sub-filter').slideDown();
+      $(this).addClass('active');
+   }
+});
+
+$(document).on('click', function (e) {
+   let el = e.target;
+
+   if (!$(el).hasClass('sub-filter') 
+      && !$(el).parents().hasClass('sub-filter')
+      && !$(el).hasClass('filter__item')
+      && !(el.tagName === 'P')) {
+      $('.sub-filter').slideUp();
+      $('.filter__item').removeClass('active');
    }
 });;
 
