@@ -145,17 +145,7 @@ $('.vacancy__item button').on('click', function(e) {
 
    $('.form__head p').text(title);
 
-   $('.form__popup-overly').fadeIn();
-});
-
-$('.form').on('click', function(e) {
-   $('.form__popup-overly').fadeOut();
-});
-
-$('.form__popup-overly').on('click', function(e) {
-   if (e.target.id === 'vacancy-popup-overly') {
-      $('.form__popup-overly').fadeOut();
-   }
+   $('.popup-overly').fadeIn();
 });;
 $(document).ready(function() {
    let last = $(this).find('.main-heading').text();
@@ -229,6 +219,23 @@ $('.filter__item' || '.filter__item p').on('click', function (e) {
       $('.filter__item').removeClass('active');
       $(this).children('.sub-filter').slideDown();
       $(this).addClass('active');
+   }
+});;
+$('.product button').on('click', function () {
+   let title = $(this).parents().find('.product h1').text();
+   title = title.trim();
+
+   $('.form__head p').text(title);
+   $('.product .popup-overly').fadeIn();
+});
+
+$('.form__close').on('click', function(e) {
+   $('.popup-overly').fadeOut();
+});
+
+$('.form__popup-overly').on('click', function(e) {
+   if (e.target.id === 'popup-overly') {
+      $('.popup-overly').fadeOut();
    }
 });;
 

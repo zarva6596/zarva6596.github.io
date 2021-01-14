@@ -510,20 +510,23 @@
       </ul>
    </div>
 
-   <div id="vacancy-popup-overly" class="form__popup-overly">
+   <div id="popup-overly" class="popup-overly">
+   <div class="popup">
+
+      <div class="form__head">
+         <p>
+           Графічний дизайнер
+         </p>
+         <div class="form__close">
+            <span></span>
+            <span></span>
+         </div>
+      </div>
+
       <form
         action=""
         class="vacancy__form form"
       >
-         <div class="form__head">
-            <p>
-              Графічний дизайнер
-            </p>
-            <div class="form__close">
-               <span></span>
-               <span></span>
-            </div>
-         </div>
          <input
             type="text"
             class="input vacancy__input"
@@ -544,11 +547,11 @@
          >
          <textarea
             placeholder="Супровідний лист"
-            class="input vacancy__input vacancy__input--textarea"
+            class="input vacancy__input input--textarea vacancy__input--textarea"
             required
          ></textarea>
-   
-         <div class="vacancy__buttons">
+
+         <div class="form__buttons vacancy__buttons">
             <button class="form__button button">Надіслати</button>
 
             <div class="input__wrapper">
@@ -556,10 +559,10 @@
                   type="file" 
                   name="file" 
                   id="input__file" 
-                  class="vacancy__input--file" 
+                  class="input--file vacancy__input--file" 
                   multiple
                >
-   
+
                <label for="input__file" class="button button--file input__file--button">
                   Завантажте ваше резюме
                </label>
@@ -567,6 +570,7 @@
          </div>
       </form>
    </div>
+</div>
 </section>
    </main>
 
