@@ -233,7 +233,7 @@ $('.form__close').on('click', function(e) {
    $('.popup-overly').fadeOut();
 });
 
-$('.form__popup-overly').on('click', function(e) {
+$('.popup-overly').on('click', function(e) {
    if (e.target.id === 'popup-overly') {
       $('.popup-overly').fadeOut();
    }
