@@ -602,10 +602,6 @@ body {
   display: none;
 }
 
-.filter {
-  background-color: #fff;
-}
-
 .filter a,
 .filter p {
   font-size: 16px;
@@ -633,6 +629,7 @@ body {
 }
 
 .filter__item {
+  background-color: #fff;
   position: relative;
   padding: 17px 24px;
   border: 2px solid #86C127;
@@ -1248,6 +1245,21 @@ body {
   min-height: 700px;
 }
 
+.head::before {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  top: 130px;
+  left: calc((100% - 1306px) / 2 - 130px);
+  content: "";
+  background-image: url("../img/bg/home_head.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+}
+
 .head__photo {
   position: absolute;
   right: 0;
@@ -1273,10 +1285,6 @@ body {
   width: 90%;
   background-color: #679A1A;
   border-radius: 50px 0 0 50px;
-}
-
-.head__info {
-  max-width: 40vw;
 }
 
 .head__info .heading {
@@ -1616,6 +1624,9 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   position: relative;
+  background-image: url("../img/bg/home_our_products.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .our-products .description {
@@ -1967,7 +1978,14 @@ body {
 }
 
 .about-us__head {
-  background-image: none;
+  background-image: url("../img/bg/aboutUs_head.png");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: right 150px;
+}
+
+.about-us__head::before {
+  display: none;
 }
 
 .about-us__head .head__text {
@@ -2133,7 +2151,7 @@ body {
   width: fit-content;
 }
 
-.contacts__map img {
+.contacts__map {
   position: absolute;
   top: 112px;
   right: 0;
@@ -2404,6 +2422,10 @@ body {
 
 .gallery {
   padding-bottom: 75px;
+  background-image: url("../img/bg/gallery.png");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: 110% 100px;
 }
 
 .gallery__list {
@@ -2426,6 +2448,13 @@ body {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
+}
+
+.products {
+  background-image: url("../img/bg/gallery.png");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: 180% 100px;
 }
 
 .products__filter {
@@ -2764,6 +2793,10 @@ body {
   .header {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .head::before {
+    left: -130px;
   }
 
   .head__list {
