@@ -191,6 +191,25 @@ $('.products__pagination-container').pagination({
       products_items.hide().slice(showFrom, showTo).show();
    }
 });;
+$('.filter__item' || '.filter__item p').on('click', function (e) {
+   if (($(this).hasClass('active') 
+      && !$(e.target).hasClass('sub-filter') 
+      && !$(e.target).parents().hasClass('sub-filter'))) {
+      $(this).children('.sub-filter').slideUp();
+      $(this).removeClass('active');
+      
+   } else if ($(e.target).hasClass('sub-filter')
+      || $(e.target).parents().hasClass('sub-filter')) {
+         $(this).children('.sub-filter').slideUp();
+         $(this).removeClass('active');
+   } else {
+      $('.sub-filter').slideUp();
+      $('.filter__item').removeClass('active');
+      $(this).children('.sub-filter').slideDown();
+      $(this).addClass('active');
+   }
+});
+
 $(document).on('click', function (e) {
    let el = e.target;
    // if (!$(el).hasClass('sub-filter') 
@@ -205,20 +224,6 @@ $(document).on('click', function (e) {
       && !($(el).parents().hasClass('active'))) {
       $('.sub-filter').slideUp();
       $('.filter__item').removeClass('active');
-   }
-});
-
-$('.filter__item' || '.filter__item p').on('click', function (e) {
-   if ($(this).hasClass('active') 
-      && !$(e.target).hasClass('sub-filter') 
-      && !$(e.target).parents().hasClass('sub-filter')) {
-      $(this).children('.sub-filter').slideUp();
-      $(this).removeClass('active');
-   } else {
-      $('.sub-filter').slideUp();
-      $('.filter__item').removeClass('active');
-      $(this).children('.sub-filter').slideDown();
-      $(this).addClass('active');
    }
 });;
 $('.product button').on('click', function () {
@@ -236,6 +241,51 @@ $('.form__close').on('click', function(e) {
 $('.popup-overly').on('click', function(e) {
    if (e.target.id === 'popup-overly') {
       $('.popup-overly').fadeOut();
+   }
+});;
+$(document).ready(function () {
+   let tender = $('.tender__item:nth-child(5) p');
+
+   for (let i = 0; i < tender.length; i++) {
+      let a = $(tender[i]).text().trim();
+      let str = 'Закриті торги';
+
+      if (a === str) {
+         // $(tender[i]).parent().parent().addClass('closed');
+         $(tender[i]).parent().parent().parent().addClass('closed');
+      }
+   }
+});
+
+let tenders_items = $(".tenders__list .tenders__item");
+let tenders_numItems = tenders_items.length;
+let tenders_perPage = 7;
+
+tenders_items.slice(tenders_perPage).hide();
+
+$('.tenders__pagination-container').pagination({
+   items: tenders_numItems,
+   itemsOnPage: tenders_perPage,
+   displayedPages: 2,
+   edges: 1,
+
+   onPageClick: function (pageNumber) {
+      let showFrom = tenders_perPage * (pageNumber - 1);
+      let showTo = showFrom + tenders_perPage;
+
+      tenders_items.hide().slice(showFrom, showTo).show();
+   }
+});
+
+$('.tender__list').on('click', function () {
+   if ($(this).parent().children('.tender__info').hasClass('opened')) {
+      $(this).parent().children('.tender__info').slideUp();
+      $(this).parent().children('.tender__info').removeClass('opened');
+   } else {
+      $('.tender__info').slideUp();
+      $('.tender__info').removeClass('opened');
+      $(this).parent().children('.tender__info').slideDown();
+      $(this).parent().children('.tender__info').addClass('opened');
    }
 });;
 
