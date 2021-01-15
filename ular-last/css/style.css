@@ -972,8 +972,12 @@ body {
   display: flex;
 }
 
-.header__lang {
+.header .lang {
   margin-left: 30px;
+}
+
+.header .lang p {
+  font-size: 16px;
 }
 
 .header--scroll {
@@ -996,6 +1000,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 0;
+}
+
+.primary-menu a {
+  font-size: 16px;
 }
 
 .menu-item {
@@ -1041,33 +1049,63 @@ body {
 }
 
 .lang {
+  position: relative;
+}
+
+.lang__active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.lang__item {
-  display: none;
-}
-
-.lang__item:hover {
+.lang__active:hover {
   cursor: pointer;
 }
 
-.lang__item--active {
-  display: inline;
+.lang__active p {
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.lang__active--none {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  display: none;
+}
+
+.lang__active--none:hover {
+  cursor: pointer;
 }
 
 .lang__arrow {
   display: block;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
+  height: 16px;
+  width: 16px;
+  background-image: url("../img/icons/arrow-filter.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
   margin-right: 5px;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
 }
 
 .lang__arrow:hover {
   cursor: pointer;
+}
+
+.lang .active {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .footer {

@@ -1,31 +1,7 @@
-// $(document).ready(function() {
-//    $('.offers__slider').slick({
-//       slidesToShow: 1,
-//       asNavFor: ".offers__slider--small",
-//       autoplay: true,
-//    });
-
-//    $('.offers__slider--small').slick({
-//       slidesToShow: 4,
-//       arrows: false,
-//       infinite: true,
-//       variableWidth: true,
-//       asNavFor: ".offers__slider",
-//    });
-// });
-
-// $('.offers__slider--small .slider__item').click(function(e) {
-//    let n = e;
-
-//    console.log(n);
-//    $('.offers__slider--small').slick('goTo', 0);
-// })
-
 $(document).ready(function() {
  $('.our-products__photos').slick({
     slidesToShow: 1,
     dots: true,
-   //  centerMode: true,
    asNavFor: '.description',
  });
 
@@ -41,7 +17,6 @@ $(document).ready(function() {
    arrows: true,
    dots: true,
    slidesToShow: 1,
-   // infinite: false,
  });
 
    $('.photo-slider__slider .slick-active').next().addClass('none-right');
@@ -287,6 +262,21 @@ $('.tender__list').on('click', function () {
       $(this).parent().children('.tender__info').slideDown();
       $(this).parent().children('.tender__info').addClass('opened');
    }
+});;
+$('.lang__active').on('click', function () {
+   $('.lang__active--none').fadeToggle();
+   $('.lang__arrow').toggleClass('active');
+});
+
+$('.lang__active--none p').on('click', function () {
+   let now = $('.lang__active p').text().trim();
+   let next = $(this).text().trim();
+
+   $('.lang__active p').text(next);
+   $(this).text(now);
+
+   $('.lang__active--none').fadeToggle();
+   $('.lang__arrow').toggleClass('active');
 });;
 
 $('.menu-item').hover(function() {
