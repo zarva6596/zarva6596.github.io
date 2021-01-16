@@ -294,6 +294,13 @@ $('.header__mobile').on('click', function () {
       $(this).children('p').text('Закрити');
    }
 });;
+$(window).on('load resize', function () {
+   if ($(window).width() < 600) {
+      $('.contact-form__adaptive').append($('.contact-form__row>.contact-form__info'));
+   } else {
+      $('.contact-form__row').append($('.contact-form__adaptive>.contact-form__info'));
+   }
+});;
 
 $('.menu-item').hover(function() {
    $(this).children().children().children('.sub-menu__item:first-of-type').addClass('sub-menu__item--active');
