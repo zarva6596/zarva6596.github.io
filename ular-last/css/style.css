@@ -615,6 +615,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .filter .active p {
@@ -629,12 +631,9 @@ body {
 }
 
 .filter__item {
-  background-color: #fff;
-  position: relative;
-  padding: 17px 24px;
-  border: 2px solid #86C127;
-  border-radius: 100px;
   margin-right: 24px;
+  margin-bottom: 5px;
+  position: relative;
 }
 
 .filter__item:last-of-type {
@@ -642,11 +641,14 @@ body {
 }
 
 .filter__item p {
-  position: relative;
-  padding-right: 32px;
+  background-color: #fff;
+  border: 2px solid #86C127;
+  border-radius: 100px;
+  padding: 17px 58px 17px 24px;
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
+  position: relative;
 }
 
 .filter__item p::after {
@@ -654,7 +656,7 @@ body {
   position: absolute;
   height: 24px;
   width: 24px;
-  right: 0;
+  right: 24px;
   top: 50%;
   background-image: url("../img/icons/arrow-filter.svg");
   background-repeat: no-repeat;
@@ -737,16 +739,15 @@ body {
   background-image: url("../img/icons/arrow-filter-hover.svg");
 }
 
-.filter .sub-filter__item:hover .sub-sub-filter {
-  display: block;
-}
-
 .filter .sub-sub-filter {
   display: none;
   position: absolute;
   left: 99%;
-  top: 0;
+  top: -20px;
   padding-left: 45px;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
 }
 
 .filter .sub-sub-filter__list {
@@ -882,11 +883,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .search {
   position: relative;
-  width: 100%;
+  max-width: 400px;
 }
 
 .search::before {
@@ -938,7 +941,7 @@ body {
   display: none;
   position: fixed;
   top: 0;
-  padding-top: 70px;
+  padding: 70px 0;
   z-index: 50;
   background-color: #fff;
   width: 100%;
@@ -959,11 +962,11 @@ body {
 
 .mobile__top::after {
   content: "";
-  position: fixed;
+  position: absolute;
   background-image: url("../img/bg/home_head.png");
   background-repeat: no-repeat;
   background-size: contain;
-  top: 140px;
+  top: 100px;
   right: -40%;
   height: 435px;
   width: 265px;
@@ -1927,6 +1930,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: relative;
 }
 
@@ -2184,6 +2189,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2273,6 +2280,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2296,7 +2305,7 @@ body {
 
 .contacts__map {
   position: absolute;
-  top: 112px;
+  bottom: 0;
   right: 0;
   height: calc(100% - 112px);
   width: 50%;
@@ -2308,9 +2317,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .partners__info {
@@ -2354,7 +2368,7 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  bottom: 15px;
+  bottom: 20px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -2421,6 +2435,10 @@ body {
      object-fit: contain;
 }
 
+.product__info {
+  margin-left: 30px;
+}
+
 .product__art {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2430,6 +2448,7 @@ body {
 
 .product__art p {
   padding-right: 10px;
+  font-size: 12px;
 }
 
 .product__button {
@@ -2713,16 +2732,48 @@ body {
 }
 
 .tenders__menu {
+  margin-top: 36px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+.tenders .filter {
+  margin-top: 0;
 }
 
 .tenders .search {
-  margin-left: 24px;
+  margin-bottom: 5px;
+  width: 30%;
+}
+
+.tenders__adaptive-info {
+  display: none;
+  text-align: center;
+  padding: 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f1f1f1;
+  max-width: 430px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.tenders__adaptive-info p {
+  margin-bottom: 10px;
 }
 
 .tenders__container {
@@ -2961,6 +3012,51 @@ body {
   }
 }
 
+@media (max-width: 1300px) {
+  .tenders__menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .tenders .filter__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .tenders .filter__item {
+    width: 400px;
+    margin-right: 0;
+  }
+
+  .tenders .filter .sub-filter {
+    position: relative;
+    top: 1px;
+  }
+
+  .tenders .search {
+    max-width: 100%;
+    width: 400px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .tenders__adaptive-info {
+    display: block;
+  }
+
+  .tenders .table {
+    margin-top: 10px;
+  }
+
+  .tenders__container {
+    width: calc(100vw - 15px);
+  }
+}
+
 @media (max-width: 1180px) {
   .footer__companies {
     display: grid;
@@ -3172,6 +3268,10 @@ body {
     top: -10px;
   }
 
+  .about-us__head {
+    padding-top: 152px;
+  }
+
   .gallery__list {
     margin-top: 30px;
   }
@@ -3197,6 +3297,27 @@ body {
   .our-products .photos .slick-arrow {
     height: 40px;
     bottom: 3px;
+  }
+
+  .geography {
+    background-size: cover;
+  }
+
+  .geography__item {
+    width: calc((100% - 90px) / 3);
+  }
+
+  .geography__text {
+    text-align: left;
+  }
+
+  .partners__slider {
+    height: 330px;
+  }
+
+  .partners__item {
+    height: 120px;
+    margin-top: 15px;
   }
 }
 
@@ -3269,6 +3390,28 @@ body {
     height: 40px;
   }
 
+  .about-us__our-products {
+    background-image: url("../img/home/slider-bg.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .about-us__our-products .slider__photo {
+    max-width: 30vw;
+  }
+
+  .partners__slider .slick-dots {
+    bottom: 15px;
+  }
+
+  .similar {
+    background-image: url("../img/home/slider-bg.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .gallery__list {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px calc(30px + 119 * ((100vw - 700px) / 1366));
@@ -3307,9 +3450,34 @@ body {
   .footer__icon:last-of-type span {
     margin-right: 0;
   }
-}
 
-@media (max-width: 790px) {
+  .vacancy__item {
+    width: 500px;
+    margin: 0 auto 36px;
+  }
+
+  .vacancy__header img {
+    position: relative;
+    left: 0;
+    margin-right: 24px;
+  }
+
+  .vacancy__main {
+    left: 0;
+  }
+
+  .vacancy__detail {
+    margin: 30px auto 0;
+  }
+
+  .geography__item {
+    width: calc((100% - 90px) / 3);
+  }
+
+  .geography__item .geography__text {
+    margin-top: 0;
+  }
+
   .partners {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3324,6 +3492,34 @@ body {
   .partners__slider {
     max-width: 100%;
     margin: 0 auto;
+    height: 240px;
+  }
+
+  .partners__slider .slick-next {
+    right: 0;
+  }
+
+  .partners__slider .slick-prev {
+    left: 0;
+  }
+
+  .partners__item {
+    height: 150px;
+    margin: 0;
+  }
+
+  .partners__item img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .product__info {
+    margin: 0 auto;
+  }
+
+  .product__photo {
+    margin-top: 25px;
+    height: 360px;
   }
 }
 
@@ -3362,6 +3558,29 @@ body {
 }
 
 @media (max-width: 700px) {
+  .path {
+    padding-left: 15px;
+  }
+
+  .popup {
+    width: 90vw;
+    padding: 15px;
+  }
+
+  .popup__photo {
+    display: none;
+  }
+
+  .popup .button:last-of-type {
+    margin-top: 10px;
+  }
+
+  .popup .form__head {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
   .section {
     padding-left: 15px;
     padding-right: 15px;
@@ -3375,6 +3594,7 @@ body {
   .products__list {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px calc(30px + 119 * ((100vw - 440px) / 1366));
+    margin-top: 40px;
   }
 }
 
@@ -3469,17 +3689,65 @@ body {
     margin: 20px 0;
   }
 
-  .our-products .description .details {
+  .details {
     margin: 0 auto;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
 
-  .our-products .description .details__item {
+  .details__item {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+
+  .about-us__text {
+    display: block;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .about-us__our-products .paragraph {
+    text-align: left;
+  }
+
+  .about-us__our-products .slider__photo {
+    max-width: 50vw;
+  }
+
+  .awards__item {
+    width: 100%;
+  }
+
+  .awards__paragraph p {
+    max-width: 100%;
+  }
+
+  .geography__item {
+    width: calc((100% - 60px) / 2);
+    height: 180px;
+  }
+
+  .geography__item img {
+    height: 100%;
+    width: 80%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+
+  .contacts {
+    padding-bottom: 490px;
+  }
+
+  .contacts__map {
+    width: 100%;
+    height: 490px;
+    bottom: 0;
+  }
+
+  .partners__slider .slick-dots {
+    bottom: 7px;
   }
 }
 
@@ -3490,6 +3758,30 @@ body {
 }
 
 @media (max-width: 600px) {
+  .filter__item {
+    margin: 5px 0;
+    width: 100%;
+  }
+
+  .filter__item:first-of-type {
+    margin: 0;
+  }
+
+  .filter .sub-filter {
+    position: relative;
+    top: 5px;
+  }
+
+  .filter .sub-sub-filter {
+    position: relative;
+    left: 0;
+    top: 0;
+    padding-left: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
   .advantage__item {
     width: 100%;
   }
@@ -3500,16 +3792,58 @@ body {
     width: -moz-fit-content;
     width: fit-content;
   }
+
+  .vacancy__item {
+    width: 100%;
+  }
+
+  .vacancy__title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .vacancy__main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+  }
+
+  .vacancy__main img {
+    margin-right: 0;
+  }
+
+  .vacancy__salary {
+    margin-left: 0;
+  }
+
+  .vacancy__salary::before {
+    display: none;
+  }
+
+  .vacancy__paragraph {
+    padding: 0 6px;
+  }
+
+  .product__description {
+    height: 218px;
+  }
 }
 
 @media (max-width: 444px) {
-  .our-products .description .details__item {
+  .details__item {
     display: block;
     position: relative;
     left: 30px;
   }
 
-  .our-products .description .details__item span {
+  .details__item span {
     position: absolute;
     left: -30px;
     top: 50%;
@@ -3528,6 +3862,35 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+
+  .product__photo {
+    width: 90%;
+  }
+
+  .product__description {
+    height: 298px;
+  }
+
+  .product__details {
+    margin: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .tenders .filter {
+    width: 100%;
+  }
+
+  .tenders .filter__item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 410px) {
+  .geography__item {
+    width: 100%;
+    height: 160px;
   }
 }
 
