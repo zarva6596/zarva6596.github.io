@@ -1388,8 +1388,7 @@ body {
 }
 
 .head__heading {
-  max-width: 40vw;
-  line-height: 1.2;
+  max-width: 30vw;
 }
 
 .head__photo {
@@ -1402,6 +1401,7 @@ body {
 
 .head__photo img {
   max-height: 480px;
+  border-radius: 20px 0 0 20px;
 }
 
 .head__photo::before {
@@ -3269,6 +3269,7 @@ body {
        object-fit: contain;
     -o-object-position: center center;
        object-position: center center;
+    border-radius: 20px;
   }
 
   .our-products {
@@ -3618,6 +3619,10 @@ body {
     padding-bottom: 0;
   }
 
+  .head__photo {
+    margin-bottom: 0;
+  }
+
   .head::before {
     display: none;
   }
@@ -3644,10 +3649,6 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-  }
-
-  .head__photo {
-    margin-bottom: 0;
   }
 
   .head__item {
