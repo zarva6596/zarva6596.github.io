@@ -1387,6 +1387,10 @@ body {
   min-height: 700px;
 }
 
+.head__heading {
+  max-width: 50vw;
+}
+
 .head__photo {
   position: absolute;
   right: 0;
@@ -1397,6 +1401,7 @@ body {
 
 .head__photo img {
   max-height: 480px;
+  border-radius: 20px 0 0 20px;
 }
 
 .head__photo::before {
@@ -3189,6 +3194,10 @@ body {
     padding-top: 92px;
   }
 
+  .head__heading {
+    max-width: 100%;
+  }
+
   .head__others {
     margin-top: 0;
   }
@@ -3234,6 +3243,7 @@ body {
     width: 100%;
     height: 300px;
     overflow: visible;
+    margin-bottom: 50px;
   }
 
   .head__photo::before {
@@ -3251,6 +3261,7 @@ body {
        object-fit: contain;
     -o-object-position: center center;
        object-position: center center;
+    border-radius: 20px;
   }
 
   .our-products {
@@ -3598,6 +3609,10 @@ body {
 
   .head {
     padding-bottom: 0;
+  }
+
+  .head__photo {
+    margin-bottom: 0;
   }
 
   .head::before {
