@@ -61,7 +61,7 @@
 
       .header__button {
          font-family: 'Montserrat', sans-serif; 
-         font-size: 10px; 
+         font-size: 12px; 
          line-height: 24px; 
          font-weight: 600; 
          letter-spacing: 0.17em; 
@@ -110,8 +110,17 @@
          color: #000000;
          padding-top: 10px;
          font-weight: 500;
-         font-size: 10px;
-         line-height: 15px;
+         font-size: 14px;
+         line-height: 18px;
+      }
+
+      .info__right p {
+         color: #ffffff;
+         font-size: 16px;
+         font-style: italic;
+         line-height: 20px;
+         font-weight: 500;
+         padding-top: 10px;
       }
 
       .info__right {
@@ -121,13 +130,19 @@
          padding-bottom: 20px;
       }
 
-      .info__right p {
-         color: #ffffff;
-         font-size: 12px;
-         font-style: italic;
-         line-height: 15px;
-         font-weight: 500;
+      .mini-heading__top {
+         font-weight: 500; 
+         font-size: 12px; 
+         line-height: 17px; 
+         color: #000000;
+      }
+
+      .mini-heading__bottom {
          padding-top: 10px;
+         font-weight: bold;
+         font-size: 22px;
+         line-height: 31px;
+         color: #000000;
       }
 
       .postHeading span {
@@ -139,9 +154,9 @@
 
       .posts {
          padding-top: 30px;
-         padding-right: 53px;
+         /* padding-right: 30px; */
          padding-bottom: 40px;
-         padding-left: 53px;
+         /* padding-left: 30px; */
       }
 
       .posts__item {
@@ -155,11 +170,36 @@
       .posts__text {
          padding-top: 10px;
          padding-bottom: 10px;
-         /* padding-left: 25px; */
+         padding-left: 10px;
+         padding-right: 10px;
       }
 
       .posts__photo {
-         padding-right: 25px;
+         /* padding-right: 25px; */
+      }
+
+      .posts__data {
+         font-weight: 300; 
+         font-size: 14px; 
+         line-height: 16px; 
+         color: #C1C8CE; 
+         padding-bottom: 5px;
+      }
+
+      .posts__title {
+         font-weight: 600;
+         font-size: 18px;
+         line-height: 20px;
+         color: #22262A;
+         padding-bottom: 5px;
+      }
+
+      .posts__paragraph {
+         font-weight: normal;
+         font-size: 14px;
+         line-height: 157.9%;
+         color: #22262A;
+         padding-bottom: 14px;
       }
 
       .media a {
@@ -168,19 +208,29 @@
          padding-left: 12px;
       }
 
+      .media__text {
+         font-size: 12px;
+         line-height: 16px;
+         color: #FFFFFF;
+      }
+
+      .posts__photo {
+         width: 50%;
+      }
+
       @media (max-width: 450px) {
          .main {
-            width: 340px;
+            width: 100%;
          }
 
          .header__left {
             display: block;
-            /* width: ; */
+            width: 100%;
          }
 
          .header__right {
             display: block;
-            width: 320px;
+            width: 100%;
             /* text-align: center;
             padding-left: 40px; */
          }
@@ -191,17 +241,43 @@
 
          .info__left {
             display: block;
+            width: 100%;
             /* padding-bottom: 30px;
             padding-left: 23px; */
          }
 
          .info__right {
-            width: 320px;
+            width: 100%;
             display: block;
          }
 
+         .info__left h3 {
+            font-size: 26px;
+            line-height: 30px;
+         }
+
+         /* .info__left p {
+            font-size: 15px;
+            line-height: 18px;
+         } */
+
+         /* .info__right p {
+            font-size: 15px;
+            line-height: 20px;
+         } */
+
          .mini-heading {
-            width: 280px;
+            width: 90%;
+         }
+
+         .mini-heading__top {
+            font-size: 16px;
+            line-height: 20px;
+         }
+
+         .mini-heading__bottom {
+            font-size: 24px;
+            line-height: 32px;
          }
 
          .mobile-none {
@@ -212,26 +288,17 @@
             width: 100%;
          }
 
-         .posts table {
-            width: 320px;
+         .posts {
+            width: 100%;
          }
 
          .posts table {
-            width: 320px;
+            width: 100%;
          }
 
          .posts__item td {
             display: block;
-            width: 90%;
-         }
-
-         .posts__text {
-            /* padding-top: 20px;
-            padding-bottom: 20px; */
-         }
-
-         .posts__photo {
-            /* padding-left: 25px; */
+            width: 100%;
          }
 
          .posts__photo img {
@@ -259,7 +326,7 @@
                               <table align="center" style="color: #ffffff;" width="290">
                                  <tr style="border-bottom: 1px solid #ffffff;">
                                     <td align="right" class="header__logo">
-                                       <img src="https://raw.githubusercontent.com/zarva6596/zarva6596.github.io/master/mail/img/logo.png" alt="logo icon" />
+                                       <img src="https://raw.githubusercontent.com/zarva6596/zarva6596.github.io/master/mail/img/logo1.png" alt="logo icon" />
                                     </td>
                                     <td style="font-size: 22px; line-height: 31px; padding-left: 20px;" width="170px">
                                        <h3 style="font-family: 'Montserrat', sans-serif;">Лига</p>
@@ -272,13 +339,13 @@
                                        colspan="2"
                                        style="padding-top: 25px;"
                                     >
-                                       <p style="font-family: 'Montserrat', sans-serif; font-size: 12px;">Выведем культуру строительства на европейский уровень!</p>
+                                       <p style="font-family: 'Montserrat', sans-serif; font-size: 16px;">Выведем культуру строительства на европейский уровень!</p>
                                     </td>
                                  </tr>
                                  <tr>
                                     <td align="center" colspan="2" style="padding-top: 18px;">
                                        <a 
-                                          href="#"
+                                          href="https://forms.gle/buLYH8VVb2YvqKH79"
                                           class="header__button"
                                           style="color: #ffffff;border-color: #ffffff;;"
                                        >
@@ -308,10 +375,10 @@
                         <tr>
                            <td class="info__left" align="left" width="320">
                               <h3 style="font-family: 'Montserrat', sans-serif;">Привет!</h3>
-                              <p style="font-family: 'Montserrat', sans-serif;">
+                              <!-- <p style="font-family: 'Montserrat', sans-serif;">
                                  Готовить список целей на новый год уже стало традицией, особенно если
                                  Вы успешный менеджер или имеете отношение к бизнес среде.
-                              </p>
+                              </p> -->
                               <p style="font-family: 'Montserrat', sans-serif;">
                                  <b>Лига Мастеров</b> продолжает набирать обороты и расширяться,
                                  а это значит: выставки, конференции, количество вебинаров и тренингов вообще сложно сосчитать,
@@ -337,17 +404,18 @@
                         <tr>
                            <td align="center">
                               <p
-                                 style="font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 12px; line-height: 17px; color: #000000;"
+                                 class="mini-heading__top"
+                                 style="font-family: 'Montserrat', sans-serif;"
                               >
-                                 Ну а пока мы продолжаем держать Вас в курсе последних событий и подготовили
+                                 Продолжаем держать Вас в курсе событий
                               </p>
                            </td>
                         </tr>
 
                         <tr>
                            <td align="center">
-                              <p style="font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 22px; line-height: 31px; color: #000000;">
-                                 Обновленный дайджест из 
+                              <p class="mini-heading__bottom" style="font-family: 'Montserrat', sans-serif;">
+                                 Ежемесячный дайджест из
                               </p>
                            </td>
                         </tr>
@@ -356,7 +424,7 @@
                </tr>
 
                <tr>
-                  <td align="center">
+                  <td align="center" bgcolor="#ffffff">
                      <table bgcolor="#ffffff" width="600" class="postHeading">
                         <tr>
                            <td width="33%" class="mobile-none">
@@ -378,34 +446,38 @@
                </tr>
 
                <tr>
-                  <td bgcolor="#ffffff" class="posts">
+                  <td align="center" bgcolor="#ffffff" class="posts">
                      <table width="495px">
                         <tr>
                            <td class="posts__item">
                               <table>
                                  <tr>
-                                    <td width="50%" class="posts__photo">
+                                    <td class="posts__photo">
                                        <img
                                           src="https://raw.githubusercontent.com/zarva6596/zarva6596.github.io/master/mail/img/1.png" 
                                           alt="post photo"
                                        >
                                     </td>
 
-                                    <td width="50%" class="posts__text">
+                                    <td class="posts__text">
                                        <p
-                                          style="font-family: 'Montserrat', sans-serif;font-weight: 300; font-size: 10px; line-height: 12px; color: #C1C8CE; padding-bottom: 5px;"
+                                          class="posts__data"
+                                          style="font-family: 'Montserrat', sans-serif;"
                                        >
                                           01 Января, 2021
                                        </p>
                                        <h4
-                                          style="font-family: 'Montserrat', sans-serif;font-weight: 600;font-size: 14px;line-height: 17px;color: #22262A;padding-bottom: 5px;"
+                                          class="posts__title"
+                                          style="font-family: 'Montserrat', sans-serif;"
                                        >
-                                          4 причины избавиться от слайдов . . .
+                                          Планы 2021 . . .
                                        </h4>
                                        <p
-                                          style="font-family: 'Montserrat', sans-serif;font-weight: normal;font-size: 10px;line-height: 157.9%;color: #22262A;padding-bottom: 14px;"
+                                          class="posts__paragraph"
+                                          style="font-family: 'Montserrat', sans-serif;"
                                        >
-                                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                          Готовить список целей на новый год  уже стало традицией,
+                                          особенно если Вы успешный менеджер или имеете отношение кбизнес среде.
                                        </p>
                                        <a
                                           href="#"
@@ -423,30 +495,33 @@
                            <td class="posts__item">
                               <table>
                                  <tr>
-                                    <td width="50%" class="posts__photo">
-                                       <img 
+                                    <td class="posts__photo">
+                                       <img
                                           src="https://raw.githubusercontent.com/zarva6596/zarva6596.github.io/master/mail/img/2.png" 
                                           alt="post photo"
                                        >
                                     </td>
-            
-                                    <td width="50%" class="posts__text">
+
+                                    <td class="posts__text">
                                        <p
-                                          style="font-family: 'Montserrat', sans-serif;font-weight: 300; font-size: 10px; line-height: 12px; color: #C1C8CE; padding-bottom: 5px;"
+                                          class="posts__data"
+                                          style="font-family: 'Montserrat', sans-serif;"
                                        >
                                           01 Января, 2021
                                        </p>
                                        <h4
-                                          style="font-family: 'Montserrat', sans-serif;font-weight: 600;font-size: 14px;line-height: 17px;color: #22262A;padding-bottom: 5px;"
+                                          class="posts__title"
+                                          style="font-family: 'Montserrat', sans-serif;"
                                        >
-                                          Внедрение инноваций . . . 
+                                          4 причины избавиться от слайдов . . .
                                        </h4>
                                        <p
-                                          style="font-family: 'Montserrat', sans-serif;font-weight: normal;font-size: 10px;line-height: 157.9%;color: #22262A;padding-bottom: 14px;"
+                                          class="posts__paragraph"
+                                          style="font-family: 'Montserrat', sans-serif;"
                                        >
-                                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text.
+                                          Почему эти витрины на первой странице не так эффективны, как отдельное портфолио.
                                        </p>
-                                       <a 
+                                       <a
                                           href="#"
                                           style="font-family: 'Montserrat', sans-serif; display: inline-block;font-weight: 600;font-size: 10px;line-height: 150%;letter-spacing: 0.17em;color: #CD2020;padding-top: 4px;padding-right: 13px;padding-bottom: 4px;padding-left: 13px;border: 1px solid #cd2020;text-decoration: none;"
                                        >
@@ -462,28 +537,32 @@
                            <td class="posts__item">
                               <table>
                                  <tr>
-                                    <td width="50%" class="posts__photo">
+                                    <td class="posts__photo">
                                        <img 
                                           src="https://raw.githubusercontent.com/zarva6596/zarva6596.github.io/master/mail/img/3.png" 
                                           alt="post photo"
                                        >
                                     </td>
             
-                                    <td width="50%" class="posts__text">
+                                    <td class="posts__text">
                                        <p
-                                          style="font-family: 'Montserrat', sans-serif;font-weight: 300; font-size: 10px; line-height: 12px; color: #C1C8CE; padding-bottom: 5px;"
+                                          class="posts__data"
+                                          style="font-family: 'Montserrat', sans-serif;"
                                        >
                                           01 Января, 2021
                                        </p>
                                        <h4
-                                          style="font-family: 'Montserrat', sans-serif;font-weight: 600;font-size: 14px;line-height: 17px;color: #22262A;padding-bottom: 5px;"
+                                          class="posts__title"
+                                          style="font-family: 'Montserrat', sans-serif;"
                                        >
-                                          Почему не все могут продавать онлайн? . . .
+                                          Внедрение инноваций . . . 
                                        </h4>
                                        <p
-                                          style="font-family: 'Montserrat', sans-serif;font-weight: normal;font-size: 10px;line-height: 157.9%;color: #22262A;padding-bottom: 14px;"
+                                          class="posts__paragraph"
+                                          style="font-family: 'Montserrat', sans-serif;"
                                        >
-                                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                       «Лидеры отрасли должны рассматривать затраты,
+                                       необходимые для внедрения технологий, как вложение, а не как расходы.»
                                        </p>
                                        <a 
                                           href="#"
@@ -501,28 +580,74 @@
                            <td class="posts__item">
                               <table>
                                  <tr>
-                                    <td width="50%" class="posts__photo">
-                                       <img
+                                    <td class="posts__photo">
+                                       <img 
                                           src="https://raw.githubusercontent.com/zarva6596/zarva6596.github.io/master/mail/img/4.png" 
                                           alt="post photo"
                                        >
                                     </td>
             
-                                    <td width="50%" class="posts__text">
+                                    <td class="posts__text">
                                        <p
-                                          style="font-family: 'Montserrat', sans-serif;font-weight: 300; font-size: 10px; line-height: 12px; color: #C1C8CE; padding-bottom: 5px;"
+                                          class="posts__data"
+                                          style="font-family: 'Montserrat', sans-serif;"
                                        >
                                           01 Января, 2021
                                        </p>
                                        <h4
-                                          style="font-family: 'Montserrat', sans-serif;font-weight: 600;font-size: 14px;line-height: 17px;color: #22262A;padding-bottom: 5px;"
+                                          class="posts__title"
+                                          style="font-family: 'Montserrat', sans-serif;"
+                                       >
+                                          Почему не все могут продавать онлайн? . . .
+                                       </h4>
+                                       <p
+                                          class="posts__paragraph"
+                                          style="font-family: 'Montserrat', sans-serif;"
+                                       >
+                                          Во время пандемии навык продажи через онлайн сервисы начал цениться как никогда,
+                                          но факт в том, что подход для офлайн продаж отличается от продаж онлайн.
+                                       </p>
+                                       <a 
+                                          href="#"
+                                          style="font-family: 'Montserrat', sans-serif; display: inline-block;font-weight: 600;font-size: 10px;line-height: 150%;letter-spacing: 0.17em;color: #CD2020;padding-top: 4px;padding-right: 13px;padding-bottom: 4px;padding-left: 13px;border: 1px solid #cd2020;text-decoration: none;"
+                                       >
+                                          ПЕРЕЙТИ
+                                       </a>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </td>
+                        </tr>
+
+                        <tr>
+                           <td class="posts__item">
+                              <table>
+                                 <tr>
+                                    <td class="posts__photo">
+                                       <img
+                                          src="https://raw.githubusercontent.com/zarva6596/zarva6596.github.io/master/mail/img/5.png" 
+                                          alt="post photo"
+                                       >
+                                    </td>
+            
+                                    <td class="posts__text">
+                                       <p
+                                          class="posts__data"
+                                          style="font-family: 'Montserrat', sans-serif;"
+                                       >
+                                          01 Января, 2021
+                                       </p>
+                                       <h4
+                                          class="posts__title"
+                                          style="font-family: 'Montserrat', sans-serif;"
                                        >
                                           Что не так с вашей презентацией? . . .
                                        </h4>
                                        <p
-                                          style="font-family: 'Montserrat', sans-serif;font-weight: normal;font-size: 10px;line-height: 157.9%;color: #22262A;padding-bottom: 14px;"
+                                          class="posts__paragraph"
+                                          style="font-family: 'Montserrat', sans-serif;"
                                        >
-                                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                          Неужели она не настолько хороша как Вы думаете?
                                        </p>
                                        <a 
                                           href="#"
@@ -546,7 +671,8 @@
                      style="padding-top: 10px;padding-bottom: 10px;"
                   >
                      <p
-                        style="font-family: 'Montserrat', sans-serif; font-size: 8px;line-height: 13px;color: #FFFFFF;" 
+                        class="media__text"
+                        style="font-family: 'Montserrat', sans-serif;" 
                      >
                         Следите за нами в социальных сетях
                      </p>
@@ -574,6 +700,37 @@
                            src="https://raw.githubusercontent.com/zarva6596/zarva6596.github.io/master/mail/img/instagram.png" 
                            alt="instagram icon"
                         >
+                     </a>
+                  </td>
+               </tr>
+
+               <tr>
+                  <td 
+                     bgcolor="#cd2020"
+                     align="center"
+                     style="padding-top: 10px;"
+                  >
+                     <p
+                        class="media__text"
+                        style="font-family: 'Montserrat', sans-serif; font-size: 14px;font-style: italic;" 
+                     >
+                        С уважением, Михаил Гришин
+                     </p>
+                  </td>
+               </tr>
+
+               <tr>
+                  <td
+                     bgcolor="#cd2020"
+                     align="center"
+                     style="padding-top: 10px;padding-bottom: 10px;"
+                  >
+                     <a 
+                        href="tel:380 67 440 0151"
+                        style="font-family: 'Montserrat', sans-serif;text-decoration: none;font-style: italic;"
+                        class="media__text"
+                     >
+                        +380 67 440 0151
                      </a>
                   </td>
                </tr>
