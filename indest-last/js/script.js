@@ -139,3 +139,29 @@ $('.header__mobile').on('click', function () {
       $(this).children('p').text('Close');
    }
 });;
+
+$(window).on('load resize', function () {
+   if ($(window).width() < 1000) {
+      let postsItem = $('.posts__item');
+
+      for (let i = 0; i < postsItem.length; i++) {
+         $(postsItem[i]).find('.post__photo--mobile').append($(postsItem[i]).find('.post__photo a'));
+         console.log(postsItem[i]);
+      }
+   } else {
+      let postsItem = $('.posts__item');
+
+      for (let i = 0; i < postsItem.length; i++) {
+         $(postsItem[i]).find('.post__photo').append($(postsItem[i]).find('.post__photo--mobile a'));
+         console.log(postsItem[i]);
+      }
+   }
+});
+
+$(window).on('load resize', function () {
+   if ($(window).width() < 600) {
+         $('.contacts__mobile').append($('.contacts__row'));
+   } else {
+      $('.contacts__desktop').append($('.contacts__row'));
+   }
+});
