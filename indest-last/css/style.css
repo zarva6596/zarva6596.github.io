@@ -2999,6 +2999,96 @@ header .logIn:hover::before {
   top: 100%;
 }
 
+.textPage {
+  padding-right: calc((100vw - 1260px) / 2);
+  padding-left: calc((100vw - 1260px) / 2);
+  overflow: hidden;
+}
+
+.textPage h2 {
+  color: #000;
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.textPage h3 {
+  color: #000;
+  font-weight: bold;
+  line-height: 1.5;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.textPage h3::before {
+  content: "";
+  height: 1px;
+  width: 100vw;
+  background-color: #d8d8d8;
+  position: absolute;
+  left: calc(100% + 20px);
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.textPage h3::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: calc(100vw - (100vw - 1260px));
+}
+
+.textPage p {
+  color: #000;
+  line-height: 1.42;
+  margin-bottom: 20px;
+}
+
+.textPage .color-text {
+  font-weight: bold;
+}
+
+.textPage li {
+  margin-bottom: 20px;
+  color: #000;
+  line-height: 1.42;
+  position: relative;
+  padding-left: 10px;
+}
+
+.textPage li::before {
+  content: "";
+  height: 4px;
+  width: 4px;
+  background-color: #2585ff;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.textPage ol {
+  margin-bottom: 20px;
+  color: #000;
+  line-height: 1.42;
+  padding-left: 0;
+}
+
+.textPage a {
+  color: #2585ff;
+  text-decoration: underline;
+}
+
 @media (min-width: 767px) {
   .main-heading {
     font-size: calc(24px + 26 * (100vw / 1440));
@@ -3574,6 +3664,46 @@ header .logIn:hover::before {
   .steps__photo__item {
     height: calc(187px + 113 * (100vw / 1440));
   }
+
+  .textPage {
+    padding-top: calc(100px + 73 * (100vw / 1440));
+  }
+
+  .textPage {
+    padding-bottom: calc(50px + 30 * (100vw / 1440));
+  }
+
+  .textPage h2 {
+    font-size: calc(14px + 6 * (100vw / 1440));
+  }
+
+  .textPage h2 {
+    margin-bottom: calc(10px + 10 * (100vw / 1440));
+  }
+
+  .textPage h3 {
+    margin-bottom: calc(0px + 13 * (100vw / 1440));
+  }
+
+  .textPage h3 {
+    font-size: calc(14px + 6 * (100vw / 1440));
+  }
+
+  .textPage p {
+    font-size: calc(12px + 4 * (100vw / 1440));
+  }
+
+  .textPage ul {
+    margin-bottom: calc(30px + 10 * (100vw / 1440));
+  }
+
+  .textPage li {
+    font-size: calc(12px + 4 * (100vw / 1440));
+  }
+
+  .textPage ol {
+    font-size: calc(12px + 4 * (100vw / 1440));
+  }
 }
 
 @media (max-width: 1365px) {
@@ -3599,6 +3729,15 @@ header .logIn:hover::before {
   .header::after {
     width: calc(100% - 60px);
     left: 30px;
+  }
+
+  .textPage {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .textPage h3::after {
+    left: calc(100vw - 60px);
   }
 }
 
@@ -4518,6 +4657,46 @@ header .logIn:hover::before {
   .steps__photo__item {
     height: calc(187px + 192.1 * ((100vw - 370px) / 1440));
   }
+
+  .textPage {
+    padding-top: calc(100px + 124.1 * ((100vw - 370px) / 1440));
+  }
+
+  .textPage {
+    padding-bottom: calc(50px + 51 * ((100vw - 370px) / 1440));
+  }
+
+  .textPage h2 {
+    font-size: calc(14px + 10.2 * ((100vw - 370px) / 1440));
+  }
+
+  .textPage h2 {
+    margin-bottom: calc(10px + 17 * ((100vw - 370px) / 1440));
+  }
+
+  .textPage h3 {
+    margin-bottom: calc(0px + 22.1 * ((100vw - 370px) / 1440));
+  }
+
+  .textPage h3 {
+    font-size: calc(14px + 10.2 * ((100vw - 370px) / 1440));
+  }
+
+  .textPage p {
+    font-size: calc(12px + 6.8 * ((100vw - 370px) / 1440));
+  }
+
+  .textPage ul {
+    margin-bottom: calc(30px + 17 * ((100vw - 370px) / 1440));
+  }
+
+  .textPage li {
+    font-size: calc(12px + 6.8 * ((100vw - 370px) / 1440));
+  }
+
+  .textPage ol {
+    font-size: calc(12px + 6.8 * ((100vw - 370px) / 1440));
+  }
 }
 
 @media (max-width: 760px) {
@@ -4867,6 +5046,10 @@ header .logIn:hover::before {
 
   .steps__photo__item:last-of-type span {
     display: none;
+  }
+
+  .textPage h3::after {
+    left: calc(100vw - 30px);
   }
 }
 
