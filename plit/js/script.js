@@ -96,6 +96,48 @@ $('.products-slider__slider').slick({
        },
    ],
 });;
+$(window).on('load resize', function() {
+   if ($(window).width() < 1201) {
+      $('.plit .plit__text--mobile').append($('.plit .plit__text p:nth-of-type(2)'));
+      $('.plit .plit__text--mobile').append($('.plit .plit__button'));
+   } else {
+      $('.plit .plit__text').append($('.plit .plit__text--mobile p'));
+      $('.plit .plit__text').append($('.plit .plit__text--mobile .plit__button'));
+   }
+});;
+$(window).on('load resize', () => {
+   if ($(window).width() < 768) {
+      $('.card .card__button a span:last-of-type').text('В кошик');
+   } else {
+      $('.card .card__button a span:last-of-type').text('Додати в кошик');
+   }
+});
+$(document).on('click', function (e) {
+   if (e.target === $('.catalog__select p')[0]) {
+      $(e.target).parent().toggleClass('catalog__select--active');
+      $('.catalog__select ul').slideToggle();
+   } else {
+      $('.catalog__select').removeClass('catalog__select--active');
+      $('.catalog__select ul').slideUp();
+   }
+});
+
+$('.catalog__select li').on('click', function () {
+   let text = $(this).text();
+
+   console.log(text);
+
+   $('.catalog__select p').text(text);
+});;
+$(window).on('load resize', function () {
+   if($(window).width() < 1200) {
+      $('.catalog__mobile').append($('.catalog__filter'));
+      $('.catalog__mobile').append($('.catalog__sort'));
+   } else {
+      $('.catalog__head').append($('.catalog__sort'));
+      $('.catalog__siteBar').append($('.catalog__filter'));
+   }
+});;
 
 $(window).on('load resize', function () {
    if ($(window).width() < 769) {
