@@ -122,17 +122,17 @@ function visibilityButton () {
       });
    }
 
-   if (n2 <= 2) {
-      $('.sub-sub-menu__button').css({
-         'visibility': 'hidden',
-         'opacity': '0'
-      })
-   } else {
-      $('.sub-sub-menu__button').css({
-         'visibility': 'visible',
-         'opacity': '1',
-      });
-   }
+   // if (n2 <= 2) {
+   //    $('.sub-sub-menu__button').css({
+   //       'visibility': 'hidden',
+   //       'opacity': '0'
+   //    })
+   // } else {
+   //    $('.sub-sub-menu__button').css({
+   //       'visibility': 'visible',
+   //       'opacity': '1',
+   //    });
+   // }
 }
 
 $('.sub-sub-menu__button--next').on('click', function () {
