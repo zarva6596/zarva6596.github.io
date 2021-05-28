@@ -207,3 +207,7 @@ $(window).on('load resize', function() {
       $('.newPortfolioNav__mobileBtn').append($('.newPortfolioNav__button'));
    }
 });;
+$('.ourTeam__slider').slick({
+   slidesToShow: 3,
+   centerMode: true,
+});;
