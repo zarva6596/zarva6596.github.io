@@ -13,6 +13,8 @@ $('.newHeader__burgerBtn').on('click', function () {
       $(newHeaderBigMenuItems[i]).children('span').text(`0${i + 1}`);
    }
 
+   $('.lang__list').toggleClass('lang__list--active');
+
    $('.bigMenu').toggleClass('bigMenu--active');
    
    if ($(this).hasClass('burgerBtn--active')) {
@@ -149,44 +151,46 @@ $('.newPostCarousel__slider').slick({
    ]
 });;
 $(window).on('load resize', function () {
-   let choosePhotoItem = $('.newChoose__photoItem');
+   if ($('main').children().hasClass('newChoose')) {
+      let choosePhotoItem = $('.newChoose__photoItem');
 
-   let firstTop = 263;
-   let firstTopMob = $(choosePhotoItem[0]).position().top;
+      let firstTop = 263;
+      let firstTopMob = $(choosePhotoItem[0]).position().top;
 
-   for (let i = 0; i < choosePhotoItem.length; i++) {
-      if ($(window).width() > 1024) {
-         let sidePadding = i === 0 || i=== 1 || (i % 2 === 0 && i % 3 !== 0 && i % 6 !== 0 && i !== 2)
-         ? '20vw' : i % 3 === 0 || i % 6 === 0 ? '25vw'
-         : '17vw';
+      for (let i = 0; i < choosePhotoItem.length; i++) {
+         if ($(window).width() > 1024) {
+            let sidePadding = i === 0 || i=== 1 || (i % 2 === 0 && i % 3 !== 0 && i % 6 !== 0 && i !== 2)
+            ? '20vw' : i % 3 === 0 || i % 6 === 0 ? '25vw'
+            : '17vw';
 
-         i % 2 === 0 
-            ? $(choosePhotoItem[i]).css('right', sidePadding) 
-            : $(choosePhotoItem[i]).css('left', sidePadding);
-
-         $(choosePhotoItem[i]).css({
-            'top': `${firstTop}px`,
-            'z-index': '0'
-         });
-
-         firstTop += (i % 2 === 0) ? 160 : 320;
-      } else {
-         i % 2 === 0
-            ? $(choosePhotoItem[i]).css('left', '0')
-            : $(choosePhotoItem[i]).css('right', '0');
+            i % 2 === 0 
+               ? $(choosePhotoItem[i]).css('right', sidePadding) 
+               : $(choosePhotoItem[i]).css('left', sidePadding);
 
             $(choosePhotoItem[i]).css({
-               'top': `${firstTopMob}px`,
+               'top': `${firstTop}px`,
                'z-index': '0'
             });
-   
-            firstTopMob += i === 0
-               ? $(choosePhotoItem[i]).height() + 8
-               : i === 1 ? $(choosePhotoItem[i]).height() + 157
-               : i === 2 ? $(choosePhotoItem[i]).height() + 67
-               : i === 3 ? $(choosePhotoItem[i]).height() + 70
-               : i === 4 ? $(choosePhotoItem[i]).height() - 16
-               : $(choosePhotoItem[i]).height() + 160;
+
+            firstTop += (i % 2 === 0) ? 160 : 320;
+         } else {
+            i % 2 === 0
+               ? $(choosePhotoItem[i]).css('left', '0')
+               : $(choosePhotoItem[i]).css('right', '0');
+
+               $(choosePhotoItem[i]).css({
+                  'top': `${firstTopMob}px`,
+                  'z-index': '0'
+               });
+            
+               firstTopMob += i === 0
+                  ? $(choosePhotoItem[i]).height() + 8
+                  : i === 1 ? $(choosePhotoItem[i]).height() + 157
+                  : i === 2 ? $(choosePhotoItem[i]).height() + 67
+                  : i === 3 ? $(choosePhotoItem[i]).height() + 70
+                  : i === 4 ? $(choosePhotoItem[i]).height() - 16
+                  : $(choosePhotoItem[i]).height() + 160;
+         }
       }
    }
 });;
@@ -237,6 +241,21 @@ $('.newPortfolio__subMenu').slick({
    variableWidth: true,
    infinite: false,
    dots: true,
+   responsive: [
+      {
+         breakpoint: 751,
+         settings: {
+            slidesToShow: 2,
+         }
+      },
+      {
+         breakpoint: 470,
+         settings: {
+            rows: 3,
+            slidesToShow: 1,
+         }
+      }
+   ]
 });
 
 let portfolioItem = $('.newPortfolio__menu-item');
@@ -254,3 +273,9 @@ $('.newPortfolio__content').mouseleave(function () {
 
    $(portfolioItem[0]).addClass('newPortfolio__menu-item--active');
 });;
+
+$(window).on('load resize', function() {
+   if ($(window).width() < 769) {
+      $('.map').prepend($('.newContacts__row:nth-child(3)'));
+   }
+});
