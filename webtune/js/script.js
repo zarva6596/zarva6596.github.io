@@ -273,6 +273,13 @@ $('.newPortfolio__content').mouseleave(function () {
 
    $(portfolioItem[0]).addClass('newPortfolio__menu-item--active');
 });;
+$(window).on('load resize', function () {
+   if ($(window).width() < 600) {
+      $('.newAtWork__content').append($('.newAtWork__list'));
+   } else {
+      $('.newAtWork__row:first-child').append($('.newAtWork__list'));
+   }
+});;
 
 $(window).on('load resize', function() {
    if ($(window).width() < 769) {
