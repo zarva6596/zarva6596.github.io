@@ -61,6 +61,10 @@ body {
           justify-content: space-between;
 }
 
+.body--noScroll {
+  overflow: hidden;
+}
+
 main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -595,7 +599,7 @@ h2,
 }
 
 .newHeader .bigMenu__background {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   height: 100%;
@@ -7175,6 +7179,19 @@ h2,
 }
 
 @media (max-width: 600px) {
+  .newHeader .bigMenu__content {
+    height: calc(100vh - 130px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 30px;
+  }
+
+  .newHeader .bigMenu__content .newHeader__contactBtn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
   .newSingleHead {
     min-height: 100vh;
   }
@@ -7498,6 +7515,25 @@ h2,
   .greatClients__list {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+  }
+}
+
+@media (max-width: 475px) {
+  .newPortfolio__subMenu {
+    display: none;
+  }
+
+  .newPortfolio__subMenu-item {
+    position: relative;
+    border-bottom: 2px solid rgba(132, 132, 132, 0.38);
+  }
+
+  .newPortfolio__subMenu-item:not(.newPortfolio__subMenu-item:first-child) {
+    background-color: #1d153d;
+  }
+
+  .newPortfolio__menu-item:first-child .newPortfolio__subMenu {
+    display: block;
   }
 }
 
