@@ -393,19 +393,22 @@ $(window).on('load', function () {
       infinite: false,
       dots: true,
       swipe: false,
+      adaptiveHeight: true,
    });
 
    $('.slick-prev').text('Крок назад');
    $('.slick-next').text('Наступний крок');
 });
 
-$('.oneClick__button, .newHead__contactBtn').on('click', function () {
+$('.oneClick__button, .newHead__contactBtn, .newHeader__contactBtn').on('click', function () {
+   $('.newHeader__bigMenu').removeClass('bigMenu--active')
+
    $('header').addClass('newHeader--scroll');
    $('.newBrief__content').append($('.newHead__links'));
-   $('.newBrief').toggleClass('newBrief--active');
+   $('.newBrief').addClass('newBrief--active');
    $('.newHeader__burgerBtn').addClass('burgerBtn--active');
-   $('body').toggleClass('noScroll');
-   $('html').toggleClass('noScroll');
+   $('body').addClass('noScroll');
+   $('html').addClass('noScroll');
    $('.newHeader__content').css('background-color', '#1d153dfa');
 
    if ($('.newHeader__burgerBtn').hasClass('burgerBtn--active')) {
