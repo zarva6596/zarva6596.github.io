@@ -63,6 +63,8 @@
       </div>
 
       <div class="bigMenu__content content">
+         <span class="bigMenu__title">Menu</span>
+
          <nav class="newHeader__bigNav bigNav">
             <div class="bigNav__title">
                Services
@@ -283,6 +285,273 @@
                   </a>
                </li>
             </ul>
+         </div>
+      </div>
+   </div>
+
+   <div class="newHeader__newBrief newBrief">
+      <div class="newBrief__content">
+         <span class="bigMenu__title">Бриф</span>
+
+         <div class="newBrief__title">
+            Заповніть нашу коротку анкету
+         </div>
+         
+         <form action="">
+            <div class="newBrief__form">
+               <div class="newBrief__container">
+                  <div class="newBrief__form__title">
+                     Яка послуга вас цікавить?
+                  </div>
+
+                  <div class="newBrief__form__text">
+                     Оберіть одну чи декілька послуг, які Вам цікаві
+                  </div>
+
+                  <div class="newBrief__form__checkboxes">
+                     <div class="newBrief__form__checkbox">
+                        <input 
+                           type="checkbox" 
+                           name="brief_design[]" 
+                           value="UX/UI Дизайн" 
+                           id="brief-service-1"
+                        >
+                        <label for="brief-service-1">UX/UI Дизайн</label>
+
+                        <span></span>
+                        <span></span>
+                     </div>
+                     
+                     <div class="newBrief__form__checkbox">
+                        <input 
+                           type="checkbox" 
+                           name="brief_web" 
+                           value="Розробка сайту" 
+                           id="brief-service-2"
+                        >
+                        <label for="brief-service-2">Розробка сайту</label>
+                        
+                        <span></span>
+                        <span></span>
+                     </div>
+                     
+                     <div class="newBrief__form__checkbox">
+                        <input 
+                           type="checkbox" 
+                           name="brief_uniqueStyle" 
+                           value="Розробка логотипу та фірмового стилю" 
+                           id="brief-service-3"
+                        >
+                        <label for="brief-service-3">Розробка логотипу та фірмового стилю</label>
+
+                        <span></span>
+                        <span></span>
+                     </div>
+      
+                     <div class="newBrief__form__checkbox">
+                        <input 
+                           type="checkbox" 
+                           name="brief_ad" 
+                           value="Таргетована та контекстна реклама" 
+                           id="brief-service-4"
+                        >
+                        <label for="brief-service-4">
+                           Таргетована та контекстна реклама
+                        </label>
+                        
+                        <span></span>
+                        <span></span>
+                     </div>
+                     
+                     <div class="newBrief__form__checkbox">
+                        <input 
+                           type="checkbox" 
+                           name="brief_smm" 
+                           value="SMM Просування" 
+                           id="brief-service-5"
+                        >
+                        <label for="brief-service-5">SMM Просування</label>
+                        
+                        <span></span>
+                        <span></span>
+                     </div>
+                     
+                     <div class="newBrief__form__checkbox">
+                        <input 
+                           type="checkbox" 
+                           name="brief_seo" 
+                           value="SEO Просування" 
+                           id="brief-service-6"
+                        >
+                        <label for="brief-service-6">SEO Просування</label>
+                        
+                        <span></span>
+                        <span></span>
+                     </div>
+                     
+                     <div class="newBrief__form__checkbox">
+                        <input 
+                           type="checkbox" 
+                           name="brief_mobileApp" 
+                           value="Розробка мобільного додатку" 
+                           id="brief-service-7"
+                        >
+                        <label for="brief-service-7">Розробка мобільного додатку</label>
+                        
+                        <span></span>
+                        <span></span>
+                     </div>
+                  </div>
+
+                  <div class="newBrief__form__title">
+                     Який бюджет проекту? ($)
+                  </div>
+
+                  <div class="newBrief__form__prices">
+                     <div class="newBrief__form__price">
+                        <input type="text" id="startprice">
+                        <label for="startprice">Від:</label>
+                     </div>
+
+                     <div class="newBrief__form__price">
+                        <input type="text" id="endprice">
+                        <label for="endprice">До:</label>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="newBrief__container">
+                  <div class="newBrief__row">
+                     <div class="newBrief__column">
+                        <div class="newBrief__form__title">
+                           Терміни для запуску проекту?
+                        </div>
+
+                        <div class="newBrief__radioButtons">
+                           <div class="newBrief__radioButton">
+                              <input type="radio" name="time" id="lotTime">
+                              <label for="lotTime">Не поспішаємо</label>
+                           </div>
+
+                           <div class="newBrief__radioButton">
+                              <input type="radio" name="time" id="anyTime">
+                              <label for="anyTime">Терміново</label>
+                           </div>
+
+                           <div class="newBrief__radioButton">
+                              <input type="radio" name="time" id="someTime">
+                              <label for="someTime">Необхідно зробити до</label>
+                              <input type="date">
+                           </div>
+                        </div>
+                     </div>
+   
+                     <div class="newBrief__column">
+                        <div class="newBrief__form__title">
+                           Звідки ви дізналися про нас?
+                        </div>
+
+                        <div class="newBrief__radioButtons">
+                           <div class="newBrief__radioButton">
+                              <input type="radio" name="where" id="searchG">
+                              <label for="searchG">Пошукова видача</label>
+                           </div>
+
+                           <div class="newBrief__radioButton">
+                              <input type="radio" name="where" id="marketingG">
+                              <label for="marketingG">Реклама в Google</label>
+                           </div>
+
+                           <div class="newBrief__radioButton">
+                              <input type="radio" name="where" id="sicialNetworks">
+                              <label for="sicialNetworks">Соціальні мережі</label>
+                           </div>
+
+                           <div class="newBrief__radioButton">
+                              <input type="radio" name="where" id="recomented">
+                              <label for="recomented">Рекомендації</label>
+                           </div>
+
+                           <div class="newBrief__radioButton">
+                              <input type="radio" name="where" id="other">
+                              <label for="other">Інше</label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="newBrief__form__title">
+                     Ваше технічне завдання (якщо воно є)
+                  </div>
+
+                  <div class="newBrief__form__file">
+                     <input 
+                        type="file" 
+                        name="" 
+                        id="newBriefFile"
+                     >
+                     <label for="newBriefFile">Ваш файл</label>
+                     <span></span>
+                  </div>
+               </div>
+
+               <div class="newBrief__container">
+                  <div class="newBrief__form__title">
+                     Вкажіть свої контактні дані.
+                  </div>
+
+                  <div class="newBrief__form__text">
+                     Поле з зірочкою (*) є обовязковим!
+                  </div>
+
+                  <div class="newBrief__form__prices newBrief__form__personalInfo">
+                     <div class="newBrief__form__price">
+                        <input type="text" id="name" required>
+                        <label for="name">Ваше ім'я</label>
+                     </div>
+
+                     <div class="newBrief__form__price">
+                        <input type="text" id="phone" required>
+                        <label for="phone">Телефон</label>
+                     </div>
+
+                     <div class="newBrief__form__price">
+                        <input type="email" id="email" required>
+                        <label for="email">Email</label>
+                     </div>
+
+                     <div class="newBrief__form__price">
+                        <input type="text" id="site">
+                        <label for="site">Ваш сайт (якщо є)</label>
+                     </div>
+
+                     <div class="newBrief__form__price">
+                        <input type="text" id="sphere">
+                        <label for="sphere">Сфера діяльності</label>
+                     </div>
+
+                     <div class="newBrief__form__price">
+                        <input type="text" id="whereFrom">
+                        <label for="whereFrom">Звідки ви</label>
+                     </div>
+                  </div>
+
+                  <div class="newBrief__form__price newBrief__form__textarea">
+                     <textarea name="" id="message" cols="30" rows="10"></textarea>
+                     <label for="message">Ваше повідомлення</label>
+                  </div>
+
+                  <div class="newBrief__form__button newButton">
+                     <input type="submit" value="Надіслати">
+                     <span></span>
+                     <span></span>
+                  </div>
+               </div>
+            </div>
+         </form>
+
+         <div class="newBrief__copyright">
+            @WebTune 2021
          </div>
       </div>
    </div>
@@ -1017,6 +1286,134 @@
 
          <div class="newPostCarousel__right">
             <div class="newPostCarousel__slider">
+               <div class="newPostCarousel__item">
+                  <div class="newPostCarousel__photo">
+                     <img src="./img/postCarousel1.png" alt="">
+                  </div>
+   
+                  <a href="#" class="newPostCarousel__info">
+                     <div class="newPostCarousel__title">
+                        UX/UI Паттерны и их огромная значимость в интерфейсах
+                     </div>
+      
+                     <div class="newPostCarousel__paragraph">
+                        В наше время интернет-магазины становятся все более 
+                        распространенным, так как люди современного поколения
+                     </div>
+      
+                     <div class="newPostCarousel__date">
+                        June 05/ 2019
+                     </div>
+                  </a>
+               </div>
+
+               <div class="newPostCarousel__item">
+                  <div class="newPostCarousel__photo">
+                     <img src="./img/postCarousel2.png" alt="">
+                  </div>
+   
+                  <a href="#" class="newPostCarousel__info">
+                     <div class="newPostCarousel__title">
+                        UX/UI Паттерны и их огромная значимость в интерфейсах
+                     </div>
+      
+                     <div class="newPostCarousel__paragraph">
+                        В наше время интернет-магазины становятся все более 
+                        распространенным, так как люди современного поколения
+                     </div>
+      
+                     <div class="newPostCarousel__date">
+                        June 05/ 2019
+                     </div>
+                  </a>
+               </div>
+
+               <div class="newPostCarousel__item">
+                  <div class="newPostCarousel__photo">
+                     <img src="./img/postCarousel3.png" alt="">
+                  </div>
+   
+                  <a href="#" class="newPostCarousel__info">
+                     <div class="newPostCarousel__title">
+                        UX/UI Паттерны и их огромная значимость в интерфейсах
+                     </div>
+      
+                     <div class="newPostCarousel__paragraph">
+                        В наше время интернет-магазины становятся все более 
+                        распространенным, так как люди современного поколения
+                     </div>
+      
+                     <div class="newPostCarousel__date">
+                        June 05/ 2019
+                     </div>
+                  </a>
+               </div>
+
+               <div class="newPostCarousel__item">
+                  <div class="newPostCarousel__photo">
+                     <img src="./img/postCarousel1.png" alt="">
+                  </div>
+   
+                  <a href="#" class="newPostCarousel__info">
+                     <div class="newPostCarousel__title">
+                        UX/UI Паттерны и их огромная значимость в интерфейсах
+                     </div>
+      
+                     <div class="newPostCarousel__paragraph">
+                        В наше время интернет-магазины становятся все более 
+                        распространенным, так как люди современного поколения
+                     </div>
+      
+                     <div class="newPostCarousel__date">
+                        June 05/ 2019
+                     </div>
+                  </a>
+               </div>
+
+               <div class="newPostCarousel__item">
+                  <div class="newPostCarousel__photo">
+                     <img src="./img/postCarousel2.png" alt="">
+                  </div>
+   
+                  <a href="#" class="newPostCarousel__info">
+                     <div class="newPostCarousel__title">
+                        UX/UI Паттерны и их огромная значимость в интерфейсах
+                     </div>
+      
+                     <div class="newPostCarousel__paragraph">
+                        В наше время интернет-магазины становятся все более 
+                        распространенным, так как люди современного поколения
+                     </div>
+      
+                     <div class="newPostCarousel__date">
+                        June 05/ 2019
+                     </div>
+                  </a>
+               </div>
+
+               <div class="newPostCarousel__item">
+                  <div class="newPostCarousel__photo">
+                     <img src="./img/postCarousel3.png" alt="">
+                  </div>
+   
+                  <a href="#" class="newPostCarousel__info">
+                     <div class="newPostCarousel__title">
+                        UX/UI Паттерны и их огромная значимость в интерфейсах
+                     </div>
+      
+                     <div class="newPostCarousel__paragraph">
+                        В наше время интернет-магазины становятся все более 
+                        распространенным, так как люди современного поколения
+                     </div>
+      
+                     <div class="newPostCarousel__date">
+                        June 05/ 2019
+                     </div>
+                  </a>
+               </div>
+            </div>
+
+            <div class="newPostCarousel__slider--small">
                <div class="newPostCarousel__item">
                   <div class="newPostCarousel__photo">
                      <img src="./img/postCarousel1.png" alt="">
