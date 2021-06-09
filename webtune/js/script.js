@@ -131,28 +131,23 @@ $(document).scroll(function() {
       // $('.header__mobile').removeClass('newHeader__mobile--out');
    }
 
+   if ($(document).scrollTop() >= 50) {
+      $('.arrowUp').css('left', 'calc(100% - 50px)');
+   } else {
+      $('.arrowUp').css('left', '100%');
+   }
+
    scrollPrev = scrolled;
 });
 
-// $('.header__mobile').click(function() {
-//    if (!$('.header').hasClass('header--scroll')) {
-//       $('.header').addClass('header--scroll');
-//    } else if ($('.header').hasClass('header--scroll') && $(document).scrollTop() < 100) {
-//       $('.header').removeClass('header--scroll');
-//    }
-
-//    $('.header__navBar').toggleClass('header__navBar--active');
-//    $('.header__mobile').toggleClass('header__mobile--active');
-//    $('.header__logo').toggleClass('header__logo--active');
-
-//    let mobileText = $('.header__mobile p').text();
-
-//    if (mobileText === 'menu') {
-//       $('.header__mobile p').text('close');
-//    } else {
-//       $('.header__mobile p').text('menu');
-//    }
-// });;
+$(window).on('load resize', function () {
+   if ($('main').hasClass('contacts-main')
+      && $(window).width() > 1000) {
+      $('body').addClass('noScroll');
+   } else {
+      $('body').removeClass('noScroll');
+   }
+});;
 $('.newPostCarousel__slider').slick({
    variableWidth: true,
    dots: false,
