@@ -418,3 +418,11 @@ $(window).on('load resize', function() {
       $('.map').prepend($('.newContacts__row:nth-child(3)'));
    }
 });
+
+if ((navigator.userAgent.match(/iPhone/))) {
+   alert('iphone');
+}
+
+if (navigator.userAgent.match(/Android/)) {
+   alert('Android');
+}
