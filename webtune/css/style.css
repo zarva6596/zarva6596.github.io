@@ -569,7 +569,7 @@ h2,
 
 .newHeader .bigMenu__content .newHeader__contactBtn {
   margin-top: 20px;
-  top: 20px;
+  top: 50px;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -2977,7 +2977,6 @@ h2,
   position: relative;
 }
 
-.newBlog__item a::before,
 .newBlog__item a::after {
   z-index: 0;
   content: "";
@@ -2989,15 +2988,6 @@ h2,
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
-}
-
-.newBlog__item a::before {
-  z-index: 1;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.1)), color-stop(42.38%, rgba(255, 255, 255, 0.015)), color-stop(96.35%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
-  background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.015) 42.38%, rgba(255, 255, 255, 0) 96.35%, rgba(255, 255, 255, 0) 100%);
-  background: linear-gradient(360deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.015) 42.38%, rgba(255, 255, 255, 0) 96.35%, rgba(255, 255, 255, 0) 100%);
-  -webkit-backdrop-filter: blur(35px);
-          backdrop-filter: blur(35px);
 }
 
 .newBlog__item a::after {
@@ -7166,6 +7156,10 @@ h2,
 }
 
 @media (max-width: 1340px) {
+  .newHeader .bigMenu .newHeader__bottomNav {
+    right: 5vw;
+  }
+
   .content {
     max-width: 90vw;
   }
@@ -9547,7 +9541,6 @@ h2,
        object-position: center right;
   }
 
-  .newBlog__item a::before,
   .newBlog__item a::after {
     height: 100%;
   }
