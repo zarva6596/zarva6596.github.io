@@ -412,6 +412,11 @@ $('.oneClick__button, .newHead__contactBtn, .newHeader__contactBtn').on('click',
       $('.newHeader__burgerBtn').children('span').text('Menu');
    }
 });
+$(window).on('load resize', function () {
+   if ($(window).width() < 700) {
+      $('.newMission__column:first-of-type').after($('.newMission__count'));
+   }
+});;
 
 $(window).on('load resize', function() {
    if ($(window).width() < 769) {
