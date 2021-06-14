@@ -132,9 +132,9 @@ $(document).scroll(function() {
    }
 
    if ($(document).scrollTop() >= 50) {
-      $('.arrowUp').css('left', 'calc(100% - 50px)');
+      $('.arrowUp').css('right', '50px');
    } else {
-      $('.arrowUp').css('left', '100%');
+      $('.arrowUp').css('right', '-100px');
    }
 
    scrollPrev = scrolled;
@@ -418,16 +418,21 @@ $(window).on('load resize', function () {
    }
 });;
 
-$(window).on('load resize', function() {
-   if ($(window).width() < 769) {
-      $('.map').prepend($('.newContacts__row:nth-child(3)'));
-   }
-});
+// $(window).on('load resize', function() {
+//    if ($(window).width() < 769) {
+//       $('.map').prepend($('.newContacts__row:nth-child(3)'));
+//    }
+// });
 
-if ((navigator.userAgent.match(/iPhone/))) {
-   alert('iphone');
-}
+// if ((navigator.userAgent.match(/iPhone/))) {
+//    alert('iphone');
+// }
 
-if (navigator.userAgent.match(/Android/)) {
-   alert('Android');
-}
+// if (navigator.userAgent.match(/Android/)) {
+//    alert('Android');
+// }
+
+$('.newServices__item').on('click', function () {
+   $('.newServices__item').removeClass('newService__item--active');
+   $(this).addClass('newService__item--active');
+})
