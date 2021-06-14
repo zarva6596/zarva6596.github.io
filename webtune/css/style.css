@@ -4632,6 +4632,10 @@ h2,
   z-index: 1;
 }
 
+.newContacts__address .newContacts__title:first-of-type {
+  display: none;
+}
+
 .map {
   position: fixed;
   height: 100vh;
@@ -8116,6 +8120,19 @@ h2,
 
   .newContacts::before {
     display: none;
+  }
+
+  .newContacts__address .newContacts__title:first-of-type {
+    display: block;
+  }
+
+  .newContacts__address .newContacts__title:last-of-type {
+    letter-spacing: 0.035em;
+    line-height: 1;
+    font-size: 24px;
+    color: #fff;
+    text-transform: none;
+    margin-top: 10px;
   }
 
   .map {

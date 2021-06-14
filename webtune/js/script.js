@@ -418,11 +418,11 @@ $(window).on('load resize', function () {
    }
 });;
 
-// $(window).on('load resize', function() {
-//    if ($(window).width() < 769) {
-//       $('.map').prepend($('.newContacts__row:nth-child(3)'));
-//    }
-// });
+$(window).on('load resize', function() {
+   if ($(window).width() < 769) {
+      $('.map').prepend($('.newContacts__address'));
+   }
+});
 
 // if ((navigator.userAgent.match(/iPhone/))) {
 //    alert('iphone');
