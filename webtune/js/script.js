@@ -1,4 +1,6 @@
 $('.newHeader__burgerBtn').on('click', function () {
+   $(document).scrollTop($(document).scrollTop + 20);
+
    if ($('.newBrief').hasClass('newBrief--active')) {
       $('header').removeClass('newHeader--scroll');
       $('.newBrief').removeClass('newBrief--active');

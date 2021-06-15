@@ -4539,6 +4539,10 @@ h2,
   color: #fff;
 }
 
+.newPortfolio__mobileArrows {
+  display: none;
+}
+
 .newContacts::before {
   z-index: 1;
   content: "";
@@ -7512,6 +7516,64 @@ h2,
 @media (max-width: 800px) {
   .newMission__content {
     padding: 0 15px;
+  }
+}
+
+@media (max-width: 769px) {
+  .newPortfolio__mobileArrows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: calc(100% - 30px);
+    left: 15px;
+    bottom: 18px;
+  }
+
+  .newPortfolio__mobileArrows .newPortfolio__prevArrow,
+  .newPortfolio__mobileArrows .newPortfolio__nextArrow {
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 600;
+    letter-spacing: 3px;
+    line-height: 15px;
+    color: #a073ff;
+    position: relative;
+  }
+
+  .newPortfolio__mobileArrows .newPortfolio__prevArrow::after,
+  .newPortfolio__mobileArrows .newPortfolio__nextArrow::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  }
+
+  .newPortfolio__mobileArrows .newPortfolio__prevArrow {
+    padding-left: 20px;
+  }
+
+  .newPortfolio__mobileArrows .newPortfolio__prevArrow::after {
+    left: 0;
+    border-right: 10px solid #a073ff;
+  }
+
+  .newPortfolio__mobileArrows .newPortfolio__nextArrow {
+    padding-right: 20px;
+  }
+
+  .newPortfolio__mobileArrows .newPortfolio__nextArrow::after {
+    right: 0;
+    border-left: 10px solid #a073ff;
+  }
+
+  .newContacts__address {
+    padding-bottom: 0;
   }
 }
 
