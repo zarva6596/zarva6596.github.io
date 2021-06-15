@@ -24,8 +24,13 @@ $('.newHeader__burgerBtn').on('click', function () {
       return;
    }
 
-   $('body').toggleClass('noScroll');
-   $('html').toggleClass('noScroll');
+   // $('body').toggleClass('noScroll');
+   // $('html').toggleClass('noScroll');
+
+   setTimeout(function() {
+      window.scrollTo(0, 1);
+  }, 1000);
+  
    $(this).toggleClass('burgerBtn--active');
    $('.newHeader__bigMenu .content .bigNav .menu .menu-item:first-of-type')
       .addClass('menu-item--active');
