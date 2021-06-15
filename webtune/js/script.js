@@ -494,4 +494,6 @@ $(window).on('load', function() {
       'visibility': 'visible',
       'opacity': '1',
    });
+
+   window.scrollTo(0, 1);
 });
