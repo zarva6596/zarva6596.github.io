@@ -30,7 +30,6 @@ h6,
 button,
 input,
 textarea {
-  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   list-style: none;
