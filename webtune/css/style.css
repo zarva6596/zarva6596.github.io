@@ -2159,6 +2159,8 @@ h2,
 
 .newPostCarousel__content {
   padding: 0 100px;
+  position: relative;
+  z-index: 1;
 }
 
 .newPostCarousel__top {
