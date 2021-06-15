@@ -1,9 +1,9 @@
 $('.newHeader__burgerBtn').on('click', function () {
-   $('html, body').animate({
-      scrollTop: !$('.newBrief').hasClass('newBrief--active') && !$('.bigMenu').hasClass('bigMenu--active')
-         ? $(document).scrollTop() + 200
-         : $(document).scrollTop() - 200,
-   }, 1);
+   // $('html, body').animate({
+   //    scrollTop: !$('.newBrief').hasClass('newBrief--active') && !$('.bigMenu').hasClass('bigMenu--active')
+   //       ? $(document).scrollTop() + 200
+   //       : $(document).scrollTop() - 200,
+   // }, 1);
 
    if ($('.newBrief').hasClass('newBrief--active')) {
       $('header').removeClass('newHeader--scroll');
@@ -81,6 +81,12 @@ $(window).on('load', function () {
    $('.newPortfolioNav .menu__item:first-of-type').addClass('menu__item--active');
    $('.newPortfolioNav .sub-menu__item:first-of-type a')
       .addClass('sub-menu__link--active');
+});
+
+$('.newPortfolioNav__nav .menu .menu__item .menu__row > a').on('click', function(e) {
+   if ($(window).width() < 769) {
+      e.preventDefault();
+   }
 });
 
 $('.newPortfolioNav .menu .menu__item').mouseenter(function () {
@@ -338,14 +344,16 @@ $('.newPortfolio__menu-item > a').on('click', function (e) {
    if ($(window).width() < 476) {
       e.preventDefault();
 
-      $('.newPortfolio__subMenu').slideUp();
-      $(this).next().slideDown();
+      $('.newPortfolio__subMenu').fadeOut();
+      $(this).next().fadeIn();
 
       $('.portfolio-main').next().css({
          'height': '0',
          'top': '0px',
          'overflow': 'hidden',
       });
+
+      $('footer').css('z-index', '-1');
 
       setTimeout(() => {
          $('.portfolio-main').next().css({
@@ -355,6 +363,8 @@ $('.newPortfolio__menu-item > a').on('click', function (e) {
             'width': '100vw',
             'top': `${$(document).height()}px`,
          });
+
+         $('footer').css('z-index', '0');
       }, 500);
    }
 });;
@@ -442,3 +452,10 @@ $('.newServices__item').on('click', function () {
    $('.newServices__item').removeClass('newService__item--active');
    $(this).addClass('newService__item--active');
 })
+
+$(window).on('load', function() {
+   $('.newHeader, .newFooter, .newSection').css({
+      'visibility': 'visible',
+      'opacity': '1',
+   });
+});
