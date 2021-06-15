@@ -5515,7 +5515,7 @@ h2,
   }
 
   .newHeader .bigMenu {
-    padding-top: calc(12px + 183 * (100vw / 1440));
+    padding-top: calc(63px + 132 * (100vw / 1440));
   }
 
   .newHeader .bigMenu {
@@ -8294,7 +8294,7 @@ h2,
   }
 
   .newHeader .bigMenu {
-    padding-top: calc(12px + 311.1 * ((100vw - 320px) / 1440));
+    padding-top: calc(63px + 224.4 * ((100vw - 320px) / 1440));
   }
 
   .newHeader .bigMenu {
@@ -9296,7 +9296,7 @@ h2,
 
 @media (max-width: 600px) {
   .newHeader .bigMenu__content {
-    height: calc(100vh - 130px);
+    height: calc(100vh - 189px);
     overflow-y: auto;
     overflow-x: hidden;
     padding-bottom: 30px;
@@ -9306,7 +9306,7 @@ h2,
   .newHeader .bigMenu__content .newHeader__contactBtn {
     position: absolute;
     left: 0;
-    top: calc(100% - 75px);
+    top: calc(100% - 145px);
   }
 
   .service-page .newServices__list {
@@ -9788,6 +9788,12 @@ h2,
 }
 
 @media (max-width: 475px) {
+  .newHeader .bigMenu {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
   .newPortfolio__subMenu {
     display: none;
   }
