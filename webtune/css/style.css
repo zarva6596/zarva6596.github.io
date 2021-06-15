@@ -89,8 +89,8 @@ h2,
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../../icons/icomoon.eot?6bydc3");
-  src: url("../../icons/icomoon.eot?6bydc3#iefix") format("embedded-opentype"), url("../../icons/icomoon.ttf?6bydc3") format("truetype"), url("../../icons/icomoon.woff?6bydc3") format("woff"), url("../../icons/icomoon.svg?6bydc3#icomoon") format("svg");
+  src: url("../icons/icomoon.eot?6bydc3");
+  src: url("../icons/icomoon.eot?6bydc3#iefix") format("embedded-opentype"), url("../icons/icomoon.ttf?6bydc3") format("truetype"), url("../icons/icomoon.woff?6bydc3") format("woff"), url("../icons/icomoon.svg?6bydc3#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -1119,7 +1119,7 @@ h2,
   content: "";
   height: 60px;
   width: 138px;
-  background-image: url("../../img/oneClickArrow.png");
+  background-image: url("../img/oneClickArrow.png");
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -1257,8 +1257,8 @@ h2,
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: left top;
-     object-position: left top;
+  -o-object-position: left bottom;
+     object-position: left bottom;
 }
 
 .newMission__content {
@@ -3268,7 +3268,7 @@ h2,
   height: 55px;
   width: 69px;
   top: 3px;
-  background-image: url("../../img/commentsBg.png");
+  background-image: url("../img/commentsBg.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -4694,7 +4694,7 @@ h2,
 .map .marker {
   height: 110px;
   width: 93px;
-  background-image: url("../../img/marker.png");
+  background-image: url("../img/marker.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

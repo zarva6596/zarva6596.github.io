@@ -374,8 +374,8 @@ $('.newPortfolio__menu-item > a').on('click', function (e) {
    if ($(window).width() < 476) {
       e.preventDefault();
 
-      $('.newPortfolio__subMenu').fadeOut();
-      $(this).next().fadeIn();
+      $('.newPortfolio__subMenu').fadeOut(0);
+      $(this).next().fadeIn(0);
 
       $('.portfolio-main').next().css({
          'height': '0',
