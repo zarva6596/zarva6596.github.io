@@ -259,6 +259,36 @@ $(window).on('load resize', function() {
 $('.ourTeam__slider').slick({
    slidesToShow: 3,
    centerMode: true,
+   responsive: [
+      {
+         breakpoint: 900,
+         settings: {
+            slidesToShow: 1,
+            centerPadding: '220px',
+         }
+      },
+      {
+         breakpoint: 800,
+         settings: {
+            slidesToShow: 1,
+            centerPadding: '160px',
+         }
+      },
+      {
+         breakpoint: 650,
+         settings: {
+            slidesToShow: 1,
+            centerPadding: '80px',
+         }
+      },
+      {
+         breakpoint: 350,
+         settings: {
+            slidesToShow: 1,
+            centerPadding: '60px',
+         }
+      }
+   ]
 });;
 $('.portfolio-main')
    .prev()

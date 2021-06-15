@@ -3591,6 +3591,10 @@ h2,
   opacity: 1;
 }
 
+.ourTeam__slider .slick-current {
+  z-index: 1;
+}
+
 .ourTeam__slider .slick-arrow {
   position: absolute;
   bottom: -60px;
@@ -6094,6 +6098,26 @@ h2,
     margin-bottom: calc(39px + 13 * (100vw / 1440));
   }
 
+  .ourTeam__heading {
+    margin-bottom: calc(33px + 37 * (100vw / 1440));
+  }
+
+  .ourTeam__name {
+    font-size: calc(18px + 6 * (100vw / 1440));
+  }
+
+  .ourTeam__position {
+    font-size: calc(14px + 2 * (100vw / 1440));
+  }
+
+  .ourTeam__photo {
+    width: calc(186px + 254 * (100vw / 1440));
+  }
+
+  .ourTeam__photo {
+    height: calc(256px + 344 * (100vw / 1440));
+  }
+
   .newAtWork {
     padding-top: calc(52px + 88 * (100vw / 1440));
   }
@@ -6934,6 +6958,26 @@ h2,
     margin-bottom: 52px;
   }
 
+  .ourTeam__heading {
+    margin-bottom: 70px;
+  }
+
+  .ourTeam__name {
+    font-size: 24px;
+  }
+
+  .ourTeam__position {
+    font-size: 16px;
+  }
+
+  .ourTeam__photo {
+    width: 440px;
+  }
+
+  .ourTeam__photo {
+    height: 600px;
+  }
+
   .newAtWork {
     padding-top: 140px;
   }
@@ -7220,6 +7264,14 @@ h2,
 
   .newMission__content {
     max-width: 868px;
+  }
+
+  .ourTeam__slider::before {
+    left: -5vw;
+  }
+
+  .ourTeam__slider::after {
+    right: -5vw;
   }
 
   .newPortfolio__navRow {
@@ -8877,6 +8929,26 @@ h2,
     margin-bottom: calc(39px + 22.1 * ((100vw - 320px) / 1440));
   }
 
+  .ourTeam__heading {
+    margin-bottom: calc(33px + 62.9 * ((100vw - 320px) / 1440));
+  }
+
+  .ourTeam__name {
+    font-size: calc(18px + 10.2 * ((100vw - 320px) / 1440));
+  }
+
+  .ourTeam__position {
+    font-size: calc(14px + 3.4 * ((100vw - 320px) / 1440));
+  }
+
+  .ourTeam__photo {
+    width: calc(186px + 431.8 * ((100vw - 320px) / 1440));
+  }
+
+  .ourTeam__photo {
+    height: calc(256px + 584.8 * ((100vw - 320px) / 1440));
+  }
+
   .newAtWork {
     padding-top: calc(52px + 149.6 * ((100vw - 320px) / 1440));
   }
@@ -9680,6 +9752,11 @@ h2,
 
   .newBlog__pagination-container {
     width: 100%;
+  }
+
+  .ourTeam__slider::before,
+  .ourTeam__slider::after {
+    width: calc((100vw - 200px) / 2);
   }
 
   .newPortfolio__title {
