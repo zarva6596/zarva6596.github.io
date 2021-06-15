@@ -121,8 +121,8 @@ let scrollPrev = 0;
 
 $(document).scroll(function() {
    let scrolled = $(document).scrollTop();
-
    let headerHeight = $('header').outerHeight();
+
    if ($(document).scrollTop() >= 10) {
       $('header').addClass('newHeader--scroll');
 
@@ -144,9 +144,15 @@ $(document).scroll(function() {
    }
 
    if ($(document).scrollTop() >= 50) {
-      $('.arrowUp').css('right', '50px');
+      $('.arrowUp').css({
+         'opacity': '1',
+         'visibility': 'visible'
+      });
    } else {
-      $('.arrowUp').css('right', '-100px');
+      $('.arrowUp').css({
+         'opacity': '0',
+         'visibility': 'hidden'
+      });
    }
 
    scrollPrev = scrolled;

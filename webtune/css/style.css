@@ -4685,7 +4685,8 @@ h2,
 }
 
 .map .arrowUp {
-  right: -100px;
+  right: 50px;
+  opacity: 0;
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
@@ -7738,10 +7739,10 @@ h2,
 
   .newHeader .bigMenu__content .bigNav .menu-item .sub-menu {
     position: absolute;
-    height: 80vh;
+    height: 63vh;
     width: 100%;
     left: 100vw;
-    top: 12vh;
+    top: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
