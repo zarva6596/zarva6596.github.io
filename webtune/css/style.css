@@ -5575,7 +5575,7 @@ h2,
   }
 
   .newHeader .bigMenu__content .bigNav .menu .sub-menu__item a {
-    font-size: calc(16px + 12 * (100vw / 1440));
+    font-size: calc(18px + 10 * (100vw / 1440));
   }
 
   .newHeader .bigMenu__content .newHeader__contactBtn a span {
@@ -7767,7 +7767,7 @@ h2,
     display: block;
     margin-bottom: 11px;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 30px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -8406,7 +8406,7 @@ h2,
   }
 
   .newHeader .bigMenu__content .bigNav .menu .sub-menu__item a {
-    font-size: calc(16px + 20.4 * ((100vw - 320px) / 1440));
+    font-size: calc(18px + 17 * ((100vw - 320px) / 1440));
   }
 
   .newHeader .bigMenu__content .newHeader__contactBtn a span {
