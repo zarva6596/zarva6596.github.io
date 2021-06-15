@@ -1,5 +1,9 @@
 $('.newHeader__burgerBtn').on('click', function () {
-   $(document).scrollTop($(document).scrollTop + 20);
+   $('html, body').animate({
+      scrollTop: !$('.newBrief').hasClass('newBrief--active') && !$('.bigMenu').hasClass('bigMenu--active')
+         ? $(document).scrollTop() + 100
+         : $(document).scrollTop() - 100,
+   }, 1000);
 
    if ($('.newBrief').hasClass('newBrief--active')) {
       $('header').removeClass('newHeader--scroll');
