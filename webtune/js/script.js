@@ -71,6 +71,9 @@ $('.newHeader__bigNav .menu .menu-item > a').mouseenter(function () {
       $('.sub-menu__title').text($(this).text().trim());
       $(this).parent().parent().parent().css('transform', 'translateX(-100vw)');
       $(this).parent().parent().parent().next().next().css('transform', 'translateX(-100vw)');
+
+      $('.bigMenu__content').scrollTop(0);
+      // console.log($('.bigMenu__content').scrollTop());
    }
 });
 
@@ -115,6 +118,19 @@ $('.newPortfolioNav .sub-menu__item').mouseenter(function () {
 $('.sub-menu__back').on('click', function () {
    $(this).parent().parent().parent().parent().css('transform', 'translateX(0)');
    $(this).parent().parent().parent().parent().next().next().css('transform', 'translateX(0)');
+   $(this).parent().parent().removeClass('menu-item--active');
+   $(this).parent().parent().parent().children('.menu-item:first-child').addClass('menu-item--active');
+
+   let newHeaderImageUrl = $(this)
+      .parent()
+      .parent()
+      .parent()
+      .children('.menu-item:first-child')
+      .children('img')
+      .attr('src');
+
+   $('.newHeader__bigMenu .bigMenu__background img')
+      .attr('src', `${newHeaderImageUrl}`);
 });;
 let scrollPrev = 0;
 
