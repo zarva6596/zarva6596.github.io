@@ -1,10 +1,4 @@
 $('.newHeader__burgerBtn').on('click', function () {
-   // $('html, body').animate({
-   //    scrollTop: !$('.newBrief').hasClass('newBrief--active') && !$('.bigMenu').hasClass('bigMenu--active')
-   //       ? $(document).scrollTop() + 200
-   //       : $(document).scrollTop() - 200,
-   // }, 1);
-
    if ($('.newBrief').hasClass('newBrief--active')) {
       $('header').removeClass('newHeader--scroll');
       $('.newBrief').removeClass('newBrief--active');
@@ -24,13 +18,13 @@ $('.newHeader__burgerBtn').on('click', function () {
       return;
    }
 
-   // $('body').toggleClass('noScroll');
-   // $('html').toggleClass('noScroll');
+   $('body').toggleClass('noScroll');
+   $('html').toggleClass('noScroll');
 
    setTimeout(function() {
-      window.scrollTo(0, 1);
+      window.scrollTo(0, 100);
   }, 1000);
-  
+
    $(this).toggleClass('burgerBtn--active');
    $('.newHeader__bigMenu .content .bigNav .menu .menu-item:first-of-type')
       .addClass('menu-item--active');
