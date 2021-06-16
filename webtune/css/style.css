@@ -9418,7 +9418,7 @@ h2,
 
 @media (max-width: 600px) {
   .newHeader .bigMenu__content {
-    height: calc(100vh - 215px);
+    height: calc(100vh - 242px);
     overflow-y: auto;
     overflow-x: hidden;
     padding-bottom: 30px;
@@ -9429,7 +9429,7 @@ h2,
     position: absolute;
     left: 0;
     top: auto;
-    bottom: 88px;
+    bottom: 115px;
   }
 
   .service-page .newServices__list {
