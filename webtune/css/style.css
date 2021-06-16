@@ -9580,7 +9580,14 @@ h2,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 74px;
+  }
+
+  .newSteps__item {
+    margin-bottom: 50px;
+  }
+
+  .newSteps__item:last-child {
+    margin-bottom: 0;
   }
 
   .newSteps__item:last-child .newSteps__marker::after {
@@ -9622,13 +9629,14 @@ h2,
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 15px;
+    width: 303px;
   }
 
   .newAtWork__photo {
     max-width: calc(50vw - 30px);
     max-height: 184px;
     overflow: hidden;
+    margin: 7px;
   }
 
   .newAtWork__photo img {
