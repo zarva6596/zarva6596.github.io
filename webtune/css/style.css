@@ -9418,7 +9418,7 @@ h2,
 
 @media (max-width: 600px) {
   .newHeader .bigMenu__content {
-    height: calc(100vh - 189px);
+    height: calc(100vh - 215px);
     overflow-y: auto;
     overflow-x: hidden;
     padding-bottom: 30px;
@@ -9428,7 +9428,8 @@ h2,
   .newHeader .bigMenu__content .newHeader__contactBtn {
     position: absolute;
     left: 0;
-    top: calc(100% - 145px);
+    top: auto;
+    bottom: 88px;
   }
 
   .service-page .newServices__list {
