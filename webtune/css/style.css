@@ -6309,7 +6309,7 @@ h2,
   }
 
   .newBrief {
-    padding-bottom: calc(90px + 57 * (100vw / 1440));
+    padding-bottom: calc(120px + 27 * (100vw / 1440));
   }
 
   .newBrief__title {
@@ -9148,7 +9148,7 @@ h2,
   }
 
   .newBrief {
-    padding-bottom: calc(90px + 96.9 * ((100vw - 320px) / 1440));
+    padding-bottom: calc(120px + 45.9 * ((100vw - 320px) / 1440));
   }
 
   .newBrief__title {
