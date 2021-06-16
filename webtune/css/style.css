@@ -2136,6 +2136,10 @@ h2,
   margin-bottom: 60px;
 }
 
+.newPortfolioNav__nav .menu__item .sub-menu__item > img {
+  display: none;
+}
+
 .newPortfolioNav__nav .menu__item--active a span:first-of-type {
   color: #a073ff;
 }
