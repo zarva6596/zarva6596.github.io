@@ -537,9 +537,9 @@ $(window).on('load resize', function() {
 //    alert('iphone');
 // }
 
-// if (navigator.userAgent.match(/Android/)) {
-//    alert('Android');
-// }
+if (navigator.userAgent.match(/Android/)) {
+   $('header').addClass('android');
+}
 
 $('.newServices__item').on('click', function () {
    $('.newServices__item').removeClass('newService__item--active');

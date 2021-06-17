@@ -9433,6 +9433,14 @@ h2,
     bottom: 115px;
   }
 
+  .android .bigMenu__content {
+    height: calc(100vh - 122px);
+  }
+
+  .android .bigMenu .newHeader__contactBtn {
+    bottom: 0;
+  }
+
   .service-page .newServices__list {
     grid-template-columns: 1fr;
     gap: 15px;
