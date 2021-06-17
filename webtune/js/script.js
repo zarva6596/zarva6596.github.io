@@ -561,3 +561,11 @@ if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) 
        }, 1000);
    });
 }
+
+if ($('main').hasClass('case')) {
+   let caseName = $('main').attr('class').split(' ');
+
+   caseName = caseName[caseName.length - 1];
+
+   $('header, footer').addClass(caseName);
+}
