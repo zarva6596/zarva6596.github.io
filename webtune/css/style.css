@@ -5236,6 +5236,7 @@ h2,
   border: 1px solid #fff;
   position: absolute;
   left: 0;
+  top: calc(50% - 14px);
 }
 
 .newBrief__form__checkbox span {
