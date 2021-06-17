@@ -5537,9 +5537,21 @@ main {
   opacity: 0.1;
 }
 
-.fly-style.newHeader .bigMenu__content .bigNav .menu-item--active a,
-.fly-style.newHeader .bigMenu__content .bigNav .menu-item--active span {
+.fly-style.newHeader .bigMenu__content .bigNav .menu-item--active > a,
+.fly-style.newHeader .bigMenu__content .bigNav .menu-item--active > span {
   color: #f1c19d;
+}
+
+.fly-style.newHeader .bigMenu__content .bigNav .menu .sub-menu__item a:hover {
+  color: #f1c19d;
+}
+
+.fly-style.newHeader .bigMenu__content .newHeader__contactBtn:hover span {
+  color: #f1c19d;
+}
+
+.fly-style.newHeader .bigMenu__content .newHeader__contactBtn:hover::after {
+  background-color: #f1c19d;
 }
 
 .fly-style.newHeader .burgerBtn > span {
