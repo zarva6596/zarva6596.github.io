@@ -659,7 +659,7 @@ main {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 0.5;
+  opacity: 0.1;
 }
 
 .newHeader .bigMenu--active {
