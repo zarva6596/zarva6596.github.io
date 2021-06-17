@@ -4968,6 +4968,8 @@ h2,
 .newBrief__radioButton input[type="radio"]:checked ~ input[type="date"] {
   opacity: 1;
   visibility: visible;
+  height: 36px;
+  width: 182px;
 }
 
 .newBrief__radioButton input[type="date"] {
@@ -9749,6 +9751,10 @@ h2,
 
   .newInNumbers__item:last-child::after {
     display: none;
+  }
+
+  .newBrief__radioButton:last-child {
+    margin-bottom: 60px;
   }
 }
 
