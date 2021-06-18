@@ -553,14 +553,14 @@ $(window).on('load', function() {
    });
 });
 
-if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
-   /* iOS hides Safari address bar */
-   window.addEventListener("load",function() {
-       setTimeout(function() {
-           window.scrollTo(0, 1);
-       }, 1000);
-   });
-}
+// if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+//    /* iOS hides Safari address bar */
+//    window.addEventListener("load",function() {
+//        setTimeout(function() {
+//            window.scrollTo(0, 1);
+//        }, 1000);
+//    });
+// }
 
 if ($('main').hasClass('case')) {
    let caseName = $('main').attr('class').split(' ');
