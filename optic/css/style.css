@@ -1099,6 +1099,7 @@ main {
   -o-transition: all .5s;
   transition: all .5s;
   -webkit-appearance: none;
+  border-radius: 0;
 }
 
 .clientCart__form form input[type='button']:hover {
