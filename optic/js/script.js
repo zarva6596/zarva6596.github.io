@@ -6,6 +6,9 @@ $('.main-slider__slider').slick({
 
 $('.services__textSlider').slick({
    asNavFor: '.services__boxSlider',
+   swipe: false,
+   fade: true,
+   autoplay: true,
    responsive: [
       {
          breakpoint: 769,
@@ -19,6 +22,7 @@ $('.services__textSlider').slick({
 $('.services__boxSlider').slick({
    arrows: false,
    variableWidth: true,
+   swipe: false,
    asNavFor: '.services__textSlider',
    responsive: [
       {
@@ -33,6 +37,7 @@ $('.services__boxSlider').slick({
 
 $('.products__slider').slick({
    variableWidth: true,
+   swipe: false,
    responsive: [
       {
          breakpoint: 769,
