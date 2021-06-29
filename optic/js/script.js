@@ -68,4 +68,33 @@ $(productsTabs).on('click', function() {
 $(whereTabs).on('click', function () {
    $(whereTabs).removeClass('where__item--active');
    $(this).addClass('where__item--active');
-});;
+});
+
+$('.reviews__list').slick({
+   variableWidth: true,
+   swipe: false,
+   responsive: [
+      {
+         breakpoint: 769,
+         settings: {
+            dots: true,
+         }
+      }
+   ],
+});
+
+setInterval(() => {
+   $('.reviews__item').removeClass('reviews__item--active');
+   $('.reviews__item.slick-active').addClass('reviews__item--active');
+}, 500);;
+
+$(window).on('load resize', function () {
+   if ($(window).width() < 769) {
+      $('.header__mobileMenu').append($('.header__contacts'));
+      $('.header__mobileMenu').append($('.header__button'));
+   }
+});
+
+$('.header__burgerBtn').on('click', function() {
+   $('.header__mobileMenu').toggleClass('header__mobileMenu--active');
+});
