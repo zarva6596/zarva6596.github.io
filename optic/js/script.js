@@ -40,6 +40,7 @@ $('.services__boxSlider').slick({
 $('.products__slider').slick({
    variableWidth: true,
    swipe: false,
+   // autoplay: true,
    responsive: [
       {
          breakpoint: 769,
@@ -65,7 +66,26 @@ $(document).ready(function () {
 
 $(productsTabs).on('click', function() {
    $(productsTabs).removeClass('products__item--active');
+   // $(productsTabs)
+   //    .children('.products__list')
+   //    .children('.products__slider').slick('unslick');
+
    $(this).addClass('products__item--active');
+   // $(this)
+   //    .children('.products__list')
+   //    .children('.products__slider').slick({
+   //       variableWidth: true,
+   //       swipe: false,
+   //       responsive: [
+   //          {
+   //             breakpoint: 769,
+   //             settings: {
+   //                dots: true,
+   //                swipe: true,
+   //             }
+   //          }
+   //       ],
+   //    });
 });
 
 $(whereTabs).on('click', function () {

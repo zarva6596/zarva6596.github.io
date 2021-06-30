@@ -3273,6 +3273,10 @@ main {
     border-left-color: transparent;
   }
 
+  .products__slider {
+    max-width: 100vw;
+  }
+
   .products__slider .slick-arrow {
     top: calc(100% + 20px);
     left: calc(100vw - 93px);
