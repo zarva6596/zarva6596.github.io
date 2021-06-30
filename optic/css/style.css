@@ -1508,6 +1508,10 @@ main {
   position: relative;
 }
 
+.reviews__slider {
+  position: relative;
+}
+
 .reviews__list {
   width: 100vw;
 }
