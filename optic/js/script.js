@@ -54,7 +54,7 @@ $('.products__slider').slick({
 let productsTabs = $('.products__menu > .products__item');
 let whereTabs = $('.where__menu > .where__item');
 
-$(window).on('load resize', function () {
+$(document).ready(function () {
    $(productsTabs[2]).addClass('products__item--active');
    $(whereTabs[1]).addClass('where__item--active');
 
