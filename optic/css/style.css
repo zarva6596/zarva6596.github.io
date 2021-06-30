@@ -1528,12 +1528,12 @@ main {
 
 .reviews__list .slick-arrow {
   position: absolute;
-  right: calc((100vw - 1140px) / 2);
-  top: 98px;
+  right: 0;
+  top: -80px;
 }
 
 .reviews__list .slick-prev {
-  right: calc((100vw - 1140px) / 2 + 100px);
+  right: 100px;
 }
 
 .reviews__item {
