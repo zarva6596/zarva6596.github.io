@@ -1,57 +1,3 @@
-$('.main-slider__slider').slick({
-   arrows: false,
-   dots: true, 
-   autoplay: true,
-});
-
-$('.services__textSlider').slick({
-   asNavFor: '.services__boxSlider',
-   swipe: false,
-   fade: true,
-   autoplay: true,
-   responsive: [
-      {
-         breakpoint: 769,
-         settings: {
-            arrows: false,
-            swipe: true,
-         }
-      }
-   ],
-});
-
-$('.services__boxSlider').slick({
-   arrows: false,
-   variableWidth: true,
-   swipe: false,
-   asNavFor: '.services__textSlider',
-   responsive: [
-      {
-         breakpoint: 769,
-         settings: {
-            arrows: true,
-            dots: true,
-            swipe: true,
-         }
-      }
-   ],
-});
-
-$('.products__slider').slick({
-   variableWidth: true,
-   swipe: false,
-   // autoplay: true,
-   responsive: [
-      {
-         breakpoint: 769,
-         settings: {
-            dots: true,
-            swipe: true,
-         }
-      }
-   ],
-});
-
 let productsTabs = $('.products__menu > .products__item');
 let whereTabs = $('.where__menu > .where__item');
 
@@ -62,6 +8,60 @@ $(document).ready(function () {
    if ($(window).width() < 1161) {
       $('.footer__column > p').after($('.footer__contacts'));
    }
+
+   $('.main-slider__slider').slick({
+      arrows: false,
+      dots: true, 
+      autoplay: true,
+   });
+   
+   $('.services__textSlider').slick({
+      asNavFor: '.services__boxSlider',
+      swipe: false,
+      fade: true,
+      autoplay: true,
+      responsive: [
+         {
+            breakpoint: 769,
+            settings: {
+               arrows: false,
+               swipe: true,
+            }
+         }
+      ],
+   });
+   
+   $('.services__boxSlider').slick({
+      arrows: false,
+      variableWidth: true,
+      swipe: false,
+      asNavFor: '.services__textSlider',
+      responsive: [
+         {
+            breakpoint: 769,
+            settings: {
+               arrows: true,
+               dots: true,
+               swipe: true,
+            }
+         }
+      ],
+   });
+   
+   $('.products__slider').slick({
+      variableWidth: true,
+      swipe: false,
+      // autoplay: true,
+      responsive: [
+         {
+            breakpoint: 769,
+            settings: {
+               dots: true,
+               swipe: true,
+            }
+         }
+      ],
+   });
 });
 
 $(productsTabs).on('click', function() {
