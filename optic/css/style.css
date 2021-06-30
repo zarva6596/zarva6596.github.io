@@ -1508,10 +1508,6 @@ main {
   position: relative;
 }
 
-.reviews__content {
-  margin: 0;
-}
-
 .reviews__list {
   width: 100vw;
 }
