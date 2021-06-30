@@ -792,7 +792,7 @@ main {
 
 .services__boxSlider {
   position: relative;
-  padding: 60px 0 0 36px;
+  padding: 60px 0 0 0;
 }
 
 .services__boxSlider .slick-track {
@@ -807,6 +807,8 @@ main {
 
 .services__boxSlider .slick-list {
   overflow: hidden;
+  position: relative;
+  left: 36px;
 }
 
 .services__boxSlider::before {
@@ -1506,6 +1508,10 @@ main {
   position: relative;
 }
 
+.reviews__content {
+  margin: 0;
+}
+
 .reviews__list {
   width: 100vw;
 }
@@ -1823,10 +1829,6 @@ main {
 
   .services__boxSlider {
     padding-top: calc(27px + 33 * (100vw / 1440));
-  }
-
-  .services__boxSlider {
-    padding-left: calc(0px + 36 * (100vw / 1440));
   }
 
   .services__boxSlider .slick-slide {
@@ -2357,10 +2359,6 @@ main {
 
   .services__boxSlider {
     padding-top: 60px;
-  }
-
-  .services__boxSlider {
-    padding-left: 36px;
   }
 
   .services__boxSlider .slick-slide {
@@ -3540,10 +3538,6 @@ main {
 
   .services__boxSlider {
     padding-top: calc(27px + 56.1 * ((100vw - 320px) / 1440));
-  }
-
-  .services__boxSlider {
-    padding-left: calc(0px + 61.2 * ((100vw - 320px) / 1440));
   }
 
   .services__boxSlider .slick-slide {
