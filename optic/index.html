@@ -13,7 +13,8 @@
       <div class="header__main">
          <div class="header__contacts">
             <p>
-               Є питання? Телефонуйте - допоможемо.
+               <span>Є питання?</span> 
+               <span>Телефонуйте - допоможемо.</span>
             </p>
             <p>
                Тел.
@@ -64,44 +65,50 @@
    </div>
 
    <div class="header__mobileMenu">
-      <div class="mobile__nav">
-         <ul class="mobile__list">
-            <li class="mobile__item">
-               <a href="#about">Про нас</a>
-            </li>
+      <div class="header__background">
+         <img src="./img/mobileMenuBG.png" alt="menu background">
+      </div>
 
-            <li class="mobile__item">
-               <a href="#services">Наші послуги</a>
-            </li>
-
-            <li class="mobile__item">
-               <a href="#products">Наша продукція</a>
-            </li>
-
-            <li class="mobile__item">
-               <a href="#clientCart">Карта клієнта</a>
-            </li>
-
-            <li class="mobile__item">
-               <a href="#see">Дивись нас на YouTube</a>
-            </li>
-
-            <li class="mobile__item">
-               <a href="#insta">Наш Instagram</a>
-            </li>
-
-            <li class="mobile__item">
-               <a href="#certificates">Сертифікати</a>
-            </li>
-
-            <li class="mobile__item">
-               <a href="#reviews">Відгуки</a>
-            </li>
-
-            <li class="mobile__item">
-               <a href="#where">Контакти</a>
-            </li>
-         </ul>
+      <div class="header__mobileMenu__content">
+         <div class="mobile__nav">
+            <ul class="mobile__list">
+               <li class="mobile__item">
+                  <a href="#about">Про нас</a>
+               </li>
+   
+               <li class="mobile__item">
+                  <a href="#services">Наші послуги</a>
+               </li>
+   
+               <li class="mobile__item">
+                  <a href="#products">Наша продукція</a>
+               </li>
+   
+               <li class="mobile__item">
+                  <a href="#clientCart">Карта клієнта</a>
+               </li>
+   
+               <li class="mobile__item">
+                  <a href="#see">Дивись нас на YouTube</a>
+               </li>
+   
+               <li class="mobile__item">
+                  <a href="#insta">Наш Instagram</a>
+               </li>
+   
+               <li class="mobile__item">
+                  <a href="#certificates">Сертифікати</a>
+               </li>
+   
+               <li class="mobile__item">
+                  <a href="#reviews">Відгуки</a>
+               </li>
+   
+               <li class="mobile__item">
+                  <a href="#where">Контакти</a>
+               </li>
+            </ul>
+         </div>
       </div>
    </div>
 </header>
@@ -160,7 +167,7 @@
       </div>
    </div>
 </section>
-         <section class="advantages section">
+         <section class="advantages section" id="advantages">
    <div class="advantages__content content">
       <ul class="advantages__list">
          <li class="advantages__item">
@@ -186,7 +193,7 @@
       </ul>
    </div>
 </section>
-         <section class="section about">
+         <section class="section about" id="about">
    <div class="about__content content">
       <div class="about__advantages">
          <ul class="about__list">
@@ -283,7 +290,7 @@
       </div>
    </div>
 </section>
-         <section class="section services">
+         <section class="section services" id="services">
    <div class="services__content content">
       <div class="services__column">
          <div class="services__title title">
@@ -402,7 +409,7 @@
       </div>
    </div>
 </section>
-         <section class="section products">
+         <section class="section products" id="products">
    <div class="content products__content">
       <div class="title products__title">
          Наша продукція
@@ -1001,7 +1008,7 @@
       </ul>
    </div>
 </section>
-         <section class="section clientCart">
+         <section class="section clientCart" id="clientcart">
    <div class="clientCart__content content">
       <div class="clientCart__column">
          <div class="clientCart__title title">
@@ -1057,7 +1064,7 @@
       </div>
    </div>
 </section>
-         <section class="section see">
+         <section class="section see" id="see">
    <div class="see__content content">
       <div class="see__text">
          <div class="title see__title">
@@ -1085,7 +1092,7 @@
       </div>
    </div>
 </section>
-         <section class="section insta">
+         <section class="section insta" id="insta">
    <div class="content insta__content">
       <div class="title insta__title">
          Наш Instagram
@@ -1100,7 +1107,7 @@
       <div class="elfsight-app-70ee3dd4-8ff8-46fe-8189-4d14b8e4f78e"></div>
    </div>
 </section>
-         <section class="section certificates">
+         <section class="section certificates" id="certificates">
    <div class="certificates__content content">
       <div class="certificates__info">
          <div class="certificates__title title">
@@ -1117,7 +1124,7 @@
       </div>
    </div>
 </section>
-         <section class="section reviews">
+         <section class="section reviews" id="reviews">
    <div class="content reviews__content">
       <div class="title reviews__title">
          Відгуки
@@ -1279,16 +1286,16 @@
       </ul>
    </div>
 </section>
-         <section class="section where">
+         <section class="section where" id="where">
    <div class="where__content content">
       <div class="where__heading heading">
          Неодмінно відвідайте нас!
       </div>
-   
+
       <p>
          Тут вказані наші адреси у місті Львів
       </p>
-   
+
       <ul class="where__menu">
          <li class="where__item">
             <p>
@@ -1298,10 +1305,23 @@
             </p>
    
             <div class="where__map">
-               <img src="" alt="map photo">
+               <div class="where__info">
+                  <div class="where__phone">
+                     <a href="tel:+380501411444">+38 050 14 11 441</a>
+                  </div>
+   
+                  <div class="where__workTime workTime">
+                     <p>Працюємо з <strong>Пн-Пт</strong></p>
+                     <p>з <strong>10:00</strong> до <strong>18:00</strong></p>
+                  </div>
+               </div>
+
+               <div id="map1" class="map">
+                  <img src="./img/map.png" alt="map photo">
+               </div>
             </div>
          </li>
-   
+
          <li class="where__item where__item--active">
             <p>
                <span class="icon-marker"></span>
@@ -1310,10 +1330,23 @@
             </p>
    
             <div class="where__map">
-               <img src="./img/map.png" alt="map photo">
+               <div class="where__info">
+                  <div class="where__phone">
+                     <a href="tel:+380501411444">+38 050 14 11 442</a>
+                  </div>
+   
+                  <div class="where__workTime workTime">
+                     <p>Працюємо з <strong>Пн-Пт</strong></p>
+                     <p>з <strong>10:00</strong> до <strong>18:00</strong></p>
+                  </div>
+               </div>
+
+               <div id="map2" class="map">
+                  <img src="./img/map.png" alt="map photo">
+               </div>
             </div>
          </li>
-   
+
          <li class="where__item">
             <p>
                <span class="icon-marker"></span>
@@ -1322,10 +1355,23 @@
             </p>
    
             <div class="where__map">
-               <img src="" alt="map photo">
+               <div class="where__info">
+                  <div class="where__phone">
+                     <a href="tel:+380501411444">+38 050 14 11 443</a>
+                  </div>
+   
+                  <div class="where__workTime workTime">
+                     <p>Працюємо з <strong>Пн-Пт</strong></p>
+                     <p>з <strong>10:00</strong> до <strong>18:00</strong></p>
+                  </div>
+               </div>
+
+               <div id="map3" class="map">
+                  <img src="./img/map.png" alt="map photo">
+               </div>
             </div>
          </li>
-   
+
          <li class="where__item">
             <p>
                <span class="icon-marker"></span>
@@ -1334,10 +1380,23 @@
             </p>
    
             <div class="where__map">
-               <img src="" alt="map photo">
+               <div class="where__info">
+                  <div class="where__phone">
+                     <a href="tel:+380501411444">+38 050 14 11 444</a>
+                  </div>
+   
+                  <div class="where__workTime workTime">
+                     <p>Працюємо з <strong>Пн-Пт</strong></p>
+                     <p>з <strong>10:00</strong> до <strong>18:00</strong></p>
+                  </div>
+               </div>
+
+               <div id="map4" class="map">
+                  <img src="./img/map.png" alt="map photo">
+               </div>
             </div>
          </li>
-   
+
          <li class="where__item">
             <p>
                <span class="icon-marker"></span>
@@ -1346,10 +1405,23 @@
             </p>
    
             <div class="where__map">
-               <img src="" alt="map photo">
+               <div class="where__info">
+                  <div class="where__phone">
+                     <a href="tel:+380501411444">+38 050 14 11 445</a>
+                  </div>
+   
+                  <div class="where__workTime workTime">
+                     <p>Працюємо з <strong>Пн-Пт</strong></p>
+                     <p>з <strong>10:00</strong> до <strong>18:00</strong></p>
+                  </div>
+               </div>
+
+               <div id="map5" class="map">
+                  <img src="./img/map.png" alt="map photo">
+               </div>
             </div>
          </li>
-   
+
          <li class="where__item">
             <p>
                <span class="icon-marker"></span>
@@ -1358,10 +1430,23 @@
             </p>
    
             <div class="where__map">
-               <img src="" alt="map photo">
+               <div class="where__info">
+                  <div class="where__phone">
+                     <a href="tel:+380501411444">+38 050 14 11 446</a>
+                  </div>
+   
+                  <div class="where__workTime workTime">
+                     <p>Працюємо з <strong>Пн-Пт</strong></p>
+                     <p>з <strong>10:00</strong> до <strong>18:00</strong></p>
+                  </div>
+               </div>
+
+               <div id="map6" class="map">
+                  <img src="./img/map.png" alt="map photo">
+               </div>
             </div>
          </li>
-   
+
          <li class="where__item">
             <p>
                <span class="icon-marker"></span>
@@ -1370,10 +1455,23 @@
             </p>
    
             <div class="where__map">
-               <img src="" alt="map photo">
+               <div class="where__info">
+                  <div class="where__phone">
+                     <a href="tel:+380501411444">+38 050 14 11 447</a>
+                  </div>
+   
+                  <div class="where__workTime workTime">
+                     <p>Працюємо з <strong>Пн-Пт</strong></p>
+                     <p>з <strong>10:00</strong> до <strong>18:00</strong></p>
+                  </div>
+               </div>
+
+               <div id="map7" class="map">
+                  <img src="./img/map.png" alt="map photo">
+               </div>
             </div>
          </li>
-   
+
          <li class="where__item">
             <p>
                <span class="icon-marker"></span>
@@ -1382,7 +1480,20 @@
             </p>
    
             <div class="where__map">
-               <img src="" alt="map photo">
+               <div class="where__info">
+                  <div class="where__phone">
+                     <a href="tel:+380501411444">+38 050 14 11 448</a>
+                  </div>
+   
+                  <div class="where__workTime workTime">
+                     <p>Працюємо з <strong>Пн-Пт</strong></p>
+                     <p>з <strong>10:00</strong> до <strong>18:00</strong></p>
+                  </div>
+               </div>
+
+               <div id="map8" class="map">
+                  <img src="./img/map.png" alt="map photo">
+               </div>
             </div>
          </li>
       </ul>
@@ -1402,7 +1513,7 @@
                Мережа магазинів оптики «Файна оптика» у Львові
             </p>
 
-            <div class="footer__workTime">
+            <div class="footer__workTime workTime">
                <p>Працюємо з <strong>Пн-Пт</strong></p>
                <p>з <strong>10:00</strong> до <strong>18:00</strong></p>
             </div>
