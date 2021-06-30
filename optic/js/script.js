@@ -148,6 +148,12 @@ $(window).on('load resize', function () {
    }
 });
 
+$(document).ready(function () {
+   let phone = $('.header__contacts p:last-of-type a').clone();
+
+   $('.header__logo').after(phone);
+})
+
 $('.header__burgerBtn').on('click', function() {
    $('.header__mobileMenu').toggleClass('header__mobileMenu--active');
    $('.header').toggleClass('header--active');

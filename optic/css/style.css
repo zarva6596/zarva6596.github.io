@@ -307,6 +307,11 @@ main {
   border-bottom: 1px solid #d9d9d9;
 }
 
+.header__main > a {
+  color: #333;
+  font-size: 14px;
+}
+
 .header__contacts p {
   font-weight: 400;
   font-size: 16px;
@@ -3240,8 +3245,14 @@ main {
             transform: translateY(0);
   }
 
+  .products__content {
+    position: relative;
+  }
+
   .products__menu {
     gap: 0px;
+    position: static;
+    overflow-x: auto;
   }
 
   .products__item {
