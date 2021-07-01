@@ -166,12 +166,16 @@ $(window).on('load resize', function () {
       $('.header__mobileMenu__content').append($('.header__contacts'));
       $('.header__mobileMenu__content').append($('.header__button'));
    }
+
+   $('a.eapps-link').attr('style', 'display: none !important');
 });
 
 $(document).ready(function () {
-   let phone = $('.header__contacts p:last-of-type a').clone();
+   if ($(window).width() < 769) {
+      let phone = $('.header__contacts p:last-of-type a').clone();
 
-   $('.header__logo').after(phone);
+      $('.header__logo').after(phone);
+   }
 })
 
 $('.header__burgerBtn').on('click', function() {
@@ -185,4 +189,10 @@ $('.mobile__item a').on('click', function () {
    $('.header__burgerBtn').removeClass('header__burgerBtn--active');
    $('.header__mobileMenu').removeClass('header__mobileMenu--active');
    $('body, html').toggleClass('noScroll');
+});
+
+$(document).on('click', function (e) {
+   if ($(e.target).hasClass('pop') || $(e.target).hasClass('popup')) {
+      $('.popup').fadeToggle();
+   }
 });

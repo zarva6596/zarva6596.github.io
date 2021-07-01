@@ -27,7 +27,7 @@
          </div>
    
          <div class="header__button">
-            <button class="button header__button">
+            <button class="button header__button pop">
                Зворотній дзвінок
             </button>
          </div>
@@ -121,9 +121,9 @@
             <div class="main-slider__background">
                <img src="./img/mainslider.png" alt="background slider photo">
             </div>
-   
+
             <div class="main-slider__info">   
-               <a href="#" class="button">
+               <a href="#" class="button pop">
                   Підібрати
                </a>
             </div>
@@ -135,7 +135,7 @@
             </div>
    
             <div class="main-slider__info">
-               <a href="#" class="button">
+               <a href="#" class="button pop">
                   Підібрати
                </a>
             </div>
@@ -147,7 +147,7 @@
             </div>
    
             <div class="main-slider__info">
-               <a href="#" class="button">
+               <a href="#" class="button pop">
                   Підібрати
                </a>
             </div>
@@ -159,7 +159,7 @@
             </div>
    
             <div class="main-slider__info">
-               <a href="#" class="button">
+               <a href="#" class="button pop">
                   Підібрати
                </a>
             </div>
@@ -450,7 +450,7 @@
                         </p>
                      </div>
    
-                     <a href="#" class="products__button button">
+                     <a href="#" class="products__button button pop">
                         Підібрати
                      </a>
                   </div>
@@ -567,7 +567,7 @@
                         </p>
                      </div>
    
-                     <a href="#" class="products__button button">
+                     <a href="#" class="products__button button pop">
                         Підібрати
                      </a>
                   </div>
@@ -684,7 +684,7 @@
                         </p>
                      </div>
    
-                     <a href="#" class="products__button button">
+                     <a href="#" class="products__button button pop">
                         Підібрати
                      </a>
                   </div>
@@ -801,7 +801,7 @@
                         </p>
                      </div>
    
-                     <a href="#" class="products__button button">
+                     <a href="#" class="products__button button pop">
                         Підібрати
                      </a>
                   </div>
@@ -918,7 +918,7 @@
                         </p>
                      </div>
    
-                     <a href="#" class="products__button button">
+                     <a href="#" class="products__button button pop">
                         Підібрати
                      </a>
                   </div>
@@ -1022,6 +1022,10 @@
          <div class="clientCart__photo">
             <img src="./img/clientCart.png" alt="client cart photo">
          </div>
+
+         <!-- <div class="clientCart__photo">
+            <img src="" alt="client cart photo">
+         </div> -->
       </div>
    
       <div class="clientCart__form form">
@@ -1503,6 +1507,40 @@
 </section>
       </main>
 
+      <div class="popup">
+   <div class="popup__background"></div>
+   <div class="popup__form form clientCart__form">
+      <div class="heading popup__heading form__heading">
+         Звяжіться з нами
+      </div>
+
+      <p>
+         Вам потрібна допомога чи у Вас є питання? 
+         Залиште свої контактні дані і ми Вам зателефонуємо!
+      </p>
+
+      <form action="">
+         <label for="popname">Ваше ім'я</label>
+         <input 
+            type="text" 
+            name="popname" 
+            id="popname"
+            placeholder="Олег Головацький"
+         >
+
+         <label for="popphone">Номер телефону</label>
+         <input 
+            type="tel" 
+            name="popphone"
+            id="popphone"
+            placeholder="+380..."
+         >
+
+         <input type="button" value="Отримати знижку" class="button">
+      </form>
+   </div>
+</div>
+
       <footer class="footer">
    <div class="footer__content content">
       <div class="footer__wrapper">
@@ -1549,7 +1587,7 @@
                Наш спеціаліст відповість на них впродовж 15 хв
             </p>
    
-            <div class="footer__button button">
+            <div class="footer__button button pop">
                Ваше запитання
             </div>
          </div>
