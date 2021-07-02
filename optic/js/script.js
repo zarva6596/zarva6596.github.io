@@ -160,6 +160,33 @@ $(document).scroll(function() {
 //       $('body').removeClass('noScroll');
 //    }
 // });;
+const script = document.createElement('script');
+
+// eslint-disable-next-line max-len
+script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCxy-5HcyQgYIRkgUvoMbwI43On1x3ymJ8&callback=initMap';
+
+script.defer = true;
+
+window.initMap = function() {
+  const position = {
+    lat: 48.5,
+    lng: 31.3,
+  };
+
+  const map = new google.maps.Map(document.getElementById('map1'), {
+    center: position,
+    zoom: 12,
+    disableDefaultUI: true,
+  });
+
+  const marker = new google.maps.Marker({
+    position,
+    map,
+   //  icon: '<?php echo get_template_directory_uri(); ?>/img/icons/chicken-icon.svg',
+  });
+};
+
+document.head.appendChild(script);;
 
 $(window).on('load resize', function () {
    if ($(window).width() < 769) {
@@ -176,7 +203,34 @@ $(document).ready(function () {
 
       $('.header__logo').after(phone);
    }
-})
+
+   let selectValue = $('.send__google .send__option');
+   let hrefA = $(selectValue[0]).children('span:last-of-type').text();
+
+   $('.send__google .send__select > p > span:first-of-type')
+      .text(`${$(selectValue[0]).children('span:first-of-type').text()}`);
+   $('.send__google__content > a').attr('href', `${hrefA}`);
+});
+
+$('.send__google .send__select > p').on('click', function () {
+   $(this).toggleClass('active');
+   $(this).next().slideToggle();
+});
+
+$('.send__option').click(function () {
+   let hrefA = $(this).children('span:last-of-type').text();
+   let nameSelect = $(this).children('span:first-of-type').text();
+   $('.send__google .send__select > p > span:first-of-type').text(`${nameSelect}`);
+   $('.send__google__content > a').attr('href', `${hrefA}`);
+   $('.send__options').slideToggle();
+});
+
+$(window).on('load', function () {
+   $('.header, .footer, .section').css({
+      'visibility': 'visible',
+      'opacity': '1',
+   });
+});
 
 $('.header__burgerBtn').on('click', function() {
    $('.header__mobileMenu').toggleClass('header__mobileMenu--active');
