@@ -318,6 +318,7 @@ $(window).on('load resize', function () {
    }
 
    $('a.eapps-link').attr('style', 'display: none !important');
+   $('.elfsight-app-70ee3dd4-8ff8-46fe-8189-4d14b8e4f78e.eapps-instagram-feed').css('z-index', '1');
 });
 
 $(document).ready(function () {
