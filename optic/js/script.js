@@ -160,33 +160,156 @@ $(document).scroll(function() {
 //       $('body').removeClass('noScroll');
 //    }
 // });;
-const script = document.createElement('script');
+$(window).on('load', function () {
+  const script = document.createElement('script');
 
-// eslint-disable-next-line max-len
-script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCxy-5HcyQgYIRkgUvoMbwI43On1x3ymJ8&callback=initMap';
+  // eslint-disable-next-line max-len
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCxy-5HcyQgYIRkgUvoMbwI43On1x3ymJ8&callback=initMap';
 
-script.defer = true;
+  script.defer = true;
 
-window.initMap = function() {
-  const position = {
-    lat: 48.5,
-    lng: 31.3,
+  window.initMap = function() {
+    const position1 = {
+      lat: 49.842830626105396,  
+      lng: 24.021083026371258,
+    };
+
+    const position2 = {
+      lat: 49.84095099147086, 
+      lng: 24.014566861258828 ,
+    };
+
+    const position3 = {
+      lat: 49.83677785051392, 
+      lng: 24.0034336459409 ,
+    };
+
+    const position4 = {
+      lat: 49.79384880533213, 
+      lng: 24.064877968648148,
+    };
+
+    const position5 = {
+      lat: 49.84848464175047,  
+      lng: 24.02410818162529 ,
+    };
+
+    const position6 = {
+      lat: 49.872874440058666, 
+      lng: 24.039951336357497 ,
+    };
+
+    const position7 = {
+      lat: 49.82310891240088, 
+      lng: 23.97760627392699,
+    };
+    
+    const position8 = {
+      lat: 49.78565793451835,  
+      lng: 24.058376575812577,
+    };
+
+    const map1 = new google.maps.Map(document.getElementById('map1'), {
+      center: position1,
+      zoom: 15,
+      disableDefaultUI: true,
+    });
+
+    const map2 = new google.maps.Map(document.getElementById('map2'), {
+      center: position2,
+      zoom: 15,
+      disableDefaultUI: true,
+    });
+
+    const map3 = new google.maps.Map(document.getElementById('map3'), {
+      center: position3,
+      zoom: 15,
+      disableDefaultUI: true,
+    });
+
+    const map4 = new google.maps.Map(document.getElementById('map4'), {
+      center: position4,
+      zoom: 15,
+      disableDefaultUI: true,
+    });
+
+    const map5 = new google.maps.Map(document.getElementById('map5'), {
+      center: position5,
+      zoom: 15,
+      disableDefaultUI: true,
+    });
+
+    const map6 = new google.maps.Map(document.getElementById('map6'), {
+      center: position6,
+      zoom: 15,
+      disableDefaultUI: true,
+    });
+
+    const map7 = new google.maps.Map(document.getElementById('map7'), {
+      center: position7,
+      zoom: 15,
+      disableDefaultUI: true,
+    });
+
+    const map8 = new google.maps.Map(document.getElementById('map8'), {
+      center: position8,
+      zoom: 15,
+      disableDefaultUI: true,
+    });
+
+    const marker1 = new google.maps.Marker({
+      position: position1,
+      map: map1,
+     //  icon: '<?php echo get_template_directory_uri(); ?>/img/icons/chicken-icon.svg',
+    });
+
+    const marker2 = new google.maps.Marker({
+      position: position2,
+      map: map2,
+     //  icon: '<?php echo get_template_directory_uri(); ?>/img/icons/chicken-icon.svg',
+    });
+
+    const marker3 = new google.maps.Marker({
+      position: position3,
+      map: map3,
+     //  icon: '<?php echo get_template_directory_uri(); ?>/img/icons/chicken-icon.svg',
+    });
+
+    const marker4 = new google.maps.Marker({
+      position: position4,
+      map: map4,
+     //  icon: '<?php echo get_template_directory_uri(); ?>/img/icons/chicken-icon.svg',
+    });
+
+    const marker5 = new google.maps.Marker({
+      position: position5,
+      map: map5,
+     //  icon: '<?php echo get_template_directory_uri(); ?>/img/icons/chicken-icon.svg',
+    });
+
+    const marker6 = new google.maps.Marker({
+      position: position6,
+      map: map6,
+     //  icon: '<?php echo get_template_directory_uri(); ?>/img/icons/chicken-icon.svg',
+    });
+
+    const marker7 = new google.maps.Marker({
+      position: position7,
+      map: map7,
+     //  icon: '<?php echo get_template_directory_uri(); ?>/img/icons/chicken-icon.svg',
+    });
+
+    const marker8 = new google.maps.Marker({
+      position: position8,
+      map: map8,
+     //  icon: '<?php echo get_template_directory_uri(); ?>/img/icons/chicken-icon.svg',
+    });
   };
 
-  const map = new google.maps.Map(document.getElementById('map1'), {
-    center: position,
-    zoom: 12,
-    disableDefaultUI: true,
-  });
+  document.head.appendChild(script);
+});
 
-  const marker = new google.maps.Marker({
-    position,
-    map,
-   //  icon: '<?php echo get_template_directory_uri(); ?>/img/icons/chicken-icon.svg',
-  });
-};
-
-document.head.appendChild(script);;
+;
 
 $(window).on('load resize', function () {
    if ($(window).width() < 769) {
@@ -249,4 +372,10 @@ $(document).on('click', function (e) {
    if ($(e.target).hasClass('pop') || $(e.target).hasClass('popup')) {
       $('.popup').fadeToggle();
    }
+});
+
+$('.contactButton__mainButton, .contactButton__bg').on('click', function() {
+   $('.contactButton__mainButton').toggleClass('contactButton__mainButton--active');
+   $('.contactButton__list').fadeToggle();
+   $('.contactButton__bg').fadeToggle();
 });
