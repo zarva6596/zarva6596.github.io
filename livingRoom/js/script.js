@@ -22,5 +22,11 @@ $(window).on('load', function () {
             'visibility': 'hidden',
             'opacity': '0'
         });
-    }, 5000);
+    }, 1000);
+
+    $('.welcome__list, .work__list, .events__list').slick({
+        arrows: false,
+        infinite: false,
+        variableWidth: true,
+    });
 });

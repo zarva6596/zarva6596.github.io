@@ -511,10 +511,6 @@ textarea {
 
 .welcome__list {
   margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-y: auto;
   width: 100vw;
   position: relative;
   right: 20px;
@@ -613,16 +609,18 @@ textarea {
   right: 15px;
 }
 
-.work__list {
-  margin-top: 20px;
+.slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.work__list {
+  margin-top: 20px;
   width: 100vw;
   position: relative;
   right: 20px;
   padding-left: 20px;
-  overflow-y: auto;
   padding-right: 10px;
 }
 
@@ -655,14 +653,10 @@ textarea {
 
 .events__list {
   margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
   right: 20px;
   padding-left: 20px;
   padding-right: 10px;
-  overflow-y: auto;
   width: 100vw;
 }
 
@@ -676,9 +670,14 @@ textarea {
   position: relative;
 }
 
+.events__item--live .events__photo span {
+  visibility: visible;
+}
+
 .events__photo {
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 .events__photo img {
@@ -686,6 +685,20 @@ textarea {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.events__photo span {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  display: inline-block;
+  padding: 4px 6px;
+  background-color: #D22323;
+  border-radius: 54px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 10px;
+  visibility: hidden;
 }
 
 .events__info {
