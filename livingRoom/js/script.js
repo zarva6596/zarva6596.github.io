@@ -22,7 +22,7 @@ $(window).on('load', function () {
             'visibility': 'hidden',
             'opacity': '0'
         });
-    }, 1000);
+    }, 3000);
 
     // $('.welcome__list, .work__list, .events__list').slick({
     //     arrows: false,
