@@ -103,6 +103,10 @@ textarea {
   border-radius: 0;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .heading {
   font-size: 22px;
   line-height: 1.44;
@@ -179,7 +183,7 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 19px 13px;
+  padding: 12px 13px;
 }
 
 .header__logo {
@@ -204,7 +208,7 @@ textarea {
 
 .header__button {
   justify-self: flex-end;
-  padding: 10px 20px;
+  padding: 6px 20px;
   border-radius: 60px;
   background-color: #000;
   margin-right: 17px;
@@ -225,19 +229,17 @@ textarea {
   display: none;
   position: absolute;
   top: calc(100% + 5px);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: -18px;
   background-color: #fff;
   border: 1px solid #000;
   border-radius: 10px;
-  padding: 7px;
+  padding: 0 18px;
   z-index: 100;
 }
 
 .header .lang__list li {
   text-align: center;
+  padding: 8px 0;
 }
 
 .header .lang__list li a {
@@ -246,11 +248,21 @@ textarea {
 
 .header .lang__list li:first-of-type {
   border-bottom: 1px solid #000;
-  padding-bottom: 3px;
+  padding-bottom: 7px;
 }
 
-.header .lang__list li:last-of-type {
-  padding-top: 3px;
+.header .lang__item--active a {
+  position: relative;
+}
+
+.header .lang__item--active a::before {
+  content: '';
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #F4D68E;
 }
 
 .content {
@@ -392,6 +404,7 @@ textarea {
 
 .footer__lang ul {
   display: none;
+  padding: 0 10px;
   position: absolute;
   bottom: calc(100% + 10px);
   z-index: 100;
@@ -403,12 +416,36 @@ textarea {
 }
 
 .footer__lang ul li {
-  margin: 5px;
-  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+.footer__lang ul li::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #000;
 }
 
 .footer__lang ul li a {
   color: #000;
+}
+
+.footer .lang__item--active a {
+  position: relative;
+}
+
+.footer .lang__item--active a::before {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #F4D68E;
 }
 
 .footer__copyright {
@@ -524,7 +561,12 @@ textarea {
 
 .welcome__list {
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
   width: 100vw;
+  min-width: 100%;
   position: relative;
   right: 20px;
   padding-left: 20px;
@@ -608,8 +650,7 @@ textarea {
 }
 
 .ar .welcome__list {
-  right: auto;
-  left: 20px;
+  right: -20px;
 }
 
 .ar .welcome__advantages {
@@ -630,10 +671,14 @@ textarea {
 
 .work__list {
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100vw;
   position: relative;
   right: 20px;
   padding-left: 20px;
+  overflow-x: auto;
   padding-right: 10px;
 }
 
@@ -666,10 +711,14 @@ textarea {
 
 .events__list {
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   right: 20px;
   padding-left: 20px;
   padding-right: 10px;
+  overflow-x: auto;
   width: 100vw;
 }
 
@@ -855,7 +904,22 @@ textarea {
 
 .date__item {
   margin-right: 10px;
-  padding: 10px 14px;
+  padding: 10px 0px;
+  height: 80px;
+  min-width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   background-color: #F3F3F3;
   border-radius: 10px;
@@ -1063,23 +1127,34 @@ textarea {
 }
 
 .tariff__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   display: none;
   margin-bottom: 50px;
+  position: relative;
+  right: 0px;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
 }
 
 .tariff__card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 309px;
+          flex: 0 0 309px;
   margin-right: 10px;
   border: 5px solid transparent;
   background-color: #f3f3f3;
   width: 309px;
 }
 
-.tariff__card.slick-active {
+.tariff__card--active {
   background-color: #fff;
   border-color: #000;
 }
 
-.tariff__card.slick-active .tariff__bottom::before {
+.tariff__card--active .tariff__bottom::before {
   background-color: #000;
 }
 
@@ -1154,14 +1229,22 @@ textarea {
 
 .tariff__submit {
   display: inline-block;
+  background-color: #F3F3F3;
+  color: #ababab;
   padding: 13px 24px;
-  background-color: #000;
-  color: #fff;
   font-weight: bold;
   font-size: 15px;
   line-height: 1;
   letter-spacing: -0.02em;
   border-radius: 60px;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.tariff__submit--active {
+  background-color: #000;
+  color: #fff;
 }
 
 @media (max-width: 426px) {
