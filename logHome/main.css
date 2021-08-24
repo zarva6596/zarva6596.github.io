@@ -1,0 +1,423 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+.all{
+	width:1450px;
+	margin:0 auto;
+}
+
+.header{
+	height: 120px;
+	
+	display:flex;
+	justify-content:center;
+	align-items: center;
+
+}
+.block_x{
+	position:relative;
+	top:50px;
+	left:57px;
+	}
+
+.icon_r{
+	position:absolute;
+}
+.icon_l{
+	position:absolute;
+}
+.slider{
+	width:1440px;
+	height:570px;
+	margin:0 auto;
+	display:flex;
+}
+.slider-left{
+	
+	
+	width:720px;
+	height:100%;
+	background-image: url('images/philip-martin-5aGUyCW_PJw-unsplash.png');
+}
+
+
+.slider-right{
+	width:720px;
+	height:100%;
+	background-color:black;
+}
+.header-login{
+    padding-top: 6px;
+}
+.slider-left-menu ol{
+	height:359px;
+	width:344px;
+	cursor:pointer;
+	margin-left: 51px;
+	margin-top:-14px;
+	background-color:white;
+	padding-top:52px;
+}
+.slider-left-menu li{
+	margin-left: 66px;
+	width:95px;
+	padding-bottom: 14px;
+	font-weight: 900; 
+	list-style-type: none;
+	text-shadow: 0px 40px 40px rgba(0, 0, 0, 0.25);
+	display:none;	transition:3s;
+}
+.slider-left-menu{
+	width:30px;
+	height:30px;
+
+	
+	position: absolute;
+	
+
+	font-family: 'Kanit', sans-serif;
+	font-style: normal;
+
+	font-size: 14px;
+	line-height: 24px;
+	
+	
+	
+}
+.slider-left-menu:hover li{
+	
+	display: block;
+
+
+}
+.slider-left-menu:hover{
+	
+	padding-top:107px;
+	display: block;
+	background-color:white;
+	width:343px;
+	height:415px;
+	
+	font-family: 'Kanit', sans-serif;
+	font-style: normal;
+	
+	font-size: 14px;
+	line-height: 24px;
+	
+	text-decoration-line: underline;
+
+	
+
+
+}
+.content-slider-right{
+	margin-left: 108px;
+	margin-top:110px;
+	
+	width: 503px;
+	height: 309px;
+	display:flex;
+	 flex-wrap: wrap;
+	align-content: space-between;
+	align-content: space-between;
+	position:relative;
+}
+
+.content-block1 img{
+    margin-left: -4px;
+    margin-top: 4px;
+
+}
+.content-block2 img{
+    margin-top:3px;
+	right:-2px;
+	position:absolute;
+}
+.content-block3 {
+	font-family: Kanit;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 28px;
+	position:absolute;
+	top: 87px;
+
+
+/* identical to box height */
+	font-family: 'Kanit', sans-serif;
+	text-transform: uppercase;
+	letter-spacing:0.7px;
+	color: #FFFFFF;
+
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.content-block4{
+	position:absolute;
+	left:-3px;
+	top:163px;
+}
+.content-block5{
+	position:absolute;
+	left:-4px;
+	bottom:-12px;
+}
+.featured{
+	width:1145px;
+	height:648px;
+	margin:59px auto 0;
+	position:relative;
+	
+}
+.featured-block1{
+	padding-top: 7px;
+	position:absolute;
+}
+.header_featured{
+	display:flex;
+	height:454px;
+}
+.featured-block2{
+	position:absolute;
+	top:57px;
+	left:-2px;
+}
+.featured-block3{
+	position:absolute;
+	top:57px;
+	right:-2px;
+}
+.featured-block4{
+	align-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+	display:flex;
+	width:1146px;
+	height:228px;
+}
+.featured_left{
+	display: flex;
+    width: 557px;
+    height: 228px;
+    left: 0;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.featured_right{
+	display: flex;
+    width: 560px;
+    height: 228px;
+    left: 0;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.featured_right .data{
+	padding-bottom:3px;
+	
+}
+.featured_right .img_featured{
+	padding-top:4px;
+}
+.lorem{
+	padding-top:22px;
+	width:500px;
+}
+.lorem p{
+	letter-spacing:0.5px;
+	font-family: 'Kanit', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 36px;
+
+	color: #1F1F1D;
+
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.featured_text{
+	padding-top:19px;
+	width:500px;
+}
+.featured_text p{ 
+	letter-spacing:0.32px;
+	width:500px;
+	font-family: Kanit;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 27px;
+
+	color: #1F1F1D;
+
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.lifestyle{
+	padding-top:28px;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width:1140px;
+}
+.l_block1{
+	height:240px;
+	width:363px;
+	
+	
+}
+.l_block2{
+	height:240px;
+	width:363px;
+	
+
+}
+.l_block3{
+	height:240px;
+	width:363px;
+	
+	
+}
+.l_block4{
+	margin-top:20px;
+	height:67px;
+	width:369px;
+	
+	display: flex;
+	 align-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.l_block5{
+	margin-top:20px;
+	height:67px;
+	width:369px;
+	
+	display: flex;
+	 align-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.l_block6{
+	margin-top:20px;
+	height:67px;
+	width:363px;
+
+	display: flex;
+	 align-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.text_lifestyle{
+	font-family: Kanit;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 27px;
+	/* identical to box height */
+
+	text-transform: uppercase;
+
+	color: #1F1F1D;
+	width:360px;
+	padding-top:16px;
+	letter-spacing:0.5px;
+	
+}
+.button1{
+	justify-content: center;
+	display:flex;
+	width:1145px;
+	line-height:198px;
+	margin: 61px 0 43px;
+}
+
+
+
+.interviews{
+	position:relative;
+}
+.lifestyle1{
+	flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+	margin:0 auto;
+	margin-top:550px;
+	display:flex;
+	width:1140px;
+}
+.lifestyle1_top{
+	width:1145px;
+	height:360px;
+	margin:15px auto 9px;
+	display:flex;
+	
+}
+.l1tl{
+	width:572px;
+	height:360px;
+	
+}
+.l1tr{
+	width:572px;
+	height:360px;
+	
+}
+.interviews_logo{
+	width:1145px;
+	margin-top:64px;
+	margin-bottom:31px;
+	
+}
+.interviews_news{
+		width:1145px;
+		margin-bottom:28px;
+}
+.futer{
+	margin:0 auto;
+	background-color:black;
+	
+	display:flex;
+	width:1440px;
+	height:168px;
+	flex-direction: column;
+    align-items: center;
+}
+.futer .img1{
+	
+	height:76px;
+	margin-top:46px;
+}
+.futer .img2{
+	
+	height:18px;
+
+}
+.button2{
+	justify-content: center;
+	display:flex;
+	width:1145px;
+	line-height:198px;
+	margin: 37px 0 43px;
+}
+.button3{
+	justify-content: center;
+	display:flex;
+	width:1145px;
+	line-height:198px;
+	margin: 31px 0 99px;
+}
