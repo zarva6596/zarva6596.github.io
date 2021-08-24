@@ -1,0 +1,54 @@
+@font-face{
+    font-family: "Roboto-Regular";
+    src: url("../fonts/Roboto-Regular.ttf")
+}
+
+@font-face{
+    font-family: "Roboto-Medium";
+    src: url("../fonts/Roboto-Medium.ttf")
+}
+
+@font-face{
+    font-family: "Roboto-Bold";
+    src: url("../fonts/Roboto-Bold.ttf")
+}
+
+@font-face{
+    font-family: "Bahi";
+    src: url("../fonts/Dahij-Sultannahia.ttf")
+}
+
+@font-face{
+    font-family: "ChronicaPro-Regular";
+    src: url("../fonts/ChronicaPro-Regular.ttf")
+}
+
+@font-face{
+    font-family: "OpenSans-Regular";
+    src: url("../fonts/OpenSans-Regular.ttf")
+}
+
+@font-face{
+    font-family: "OpenSans-SemiBold";
+    src: url("../fonts/OpenSans-SemiBold.ttf")
+}
+
+@font-face{
+    font-family: "OpenSans-Bold";
+    src: url("../fonts/OpenSans-Bold.ttf")
+}
+
+@font-face{
+    font-family: "Kanit-Light";
+    src: url("../fonts/Kanit-Light.ttf")
+}
+
+@font-face{
+    font-family: "Kanit-Medium";
+    src: url("../fonts/Kanit-Medium.ttf")
+}
+
+@font-face{
+    font-family: "Kanit-Regular";
+    src: url("../fonts/Kanit-Regular.ttf")
+}
