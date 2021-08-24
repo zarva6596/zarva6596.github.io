@@ -1,0 +1,662 @@
+@import url(reset.css);
+@import url(fonts.css);
+
+.header{
+    width: 1442px;
+    height: 144px;
+    background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.x1{
+    position: absolute;
+    top: 51px;
+    left: 58px;
+    font-weight: bold;
+    font-size: 42px;
+    transform: rotate(-26.67deg);
+}
+
+.x{
+    position: absolute;
+    top: 51px;
+    left: 58px;
+    font-weight: bold;
+    font-size: 40px;
+    transform: matrix(1.69, 0.28, 1.28, -0.69, 0, 1);
+}
+.slider{
+    width: 1440px;
+    height: 555px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.slider-left{
+    width: 722px;
+    height: 585px;
+    background-image: url(../images/philip-martin-5aGUyCW_PJw-unsplash.png);
+    border-bottom: 15px solid #fff;
+    box-sizing: border-box;
+}
+
+.slider-right{
+    width: 720px;
+    height: 585px;
+    background-color: black;
+    border-bottom: 15px solid #fff;
+    box-sizing: border-box;
+}
+
+.date-lifestyle{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    color: #fff;
+    font-family: "Kanit-Light";
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 6px;
+    margin-top: 112px;
+    margin-left: -22px;
+}
+
+.date-life{
+    color: #fff;
+    letter-spacing: 1px;
+    margin-right: -32;
+    font-size: 15px;
+}
+h1{
+    margin-top: 78px;
+    margin-left: 110px;
+    color: #fff;
+    font-size: 26px;
+}
+
+.black-box-text{
+    color: #fff;
+    font-family: "Kanit-Light";
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 20.93px;
+    margin-left: 106px;
+    margin-right: 113px;
+    margin-top: 36px;
+}
+.read-black-box{
+    width: 198px;
+    height: 55px;
+    border: 1px solid rgb(168, 168, 168);
+    color: #fff;
+    padding: 22px 4px;
+    font-family: "Kanit-Light";
+    font-weight: 300;
+    font-size: 12px;
+    text-align: center;
+    margin-left: 107px;
+    margin-top: 55px;
+    box-sizing: border-box;
+}
+
+h2{
+    width: 720px;
+    margin-top: 63px;
+    margin-left: 150px;
+    margin-bottom: 35px;
+    font-family: "Kanit-Light";
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.rectangle{
+    position: absolute;
+    top: 71px;
+    left: 52px;
+    width: 344px;
+    height: 359px;
+    margin-top: 44px;
+    background-color: #fff;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.menu-block{
+    padding: 44px;
+    padding-left: 65px;
+    font-family: "Kanit-Light";
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 38px;
+    box-sizing: border-box;
+}
+
+.block-2{
+    width: 1440px;
+    height: 368px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;  
+}
+
+.black-photo{
+    width: 557px;
+    height: 368px;
+    margin-right: 20px;
+    background-image: url(../images/Screen\ Shot\ 2560-08-18\ at\ 4.23.48\ PM.png);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.sunglasses{
+    width: 557px;
+    height: 368px;
+    margin-left: 5px;
+    background-image: url(../images/biocarbon-drone.jpg.650x0_q70_crop-smart.png);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.lifestyle1{
+   margin: -41px;
+   margin-left: 1px;
+   margin-right: 5px;
+   font-family: "Kanit-Light";
+   color: black;
+   font-weight: 500;
+   font-size: 12px;
+   letter-spacing: 6px;
+   box-sizing: border-box;
+}
+
+.lifestyle2{
+    margin: -41px;
+    margin-left: 5px;
+    margin-right: 3px;
+    font-family: "Kanit-Light";
+    color: black;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 6px;
+ }
+.lifestyle{
+    margin: -44px;
+    margin-left: 3px;
+    margin-right: 3px;
+    font-family: "Kanit-Light";
+    color: black;
+    font-weight: 500;
+    font-size: 12px;
+ }
+ .lifestyle3{
+    margin: -44px;
+    margin-left: 3px;
+    margin-right: -1px;
+    font-family: "Kanit-Light";
+    color: black;
+    font-weight: 500;
+    font-size: 12px;
+ }
+
+ .img-lorem{
+    display: flex;
+    justify-content: space-between;
+    width: 1135px;
+    height: 72px;
+    margin-top: 78px;
+    margin-left: 147px;
+    font-family: "Kanit-Light";
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 35.88px;
+    color: #1f1f1d;
+ }
+
+ .img-lorem1{
+    width: 546px;
+ }
+
+ .img-lorem2{
+    width: 546px;
+ }
+
+ .after-lorem{
+    width: 546px;
+    font-weight: 500;
+    margin-top: 22px;
+    font-size: 18.7px;
+    line-height: 26.91px;
+    color: #1f1f1d;
+ }
+
+ .block-3{
+    width: 1454px;
+    height: 377px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-sizing: border-box; 
+ }
+
+ .photo-girl{
+    width: 363px;
+    height: 240px;
+    margin-left: -12px;
+    margin-right: 4px;
+    background-image: url(../images/img-1.png);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+ }
+
+ .magazine{
+    width: 363px;
+    height: 240px;
+    margin-left: 24px;
+    margin-right: 4px;
+    background-image: url(../images/img-2.png);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+ }
+
+ .photo-boys{
+    width: 363px;
+    height: 240px;
+    margin-left: 22px;
+    margin-right: 2px;
+    background-image: url(../images/img-3.png);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+ }
+
+ .block2-date1,
+ .block2-date2,
+ .block2-date3{
+    margin: -33px;
+    margin-left: 4px;
+    margin-right: 5px;
+    font-family: "Kanit-Light";
+    color: black;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 6px;
+    box-sizing: border-box;
+ }
+
+ .block2-date2{
+    margin-left: 2px;
+    margin-right: 5px;
+ }
+
+ .block2-date3{
+    margin-left: 1px;
+    margin-right: 5px;
+ }
+
+ .block2-lifestyle1,
+ .block2-lifestyle2,
+ .block2-lifestyle3{
+    margin: -33px;
+    margin-right: 0px;
+    font-family: "Kanit-Light";
+    color: black;
+    font-weight: 500;
+    font-size: 12px;
+ }
+
+ .block2-lifestyle2{
+    margin-right: 2px;
+ }
+
+ .block2-lifestyle3{
+    margin-right: 1px;
+ }
+
+ .et-vero{
+    display: flex;
+    justify-content: space-between;
+    width: 1259px;
+    height: 72px;
+    font-family: "Kanit-Light";
+    font-weight: 700;
+    font-size: 19px;
+    color: #1f1f1d;
+ }
+
+ .et-vero1{
+    margin-top: 62px;
+    margin-left: 150px;
+ }
+
+ .et-vero2{
+    margin-top: 64px;
+    margin-left: -67px;
+ }
+
+ .et-vero3{
+    margin-top: 64px;
+    margin-left: 124px;
+ }
+
+ .box-see-all{
+    width: 1443px;
+    margin-top: 77px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+ }
+
+ .see-all{
+    width: 236px;
+    height: 42px;
+    background-color: #303030;
+    padding-top: 16px;
+    padding-left: 2px;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: "Kanit-Light";
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+ }
+
+ .block-4{
+    width: 1440px;
+    height: 505px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+ }
+
+ .cup-photo{
+    width: 571.5px;
+    height: 360px;
+    background-image: url(../images/photo-1520781359717-3eb98461c9fe.png);
+ }
+
+ .black-right{
+    width: 571.5px;
+    height: 360px;
+    background-color: black;
+    text-align: center;
+    color: #fff;
+    font-family: "Kanit-Light";
+ }
+
+ .issue{
+    width: 349px;
+    height: 51px;
+    font-size: 37px;
+    line-height: 50.83px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 123px;
+    margin-left: 110px;
+ }
+
+ .subscribe{
+    width: 198px;
+    height: 42px;
+    border: 1px solid #ffff;
+    text-align: center;
+    padding-top: 14px;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-left: 187px;
+    margin-top: 19px;
+ }
+
+ .interviews{
+    width: 720px;
+    margin-top: -3px;
+    margin-left: 152px;
+    margin-bottom: 35px;
+    font-family: "Kanit-Light";
+    font-weight: 600;
+    font-size: 18px;
+ }
+
+ .block-5{
+ width: 1454px;
+ height: 239px;
+ margin-top: 0px;
+ display: flex;
+ justify-content: center;
+ align-items: flex-end;
+ box-sizing: border-box; 
+}
+
+.photograph{
+ width: 363px;
+ height: 240px;
+ margin-left: -12px;
+ margin-right: 4px;
+ background-image: url(../images/img-5.png);
+ display: flex;
+ align-items: flex-end;
+ justify-content: space-between;
+}
+
+.photo-dog{
+ width: 363px;
+ height: 240px;
+ margin-left: 24px;
+ margin-right: 4px;
+ background-image: url(../images/img-6.png);
+ display: flex;
+ align-items: flex-end;
+ justify-content: space-between;
+}
+
+.yellow-sweater{
+ width: 363px;
+ height: 240px;
+ margin-left: 22px;
+ margin-right: 2px;
+ background-image: url(../images/img-7.png);
+ display: flex;
+ align-items: flex-end;
+ justify-content: space-between;
+}
+
+.block5-date1,
+.block5-date2,
+.block5-date3{
+ margin: -24px;
+ margin-left: 4px;
+ margin-right: 5px;
+ font-family: "Kanit-Light";
+ color: black;
+ font-weight: 500;
+ font-size: 12px;
+ letter-spacing: 6px;
+ box-sizing: border-box;
+}
+
+.block5-date2{
+ margin-left: 2px;
+ margin-right: 5px;
+}
+
+.block5-date3{
+ margin-left: 1px;
+ margin-right: 5px;
+}
+
+.block5-interviews1,
+.block5-interviews2,
+.block5-interviews3{
+ margin: -26px;
+ margin-right: 0px;
+ font-family: "Kanit-Light";
+ color: black;
+ font-weight: 500;
+ font-size: 12px;
+}
+
+.block5-interviews2{
+ margin-right: 1px;
+}
+
+.block5-interviews3{
+ margin-right: -1px;
+}
+
+.box-see-all-2{
+    width: 1443px;
+    margin-top: 51px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+h3{
+    width: 720px;
+    margin-top: 37px;
+    margin-left: 150px;
+    margin-bottom: 34px;
+    font-family: "Kanit-Light";
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.block-6{
+    width: 1454px;
+    height: 239px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-sizing: border-box; 
+   }
+   
+   .microphone{
+    width: 363px;
+    height: 240px;
+    margin-left: -12px;
+    margin-right: 4px;
+    background-image: url(../images/Screen\ Shot\ 2560-08-18\ at\ 4.39.04\ PM\ Copy\ 3.jpg);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+   }
+   
+   .bood-newspaper{
+    width: 363px;
+    height: 240px;
+    margin-left: 24px;
+    margin-right: 4px;
+    background-image: url(../images/Screen\ Shot\ 2560-08-18\ at\ 4.38.56\ PM\ Copy\ 5.jpg);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+   }
+   
+   .newspaper{
+    width: 363px;
+    height: 240px;
+    margin-left: 22px;
+    margin-right: 2px;
+    background-image: url(../images/Screen\ Shot\ 2560-08-18\ at\ 4.38.56\ PM\ Copy\ 6.jpg);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+   }
+   
+   .block6-date1,
+   .block6-date2,
+   .block6-date3{
+    margin: -34px;
+    margin-left: 4px;
+    margin-right: 5px;
+    font-family: "Kanit-Light";
+    color: black;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 6px;
+    box-sizing: border-box;
+   }
+   
+   .block6-date2{
+    margin-left: 2px;
+    margin-right: 5px;
+   }
+   
+   .block6-date3{
+    margin-left: 1px;
+    margin-right: 5px;
+   }
+   
+   .block6-news1,
+   .block6-news2,
+   .block6-news3{
+    margin: -33px;
+    margin-right: 0px;
+    font-family: "Kanit-Light";
+    color: black;
+    font-weight: 500;
+    font-size: 12px;
+   }
+   
+   .block6-news2{
+    margin-right: 1px;
+   }
+   
+   .block6-news3{
+    margin-right: -1px;
+   }
+
+   .box-see-all-3{
+    width: 1443px;
+    margin-top: 47px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.footer{
+    width: 1442px;
+    height: 142px;
+    background-color: black;
+    margin-top: 102px;
+    box-sizing: border-box;
+    padding-top: 54px;
+    padding-left: 649px;
+}
+
+.footer-text{
+    background-color: black;
+    
+}
+
+.designed{
+    width: 102px;
+    height: 18px;
+    color: #fff;
+    font-family: "Kanit-Light";
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 17.94px;
+    text-align: center;
+    margin-top: 38px;
+    margin-left: 21px;
+}
+   
