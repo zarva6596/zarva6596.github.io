@@ -1,0 +1,940 @@
+@import url(fonts.css);
+@import "base/veriables";
+@import "base/base";
+@import "base/mixins";
+@import url(tablet.scss);
+
+body {
+    margin: 0 auto;
+}
+.container {
+    width: 320px;
+    margin: 0 auto;
+    font-family: "Montserrat Regular";
+}
+
+header {
+    background: {
+        image: url(./images/Head-Background-s.png);
+        size: cover;
+        repeat: no-repeat;
+        position: center;
+    }
+    padding-top: 22px;
+}
+
+.logo {
+    display: none;
+}
+
+.log-buttons {
+    width: 153px;
+    margin: 0 auto;
+    &__button {
+        font-size: 14px;
+        line-height: 17px;
+        background-color: rgba(255, 255, 255, 0);
+        color: $main-color;
+        border: none;
+        padding: 0;
+        &_active {
+            border: 2px solid $main-color;
+            width: 90px;
+            height: 36px;
+            border-radius: 40px;
+            margin-left: 19px;
+        }
+    }
+}
+
+.main-title {
+    margin-top: 95px;
+    color: $main-color;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h3 {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 26.5px;
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 37px;
+        margin-bottom: 5.5px;
+    }
+    p {
+        width: 260px;
+        font-family: "Roboto Thin";
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+    }
+    &__button {
+        width: 280px;
+        height: 40px;
+        background: #ff4e50;
+        border-radius: 40px;
+        border: none;
+        color: $main-color;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 15px 0 153px 0;
+    }
+}
+
+article h3 {
+    color: $titles-color;
+    font-family: "Montserrat Bold";
+    @include font(normal, bold, 22px, 27px);
+}
+.first-article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 33px;
+    margin-bottom: 36px;
+    h3 {
+        margin-bottom: 16px;
+    }
+    section {
+        width: 300px;
+        height: 240px;
+        padding: 64px 30px 16px 20px;
+        button {
+            width: 70px;
+            height: 20px;
+            border-radius: 40px;
+            background-color: rgba(255, 78, 80, 1);
+            border: none;
+            color: $main-color;
+            @include font(normal, normal, 10px, 12px);
+            font-family: "Montserrat Regular";
+        }
+        h2 {
+            color: $main-color;
+            @include font(normal, bold, 24px, 14px);
+            font-family: "Montserrat Bold";
+        }
+        p {
+            color: $main-color;
+            @include font(normal, 300, 14px, 14px);
+            font-family: "Roboto Thin";
+        }
+    }
+    .step-1 {
+        background-image: url(./images/Step-1-image-s.png);
+        button {
+            margin-bottom: 47px;
+        }
+        p {
+            margin-top: 24px;
+        }
+    }
+    .step-2 {
+        background-image: url(./images/Step-2-image-s.png);
+        margin: 10px 0;
+        button {
+            margin-top: 32px;
+            margin-bottom: 30px;
+        }
+        p {
+            margin-top: 22px;
+        }
+    }
+    .step-3 {
+        background-image: url(./images/Step-3-image-s.png);
+        button {
+            margin: 2px 0 45px 0;
+        }
+        p {
+            margin-top: 24px;
+        }
+    }
+}
+
+.second-article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h3 {
+        text-align: center;
+    }
+    section {
+        @include size(236px, 100%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 16px;
+        .avatar-hunter {
+            position: relative;
+        }
+
+        .avatar-hunter::after {
+            content: url(./images/music.png);
+            display: block;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: rgba(255, 78, 80, 1);
+            border: 4px solid $main-color;
+            top: 85px;
+            left: 85px;
+            padding: 7px;
+        }
+
+        .avatar-wells {
+            position: relative;
+        }
+
+        .avatar-wells::after {
+            content: url(./images/camera.png);
+            display: block;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: rgba(255, 167, 16, 1);
+            border: 4px solid $main-color;
+            top: 85px;
+            left: 85px;
+            padding: 7px;
+        }
+
+        .avatar-bennett {
+            position: relative;
+        }
+
+        .avatar-bennett::after {
+            content: url(./images/brush.png);
+            display: block;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: rgba(25, 212, 202, 1);
+            border: 4px solid $main-color;
+            top: 85px;
+            left: 85px;
+            padding: 7px;
+        }
+
+        .avatar-pierce {
+            position: relative;
+        }
+
+        .avatar-pierce::after {
+            content: url(./images/airplane.png);
+            display: block;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: rgba(102, 125, 243, 1);
+            border: 4px solid $main-color;
+            top: 85px;
+            left: 85px;
+            padding: 7px;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+        .profile-name {
+            font-family: "Montserrat Bold";
+            font-style: normal;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            margin: 17px 0 12px 0;
+            color: rgba(68, 68, 68, 1);
+        }
+
+        #margin1 {
+            margin-bottom: 17px;
+        }
+        #margin2 {
+            margin-bottom: 21px;
+        }
+        .profile-description {
+            color: rgba(68, 68, 68, 1);
+            font-family: "Roboto Thin";
+            font-style: normal;
+            font-size: 14px;
+            line-height: 14px;
+            text-align: center;
+            padding: 5px 0;
+        }
+    }
+    button {
+        width: 280px;
+        height: 40px;
+        border-radius: 40px;
+        border: 2px solid #ff4e50;
+        background: #ffffff;
+        color: rgba(255, 78, 80, 1);
+        @include font(normal, bold, 14px, 17px);
+        font-family: "Montserrat Bold";
+        margin: 35px 0;
+    }
+}
+
+.third-article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 25px;
+    h3 {
+        width: 280px;
+        text-align: center;
+        margin-bottom: 33px;
+    }
+    section {
+        color: rgba(255, 255, 255, 1);
+        font-family: "Montserrat Bold";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 27px;
+        margin-bottom: 10px;
+        .opacity {
+            width: 100%;
+            height: 100%;
+            background: rgba(8, 8, 8, 0.2);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+                display: block;
+                width: 200px;
+                text-align: center;
+            }
+        }
+    }
+    &__sport {
+        background: url(./images/sport-s.png);
+        @include size(300px, 120px);
+    }
+    &__wellness {
+        background-image: url(./images/wellnes-s.png);
+        @include size(300px, 120px);
+    }
+    &__extreme {
+        background-image: url(./images/extreme-s.png);
+        @include size(300px, 120px);
+    }
+    &__games {
+        background-image: url(./images/games-s.png);
+        @include size(300px, 120px);
+    }
+    &__culture {
+        background-image: url(./images/culture.png);
+        @include size(300px, 120px);
+    }
+    &__relax {
+        background-image: url(./images/relax-s.png);
+        @include size(300px, 120px);
+    }
+    &__trevelling {
+        background-image: url(./images/treveling-s.png);
+        @include size(300px, 120px);
+    }
+}
+
+.fourth-article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    h3 {
+        width: 280px;
+        text-align: center;
+        margin-bottom: 17px;
+    }
+    p {
+        font-family: "Roboto";
+        color: rgba(102, 102, 102, 1);
+        font-size: 18px;
+        line-height: 14px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .form {
+        @include size(280px, 40px);
+        color: rgba(153, 153, 153, 1);
+        font-family: "Roboto Thin";
+        font-size: 14px;
+        line-height: 16px;
+        padding: 14px 0 10px 15px;
+        border: 1px solid #d4d4d4;
+        border-radius: 3px;
+        margin-bottom: 10px;
+    }
+    .search-button {
+        @include size(280px, 40px);
+        background: rgba(255, 78, 80, 1);
+        border: none;
+        border-radius: 40px;
+        color: #ffffff;
+        font-family: "Montserrat Bold";
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-top: 2px solid #ff4e50;
+    padding: 19px 0 22px 0;
+    h3 {
+        color: rgba(255, 78, 80, 1);
+        font-family: "Montserrat Regular";
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 13px;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 280px;
+        h5 {
+            font-family: "Montserrat Bold";
+            color: #444444;
+            font-size: 14px;
+            line-height: 17px;
+            margin-top: 3px;
+        }
+        .footer-menu {
+            width: 220px;
+            text-align: center;
+            margin-bottom: 4px;
+        }
+
+        li {
+            display: inline;
+            margin-right: 10px;
+        }
+        a {
+            font-family: "Roboto Thin";
+            font-size: 14px;
+            line-height: 26px;
+            text-decoration: none;
+            color: #999999;
+        }
+        .footer-logo {
+            margin-top: 14px;
+            h6 {
+                font-family: "Montserrat Bold";
+                font-size: 10px;
+                line-height: 12px;
+                color: #cccccc;
+                text-align: center;
+                margin-bottom: 7px;
+            }
+            img {
+                @include size(110px, 24px);
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+
+    header {
+        width: 768px;
+        height: 700px;
+        background: {
+            image: url(./images/Head-Background-m.png);
+            size: cover;
+            repeat: no-repeat;
+            position: center;
+        }
+        padding-top: 40px;
+        padding-bottom: 224px;
+    }
+
+    .logo {
+        display: inline-block;
+        font-family: "Montserrat Bold";
+        font-size: 20px;
+        line-height: 24px;
+        color: #ffffff;
+        margin-left: 48px;
+        margin-top: 6px;
+    }
+
+    .log-buttons {
+        float: right;
+        margin-right: 50px;
+    }
+
+    .main-title {
+        margin-top: 152px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h3 {
+            display: none;
+        }
+        h2 {
+            display: inline-block;
+            width: 475px;
+            font-size: 52px;
+            line-height: 63px;
+            letter-spacing: 1px;
+            margin-bottom: 28.5px;
+        }
+        p {
+            width: 396px;
+            font-size: 24px;
+            line-height: 24px;
+            letter-spacing: 0.2px;
+            margin-bottom: 22px;
+        }
+        &__button {
+            width: 225px;
+            letter-spacing: 0.6px;
+        }
+    }
+    .first-article {
+        margin-top: 94px;
+        margin-bottom: 95px;
+        h3 {
+            margin-bottom: 35px;
+        }
+
+        .steps {
+            display: flex;
+            section {
+                width: 236px;
+                height: 400px;
+                padding-top: 0;
+            }
+            .step-1 {
+                background-image: url(./images/Step-1-image-m.png);
+                button {
+                    margin: 205px 0 45px 0;
+                }
+                p {
+                    margin-top: 33px;
+                }
+            }
+            .step-2 {
+                background-image: url(./images/Step-2-image-m.png);
+                margin: 0 20px;
+                button {
+                    margin-top: 255px;
+                    margin-bottom: 18px;
+                }
+                p {
+                    margin-top: 23px;
+                }
+            }
+            .step-3 {
+                background-image: url(./images/Step-3-image-m.png);
+                button {
+                    margin: 205px 0 45px 0;
+                }
+                p {
+                    margin-top: 33px;
+                }
+            }
+        }
+    }
+
+    .second-article {
+        h3 {
+            text-align: center;
+            margin-bottom: 19px;
+        }
+        .profiles {
+            display: flex;
+            flex-wrap: wrap;
+            width: 492px;
+        }
+        #hunter {
+            margin-bottom: 34px;
+            margin-right: 20px;
+        }
+        #bennett {
+            margin-right: 20px;
+        }
+        section {
+            #margin1 {
+                margin-bottom: 17px;
+            }
+            #margin2 {
+                margin-bottom: 21px;
+            }
+            .profile-description {
+                color: rgba(68, 68, 68, 1);
+                font-family: "Roboto Thin";
+                font-style: normal;
+                font-size: 14px;
+                line-height: 14px;
+                text-align: center;
+                padding: 5px 0;
+            }
+        }
+        button {
+            width: 180px;
+            margin: 45px 0;
+        }
+    }
+
+    .third-article {
+        margin-top: 50px;
+        margin-bottom: 84px;
+        h3 {
+            width: 350px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .activitys {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        &__sport {
+            background: url(./images/sport-m.png);
+            @include size(236px, 310px);
+
+            p {
+                margin-bottom: 25px;
+            }
+        }
+        &__wellness {
+            background-image: url(./images/wellnes-m.png);
+            @include size(236px, 310px);
+            margin: 0 20px;
+        }
+        &__extreme {
+            background-image: url(./images/extreme-m.png);
+            @include size(236px, 310px);
+        }
+        &__games {
+            background-image: url(./images/games-m.png);
+            @include size(236px, 310px);
+            margin-top: 10px;
+        }
+        &__culture {
+            background-image: url(./images/culture-m.png);
+            @include size(492px, 310px);
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        &__relax {
+            background-image: url(./images/relax-m.png);
+            @include size(492px, 310px);
+            margin-top: 10px;
+        }
+        &__trevelling {
+            background-image: url(./images/treveling-m.png);
+            @include size(236px, 310px);
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+    }
+
+    .fourth-article {
+        margin-bottom: 92px;
+        h3 {
+            width: 303px;
+            margin-bottom: 51px;
+        }
+        p {
+            margin-bottom: 25px;
+        }
+        .form {
+            @include size(299px, 40px);
+            margin-right: 8px;
+        }
+        .search-button {
+            @include size(172.12px, 40px);
+        }
+    }
+
+    footer {
+        align-items: flex-start;
+        flex-direction: row;
+        padding: 38px 37px 20px 39px;
+        nav {
+            align-items: flex-start;
+            flex-direction: row;
+            width: 100%;
+            h5 {
+                margin-top: 0;
+            }
+            .footer-menu {
+                width: 114px;
+                margin: 0 56px 0 108px;
+                h5 {
+                    text-align: start;
+                }
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                li {
+                    display: inline;
+                    margin-right: 0;
+                }
+                a {
+                    font-family: "Roboto Thin";
+                    font-size: 14px;
+                    line-height: 26px;
+                    text-decoration: none;
+                    color: #999999;
+                }
+            }
+            .footer-logo {
+                margin: 0 0 0 118px;
+                h6 {
+                    margin: 0 0 7px 25px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        width: 1440px;
+    }
+
+    header {
+        width: 1440px;
+        background: {
+            image: url(./images/Head-Background-L.png);
+        }
+    }
+
+    .logo {
+        display: inline-block;
+        margin-left: 248px;
+    }
+
+    .log-buttons {
+        float: right;
+        margin-right: 290px;
+    }
+
+    .main-title {
+        h2 {
+            margin-top: 4px;
+            margin-bottom: 30px;
+        }
+        p {
+            margin-bottom: 19px;
+        }
+        &__button {
+            width: 225px;
+            letter-spacing: 0.6px;
+        }
+    }
+    .first-article {
+        margin-bottom: 89px;
+        h3 {
+            font-size: 26px;
+            line-height: 32px;
+            margin-top: -4px;
+            margin-bottom: 35px;
+        }
+
+        .steps {
+            section {
+                width: 300px;
+            }
+            .step-1 {
+                background-image: url(./images/Step-1-image-L.png);
+                button {
+                    letter-spacing: 2px;
+                    padding: 4px 0 0 2px;
+                    margin: 218px 0 23px 5px;
+                }
+                h2 {
+                    margin-left: 7px;
+                    font-size: 24px;
+                    line-height: 26px;
+                }
+                p {
+                    margin: 25px 0 0 5px;
+                }
+            }
+            .step-2 {
+                background-image: url(./images/Step-2-image-L.png);
+                button {
+                    margin: 250px 0 30px 5px;
+                }
+                h2 {
+                    margin-left: 7px;
+                }
+                p {
+                    margin: 23px 0 0 4px;
+                }
+            }
+            .step-3 {
+                background-image: url(./images/Step-3-image-L.png);
+                button {
+                    margin: 218px 0 22px 5px;
+                }
+                h2 {
+                    margin-left: 4px;
+                    line-height: 26px;
+                }
+                p {
+                    margin: 26px 0 0 5px;
+                }
+            }
+        }
+    }
+
+    .second-article {
+        h3 {
+            font-size: 26px;
+            line-height: 32px;
+            margin-bottom: 35px;
+        }
+        .profiles {
+            justify-content: center;
+            flex-wrap: nowrap;
+            width: 1000px;
+        }
+        #hunter {
+            order: 1;
+            margin: 0 2px 0 0;
+        }
+        #bennett {
+            order: 2;
+            margin: 0 4px 0 0;
+        }
+        #wells {
+            order: 3;
+            margin: 0;
+        }
+        #pierce {
+            order: 4;
+            margin: 0 0 0 5px;
+        }
+        section {
+            #margin1 {
+                margin-bottom: 0;
+            }
+            #margin2 {
+                margin-bottom: 0;
+            }
+        }
+        button {
+            width: 180px;
+            margin: 56px 0 0 0;
+        }
+    }
+
+    .third-article {
+        margin-top: 90px;
+        margin-bottom: 0;
+        h3 {
+            width: 413px;
+            font-size: 26px;
+            line-height: 32px;
+        }
+        .activitys {
+            width: 940px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        section {
+            .opacity {
+                p {
+                    width: 238px;
+                }
+            }
+        }
+        &__sport {
+            background: url(./images/sport-L.png);
+            @include size(300px, 310px);
+            p {
+                margin-top: 15px;
+            }
+        }
+        &__wellness {
+            background-image: url(./images/wellnes-L.png);
+            @include size(300px, 310px);
+        }
+        &__extreme {
+            background-image: url(./images/extreme-L.png);
+            @include size(300px, 310px);
+        }
+        &__games {
+            background-image: url(./images/games-L.png);
+            @include size(300px, 310px);
+        }
+        &__culture {
+            background-image: url(./images/culture-L.png);
+            @include size(620px, 310px);
+        }
+        &__relax {
+            background-image: url(./images/relax-L.png);
+            @include size(620px, 310px);
+        }
+        &__trevelling {
+            background-image: url(./images/treveling-L.png);
+            @include size(300px, 310px);
+        }
+    }
+
+    .fourth-article {
+        margin-top: 79px;
+        margin-bottom: 92px;
+        h3 {
+            font-size: 26px;
+            line-height: 32px;
+            width: 358px;
+        }
+    }
+
+    footer {
+        flex-direction: row;
+        padding: 38px 37px 20px 249px;
+        nav {
+            align-items: flex-start;
+            flex-direction: row;
+            width: 100%;
+            h5 {
+                margin-top: 0;
+            }
+            .footer-menu {
+                width: 114px;
+                margin: 0 126px 0 122px;
+                h5{
+                    margin-bottom: 11px;
+                }
+            }
+            .footer-logo {
+                margin: 0 0 0 287px;
+                h6 {
+                    margin: 0 0 7px 25px;
+                }
+            }
+        }
+    }
+}
