@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
       <link rel="stylesheet" href="css/style.min.css">
-      <title>Form</title>
+      <title>capsule booking</title>
    </head>
 
    <body>
@@ -52,7 +52,7 @@
         </h2>
 
         <ul class="date__list">
-            <li class="date__item date__item--active">
+            <li class="date__item">
                 <p class="date__month"></p>
                 <p class="date__num"></p>
                 <p class="date__day"></p>
@@ -120,37 +120,140 @@
             Choose the time
         </h2>
 
-        <ul class="time__text">
-            <li>
-                Day time <i>(available for meetings)</i>
+        <div class="time__times">
+            <ul class="time__list">
+                <div class="time__event">
+                    <span class="time__eventFrom"></span>
+                    <span class="time__eventTo">24:00</span>
+                </div>
+            </ul>
+        </div>
+
+        <div class="time__take">
+            <div>
+                <h3>Your booking:</h3>
+
+                <div class="time__info">
+                    <img src="./img/icon_time.svg" alt="time icon">
+                    <span class="time__count">3</span>
+                    hours (
+                    <span class="time__takeFrom"></span>
+                    -
+                    <span class="time__takeTo">..?.</span>
+                </div>
+            </div>
+
+            <span class="time__confirm">
+                <span>Confirm time</span>
+                <span>Confirmed</span>
+            </span>
+        </div>
+    </div>
+</section>
+         <section class="section today">
+    <div class="today__content content">
+        <h3>
+            What else
+        </h3>
+
+        <ul class="today__list">
+            <li class="today__item">
+                <img src="./img/slider-2-1.png" alt="card photo">
+
+                <div class="today__info">
+                    <h4>Business Lounge</h4>
+
+                    <span></span>
+
+                    <div>
+                        <span>9:00</span>
+                        <span>17:00</span>
+                    </div>
+                </div>
             </li>
 
-            <li>
-                Night time: <u>Eden pines - streaming talk on socials.</u> <span>(for members only)</span>
+            <li class="today__item">
+                <img src="./img/slider-3-3.png" alt="card photo">
+
+                <div class="today__info">
+                    <h4>Lounge bar</h4>
+
+                    <span></span>
+
+                    <div>
+                        <span class="text">start at</span>
+                        <span>17:00</span>
+                    </div>
+                </div>
             </li>
         </ul>
 
-        <div class="time__times">
-            <ul class="time__list">
-                <li class="time__item">9:00</li>
-                <li class="time__item">10:00</li>
-                <li class="time__item">11:00</li>
-                <li class="time__item">12:00</li>
-                <li class="time__item">13:00</li>
-                <li class="time__item">14:00</li>
-                <li class="time__item">15:00</li>
-                <li class="time__item">16:00</li>
-                <li class="time__item">17:00</li>
-                <li class="time__item">17:00</li>
-                <li class="time__item">18:00</li>
-                <li class="time__item">19:00</li>
-                <li class="time__item">20:00</li>
-                <li class="time__item">21:00</li>
-                <li class="time__item">22:00</li>
-                <li class="time__item">23:00</li>
-                <li class="time__item">24:00</li>
-            </ul>
-        </div>
+        <h3 class="today__events--heading">
+            Event on this day
+        </h3>
+
+        <ul class="today__list today__events">
+            <li class="today__item">
+                <img src="" alt="card photo">
+
+                <div class="today__info">
+                    <h4></h4>
+
+                    <span></span>
+
+                    <div>
+                        <span class="text">Start at</span>
+                        <span></span>
+                    </div>
+                </div>
+            </li>
+
+            <li class="today__item">
+                <img src="" alt="card photo">
+
+                <div class="today__info">
+                    <h4></h4>
+                    
+                    <span></span>
+
+                    <div>
+                        <span class="text">start at</span>
+                        <span></span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+         <section class="welcome section">
+    <div class="welcome__content content">
+        <h2 class="welcome__heading heading">
+            Choose a capsule
+        </h2>
+
+        <ul class="welcome__list">
+            <li class="welcome__item--none">
+                <div class="welcome__photo">
+                    <img src="" alt="room photo">
+
+                    <p class="welcome__title title"></p>
+                    <p class="welcome__key"></p>
+                </div>
+
+                <div class="welcome__row">
+                    <p class="welcome__paragraph"></p>
+    
+                    <div class="welcome__advantages">
+                        <img src="./img/wifi.svg" alt="advantages icon">
+                        <img src="./img/team.svg" alt="advantages icon">
+                        <img src="./img/glass.svg" alt="advantages icon">
+                        <img src="./img/work.svg" alt="advantages icon">                    
+    
+                        <a>Select</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 </section>
          <section class="section tariff">
@@ -340,9 +443,15 @@
             </li>
         </ul>
 
-        <a href="./membership-en.html" class="tariff__submit button">
-            Confirm booking
-        </a>
+        <div class="tariff__submits">
+            <a href="./membership-en.html" class="tariff__submit button">
+                Confirm booking
+            </a>
+    
+            <a href="./membership-en.html" class="tariff__friends button">
+                Invite friends
+            </a>
+        </div>
     </div>
 </section>
       </main>
@@ -360,174 +469,43 @@
       <script src="./js/jquery-3.5.1.min.js"></script>
 <script src="./js/slick.min.js"></script>
 <script src="./js/script.min.js"></script>
-
       <script>
-         $(window).on('load', function () {
-            let date = new Date();
-                 
-            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-                 
-            let dates = $('.date__item');
-                 
-            for (let i = 0; i < dates.length; i++) {
-                let newDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + i)
-                $(dates[i]).children('.date__month').text(months[newDate.getMonth()]);
-                $(dates[i]).children('.date__day').text(days[newDate.getDay()]);
-                $(dates[i]).children('.date__num').text(newDate.getDate());
-            }
-
+    $(window).on('load', function () {
+       let date = new Date();
             
-            $('.form__day').val($('.date__item--active').children('.date__num').text());
-            $('.form__month').val($('.date__item--active').children('.date__month').text());
-
-            $('.form__heading').val($('h1').text());
-         });
-
-         $('.date__item').on('click', function () {
-             $('.date__item').removeClass('date__item--active');
-             $(this).addClass('date__item--active');
-
-            $('.form__day').val($(this).children('.date__num').text());
-            $('.form__month').val($(this).children('.date__month').text());
-         });
-
-
-         let first;
-
-         $('.time__item').on('click', function (e) {
-             if (!$('.time__item').hasClass('time__item--active')) {  
-                 $(this).addClass('time__item--active');
-                 $(this).css('border-radius', '19px')
-                 first = $(this);
-             } else if ($(this).hasClass('time__item--active') 
-                 && !$(this).next().hasClass('time__item--active') 
-                 && !$(this).prev().hasClass('time__item--active')) {
-                     $(this).removeClass('time__item--active');
-                     $(this).removeAttr('style');
-             } else {
-                 $(first).removeAttr('style');
-                 first = undefined;
+       const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+       const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
             
-                 $(this).addClass('timeOut');
-                 let times = $('.time__item');
-                 let start;
-                 let end;
+       let dates = $('.date__item');
             
-                 for (let i = 0; i < times.length; i++) {
-                     if ($(times[i]).hasClass('time__item--active') && start === undefined) {
-                         start = i;
-                     }
-                  
-                     if ($(times[i]).hasClass('timeOut')) {
-                         end = i;
-                     }
-                 }
-              
-                 $('.time__item').removeClass('time__item--active');
-                 $('.time__item').removeAttr('style');
-                 $('.time__item').removeClass('timeOut');
-              
-                 if (start <= end) {
-                     for (let i = start; i <= end; i++) {
-                         $(times[i]).addClass('time__item--active');
-                     }
-                  
-                     $(times[start]).css('border-radius', '19px 0 0 19px');
-                     start === end 
-                         ? $(times[end]).css('border-radius', '19px')
-                         : $(times[end]).css('border-radius', '0 19px 19px 0');
+       for (let i = 0; i < dates.length; i++) {
+           let newDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + i)
+           $(dates[i]).children('.date__month').text(months[newDate.getMonth()]);
+           $(dates[i]).children('.date__day').text(days[newDate.getDay()]);
+           $(dates[i]).children('.date__num').text(newDate.getDate());
+       }
 
-                     $('.form__hourAt').val($(times[start]).text());
-                     $('.form__hourFrom').val($(times[end]).text());
-                 } 
-              
-                 if (start > end) {
-                     for (let i = end; i <= start; i++) {
-                         $(times[i]).addClass('time__item--active');
-                     }
-                  
-                     $(times[start]).css('border-radius', '0 19px 19px 0');
-                     start === end 
-                         ? $(times[end]).css('border-radius', '19px')
-                         : $(times[end]).css('border-radius', '19px 0 0 19px');
+       
+       $('.form__day').val($('.date__item--active').children('.date__num').text());
+       $('.form__month').val($('.date__item--active').children('.date__month').text());
 
-                     
-                     $('.form__hourAt').val($(times[end]).text());
-                     $('.form__hourFrom').val($(times[start]).text());
-                 }
-             }
-         });
+       $('.form__heading').val($('h1').text());
+    });
 
-         $('.tariff__button, .tariff__card').on('click', function () {
-             $('.tariff__button').removeClass('tariff__button--active');
-             $(this).addClass('tariff__button--active');   
-         
-             // let start = +$(this).attr('class').split(' ')[0] - 1;
-         
-             if ($(this).hasClass('1') || $(this).hasClass('tariff__card:nth-child(1)')) {
-                 $('.tariff__cards').slideDown();
-                 $('.tariff__button').removeClass('tariff__button--active');
-                 $('.tariff__button:nth-child(1)').addClass('tariff__button--active');  
-                 $('.tariff__cards').css({
-                     'display': 'flex',
-                     'right': '0px'
-                 });
-                 $('.tariff__card').removeClass('tariff__card--active');
-                 $('.tariff__card:nth-child(1)').addClass('tariff__card--active');
+    $('.date__item').on('click', function () {
+        $('.date__item').removeClass('date__item--active');
+        $(this).addClass('date__item--active');
 
-                 $('.form__tariff').val($('.tariff__button:nth-child(1) p:first-of-type').text());
-             }
-          
-             if ($(this).hasClass('2') || $(this).hasClass('tariff__card:nth-child(2)')) {
-                 $('.tariff__cards').slideDown();
-                 $('.tariff__button').removeClass('tariff__button--active');
-                 $('.tariff__button:nth-child(2)').addClass('tariff__button--active');  
-                 $('.tariff__cards').css({
-                     'display': 'flex',
-                     'right': '319px'
-                 });
-                 $('.tariff__card').removeClass('tariff__card--active');
-                 $('.tariff__card:nth-child(2)').addClass('tariff__card--active');
+       $('.form__day').val($(this).children('.date__num').text());
+       $('.form__month').val($(this).children('.date__month').text());
+    });
+</script>
 
-                 $('.form__tariff').val($('.tariff__button:nth-child(2) p:first-of-type').text());
-             }
-          
-             if ($(this).hasClass('3') || $(this).hasClass('tariff__card:nth-child(3)')) {
-                 $('.tariff__cards').slideDown();
-                 $('.tariff__button').removeClass('tariff__button--active');
-                 $('.tariff__button:nth-child(3)').addClass('tariff__button--active');  
-                 $('.tariff__cards').css({
-                     'display': 'flex',
-                     'right': '638px'
-                 });
-                 $('.tariff__card').removeClass('tariff__card--active');
-                 $('.tariff__card:nth-child(3)').addClass('tariff__card--active');
-                 
-                 $('.form__tariff').val($('.tariff__button:nth-child(3) p:first-of-type').text());
-             }
-          
-             $('.tariff__submit').addClass('tariff__submit--active');
-          
-             // if ($('.tariff__cards').hasClass('tariff__cards--active')) {
-             //     $('.tariff__cards').slideUp();
-             //     $('.tariff__cards').slick('unslick');
-             //     $('.tariff__cards').removeClass('tariff__cards--active');
-             //     $(this).click();
-             // } else {
-             //     $('.tariff__cards').addClass('tariff__cards--active');
-            
-             //     $('.tariff__cards').slick({
-             //         arrows: false,
-             //         variableWidth: true,
-             //         infinite: false,
-             //         initialSlide: start,
-             //     });
-            
-             //     $('.tariff__cards').slideDown();
-             // }
-         });
-      </script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+
+<script src='./js/firebase.min.js'></script>
    </body>
 
 </html>
