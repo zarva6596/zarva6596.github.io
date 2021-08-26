@@ -501,3 +501,44 @@ $('.time__confirm').on('click', function() {
         console.log(error);
     })
 });;
+
+$(document).ready(function() {
+    if ($('main').hasClass('capsule-ticket')) loadCapsuleTicket();
+});
+
+function loadCapsuleTicket() {
+    let link = window.location.href.split('?')[1].split('=');
+
+    const ticketKey = link[0];
+    const ticketMonth = link[1];
+    const ticketDay = link[2];
+    const ticketFrom = link[3];
+    const ticketTo = link[4];
+
+    bdRooms.child('rooms').get().then((snapshot) => {
+        if (snapshot.exists()) {
+            baseRooms = snapshot.val();
+    
+            const placeName = baseRooms[ticketKey].name;
+            const placePhoto = baseRooms[ticketKey].photo;
+
+            $('.ticket .head__photo img').attr('src', placePhoto);
+            $('.ticket__place span').text(placeName);
+            $('.ticket__month').text(ticketMonth);
+            $('.ticket__day').text(ticketDay);
+            $('.ticket__timeFrom').text(ticketFrom + ':00 -');
+            $('.ticket__timeTo').text(ticketTo + ':00');
+
+            const ticketButton = `https://wa.me/?text=Hi,%20I%20invite%20you%20to%20the%20meeting.%20Click%20here%20to%20open%20the%20ticket%20-->%20${window.location.href}`;
+
+            $('.ticket__info a').attr('href', ticketButton);
+
+            $('.preloader').css({
+                'visibility': 'hidden',
+                'opacity': '0'
+            });
+        }
+    }).catch((error) => {
+        console.log(error);
+    });
+}
