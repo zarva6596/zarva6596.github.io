@@ -35,7 +35,7 @@
     </div>
  </header>
 
-      <main class="main en-home">
+      <main class="main en-home home">
          <section class="head">
     <div class="head__content content">
         <div class="head__photo">
@@ -62,12 +62,14 @@
         </h2>
 
         <ul class="events__list">
-            <li class="events__item events__item--live">
+            <li class="events__item--none">
                 <div class="events__photo">
                     <img src="./img/slider-4-1.png" alt="events photo">
 
-                    <span>For members only</span>
-                    <span>Live</span>
+                    <div class="events__tags">
+                        <span class="events__members">For members only</span>
+                        <span class='events__live'>Live</span>
+                    </div>
                 </div>
 
                 <div class="events__info">
@@ -87,45 +89,6 @@
                         <p class="events__from">13:00</p>
                         <p class="events__to">15:00</p>
                     </div>
-
-                    <a href="#" class="events__button">
-                        Join the event
-                    </a>
-                </div>
-            </li>
-
-            <li class="events__item">
-                <div class="events__photo">
-                    <img src="./img/slider-4-2.png" alt="events photo">
-
-                    <span>For members only</span>
-                    <span>Live</span>
-                </div>
-
-                <div class="events__info">
-                    <h3 class="events__title">
-                        retro band <br>
-                        show
-                    </h3>
-
-                    <a href="#" class="events__button">
-                        Join the event
-                    </a>
-                </div>
-            </li>
-
-            <li class="events__item events__item--live">
-                <div class="events__photo">
-                    <img src="./img/slider-4-3.png" alt="events photo">
-
-                    <span>For members only</span>
-                    <span>Live</span>
-                </div>
-
-                <div class="events__info">
-                    <h3 class="events__title">
-                        Eden pines - streaming talk on socials
-                    </h3>
 
                     <a href="#" class="events__button">
                         Join the event
@@ -500,6 +463,43 @@
       <script src="./js/jquery-3.5.1.min.js"></script>
 <script src="./js/slick.min.js"></script>
 <script src="./js/script.min.js"></script>
+      <script>
+    $(window).on('load', function () {
+       let date = new Date();
+            
+       const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+       const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            
+       let dates = $('.date__item');
+            
+       for (let i = 0; i < dates.length; i++) {
+           let newDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + i)
+           $(dates[i]).children('.date__month').text(months[newDate.getMonth()]);
+           $(dates[i]).children('.date__day').text(days[newDate.getDay()]);
+           $(dates[i]).children('.date__num').text(newDate.getDate());
+       }
+
+       
+       $('.form__day').val($('.date__item--active').children('.date__num').text());
+       $('.form__month').val($('.date__item--active').children('.date__month').text());
+
+       $('.form__heading').val($('h1').text());
+    });
+
+    $('.date__item').on('click', function () {
+        $('.date__item').removeClass('date__item--active');
+        $(this).addClass('date__item--active');
+
+       $('.form__day').val($(this).children('.date__num').text());
+       $('.form__month').val($(this).children('.date__month').text());
+    });
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+
+<script src='./js/firebase.min.js'></script>
    </body>
 
 </html>

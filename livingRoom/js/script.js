@@ -31,3 +31,8 @@ $(window).on('load', function () {
     // });
 });
 
+
+$('.membership-dark__list a').on('click', function() {
+    $('.membership-dark-slider__slider').slideUp();
+    $('.membership-dark-form').fadeIn();
+})

@@ -11,6 +11,8 @@ firebase.initializeApp(firebaseConfig);
 
 let bookingN, year, room, day, month, timeFrom, timeTo, tariff, key;
 
+const livingRoomAddress = 'https://zarva6596.github.io/livingRoom';
+
 const bdRooms = firebase.database().ref();
 let baseRooms;
 let date = new Date;
@@ -69,6 +71,83 @@ function Ready() {
     timeTo = +$('input.form__hourFrom').val().split(':')[0];
     tariff = $('input.form__tariff').val();
 }
+
+$(document).ready(function () {
+    if ($('main').hasClass('home')) loadEvents();
+});
+
+function loadEvents() {
+    bdRooms.child('events').get().then((snapshot) => {
+        if (snapshot.exists()) {
+            baseEvents = snapshot.val();
+    
+            const events = baseEvents.events;
+            const nowTime = date.getTime();
+
+            for (const e in events) {
+                const eventDay = new Date(events[e].year, months.indexOf(events[e].month), events[e].day);
+                const eventTime = eventDay.getTime();
+
+                if (eventTime >= nowTime) {
+                    firebase.database().ref(`events/events/${e}/`).set({
+                        id: e,
+                        day: events[e].day,
+                        month: events[e].month,
+                        name: events[e].name,
+                        photo: events[e].photo,
+                        text: events[e].text,
+                        timeFrom: events[e].timeFrom,
+                        timeTo: events[e].timeTo,
+                        year: events[e].year,
+                        live: events[e].live ? true : false,
+                        membersOnly: events[e].membersOnly ? true : false
+                    });
+
+                    firebase.database().ref(`events/${events[e].year}/${events[e].month}/${events[e].day}/${e}`).set({
+                        id: e,
+                        day: events[e].day,
+                        month: events[e].month,
+                        name: events[e].name,
+                        photo: events[e].photo,
+                        text: events[e].text,
+                        timeFrom: events[e].timeFrom,
+                        timeTo: events[e].timeTo,
+                        year: events[e].year,
+                        live: events[e].live ? true : false,
+                        membersOnly: events[e].membersOnly ? true : false
+                    });
+
+                    const eventItem = $('.events__list .events__item--none').clone();
+                    
+                    $(eventItem).find('.events__photo img').attr('src', events[e].photo);
+                    $(eventItem).find('.events__info .events__title').text(events[e].name);
+                    $(eventItem).find('.events__month').text(events[e].month);
+                    $(eventItem).find('.events__day').text(events[e].day);
+                    $(eventItem).find('.events__from').text(events[e].timeFrom);
+                    $(eventItem).find('.events__to').text(events[e].timeTo);
+
+                    if (events[e].live) {
+                        $(eventItem).find('.events__live').css('display', 'inline-block');
+                    }
+
+                    if (events[e].membersOnly) {
+                        $(eventItem).find('.events__members').css('display', 'inline-block');
+                    }
+
+                    const eventLink = `${livingRoomAddress}/event-page.html?${e}`;
+
+                    $(eventItem).find('.events__button').attr('href', eventLink);
+
+                    $(eventItem).removeClass('events__item--none').addClass('events__item');
+
+                    $('.events__list').prepend($(eventItem));
+                }
+            }
+        }
+    }).catch((error) => {
+        console.log(error);
+    });
+};
 
 $('.date__item').on('click', function() {
     $('section.today').slideDown();
@@ -348,7 +427,7 @@ $('.time__confirm').on('click', function() {
             $('.welcome__list').append($(roomItem));
         }
 
-        $('.form .welcome__advantages a').on('click', function(e) {
+        $('.form .welcome__advantages a, .event .welcome__advantages a').on('click', function(e) {
     e.preventDefault();
 
     $('.welcome__item').removeClass('welcome__item--active');
@@ -480,10 +559,14 @@ $('.time__confirm').on('click', function() {
         });
 
         let link = 'https://api.whatsapp.com/send?phone=380638373845&text=';
-        let textForLink = `Hi,%20I%20want%20to%20book%20${room}%20capsule%20in%20LR.%20${month}%20${day},%20from%20${timeFrom}:00%20to%20${timeTo}:00%20(${tariff}%20tariff).`;
-        let reverseLink = `https://zarva6596.github.io/livingRoom/capsule-ticket.html?${key}=${month}=${day}=${timeFrom}=${timeTo}`;
+        let textForLink = $('main').hasClass('form')
+            ? `Hi,%20I%20want%20to%20book%20${room}%20capsule%20in%20LR.%20${month}%20${day},%20from%20${timeFrom}:00%20to%20${timeTo}:00%20(${tariff}%20tariff).`
+            : `Hi,%20I%20want%20to%20book%20the%20${room}%20capsule%20in%20LR.%20${month}%20${day},%20on%20the%20event%20“${$('h1')}”%20(${tariff}%20tariff).`;
+        let reverseLink = $('main').hasClass('form')
+            ? `${livingRoomAddress}/capsule-ticket.html?${key}=${month}=${day}=${timeFrom}=${timeTo}`
+            : `${livingRoomAddress}/event-ticket.html?${key}=${month}=${day}=${timeFrom}=${timeTo}=${thisE.id}`;
 
-        document.location.href = `${link}${textForLink}%20${reverseLink}`;
+        document.location.href = `${link}${textForLink}%20My%20ticket%20is%20-->%20${reverseLink}`;
     }).catch((error) => {
         console.error(error);
     });
@@ -503,17 +586,20 @@ $('.time__confirm').on('click', function() {
 });;
 
 $(document).ready(function() {
-    if ($('main').hasClass('capsule-ticket')) loadCapsuleTicket();
+    if ($('main').hasClass('capsule-ticket') || $('main').hasClass('event-ticket')) loadCapsuleTicket();
 });
 
 function loadCapsuleTicket() {
     let link = window.location.href.split('?')[1].split('=');
+
+    $('body').css('justify-content', 'flex-start');
 
     const ticketKey = link[0];
     const ticketMonth = link[1];
     const ticketDay = link[2];
     const ticketFrom = link[3];
     const ticketTo = link[4];
+    const ticketEvent = link[5];
 
     bdRooms.child('rooms').get().then((snapshot) => {
         if (snapshot.exists()) {
@@ -533,6 +619,26 @@ function loadCapsuleTicket() {
 
             $('.ticket__info a').attr('href', ticketButton);
 
+            if ($('main').hasClass('capsule-ticket')) {
+                $('.preloader').css({
+                    'visibility': 'hidden',
+                    'opacity': '0'
+                });
+            }
+        }
+    }).catch((error) => {
+        console.log(error);
+    });
+
+    bdRooms.child('events').get().then((snapshot) => {
+        if (snapshot.exists()) {
+            baseEvents = snapshot.val().events[ticketEvent];
+            const placePhoto = baseEvents.photo;
+            const eventName = baseEvents.name;
+
+            $('.ticket .head__photo img').attr('src', placePhoto);
+            $('.ticket__event-name').text(eventName);
+
             $('.preloader').css({
                 'visibility': 'hidden',
                 'opacity': '0'
@@ -541,4 +647,351 @@ function loadCapsuleTicket() {
     }).catch((error) => {
         console.log(error);
     });
-}
+};;
+
+$(document).ready(function () {
+    if ($('main').hasClass('event')) loadEventPage();
+});
+
+function loadEventPage() {
+    const link = window.location.href.split('?')[1];
+    
+    bdRooms.child('events').get().then((snapshot) => {
+        if (snapshot.exists()) {
+            const thisE = snapshot.val().events[link];
+            
+            $('.head__photo img').attr('src', thisE.photo);
+            $('.event__text h1').text(thisE.name);
+            
+            if (thisE.live) $('.event__live').css('display', 'inline-block');
+            if (thisE.membersOnly) $('.event__members').css('display', 'inline-block');
+
+            $('.event__month').text(thisE.month);
+            $('.event__day').text(thisE.day);
+            $('.event__from').text(thisE.timeFrom);
+            $('.event__to').text(thisE.timeTo);
+
+            $('.head__title').text(thisE.text);
+
+            $('input.form__heading').val(thisE.name);
+            $('input.form__day').val(thisE.day);
+            $('input.form__month').val(thisE.month);
+            $('input.form__hourAt').val(thisE.timeFrom);
+            $('input.form__hourFrom').val(thisE.timeTo);
+
+            bdRooms.child('rooms').get().then((snapshot) => {
+    Ready();
+
+    $('.welcome__item').remove();
+
+    if (snapshot.exists()) {
+        baseRooms = snapshot.val();
+
+        let freeRooms = [];
+
+        for (const key in baseRooms) {
+            for (let i = timeFrom; i <= timeTo; i++) {
+                if (!baseRooms[key][year][month][day].freeTimes.includes(i + ':00')) {
+                    break;
+                }
+
+                if (i === timeTo) {
+                    freeRooms.push(baseRooms[key]);
+                }
+            }
+        }
+
+        for (const a of freeRooms) {
+            const img = a.photo;
+            const name = a.name;
+            const text = a.cardText;
+            const key = a.key;
+
+            const roomItem = $('.welcome__item--none').clone();
+
+            $(roomItem).find('.welcome__photo img').attr('src', img);
+            $(roomItem).find('.welcome__title').text(name);
+            $(roomItem).find('.welcome__paragraph').text(text);
+            $(roomItem).find('.welcome__key').text(key);
+
+            $(roomItem)
+                .removeClass('welcome__item--none')
+                .addClass('welcome__item');
+
+            $('.welcome__list').append($(roomItem));
+        }
+
+        $('.form .welcome__advantages a, .event .welcome__advantages a').on('click', function(e) {
+    e.preventDefault();
+
+    $('.welcome__item').removeClass('welcome__item--active');
+
+    $(this)
+        .parent()
+        .parent()
+        .parent()
+        .addClass('welcome__item--active');
+
+    $('section.tariff').slideDown();
+
+    $('input.form__heading').val(
+        $(this)
+            .parent()
+            .parent()
+            .parent()
+            .find('.welcome__title').text()
+    );
+
+    key =  $(this)
+        .parent()
+        .parent()
+        .parent()
+        .find('.welcome__key').text();
+
+    $('.tariff__button, .tariff__card').on('click', function () {
+    $('.tariff__button').removeClass('tariff__button--active');
+    $(this).addClass('tariff__button--active');   
+
+    // let start = +$(this).attr('class').split(' ')[0] - 1;
+
+    if ($(this).hasClass('1') || $(this).hasClass('tariff__card:nth-child(1)')) {
+        $('.tariff__cards').slideDown();
+        $('.tariff__button').removeClass('tariff__button--active');
+        $('.tariff__button:nth-child(1)').addClass('tariff__button--active');  
+        $('.tariff__cards').css({
+            'display': 'flex',
+            'right': '0px'
+        });
+        $('.tariff__card').removeClass('tariff__card--active');
+        $('.tariff__card:nth-child(1)').addClass('tariff__card--active');
+
+        $('.form__tariff').val($('.tariff__button:nth-child(1) p:first-of-type').text());
+    }
+ 
+    if ($(this).hasClass('2') || $(this).hasClass('tariff__card:nth-child(2)')) {
+        $('.tariff__cards').slideDown();
+        $('.tariff__button').removeClass('tariff__button--active');
+        $('.tariff__button:nth-child(2)').addClass('tariff__button--active');  
+        $('.tariff__cards').css({
+            'display': 'flex',
+            'right': '319px'
+        });
+        $('.tariff__card').removeClass('tariff__card--active');
+        $('.tariff__card:nth-child(2)').addClass('tariff__card--active');
+
+        $('.form__tariff').val($('.tariff__button:nth-child(2) p:first-of-type').text());
+    }
+ 
+    if ($(this).hasClass('3') || $(this).hasClass('tariff__card:nth-child(3)')) {
+        $('.tariff__cards').slideDown();
+        $('.tariff__button').removeClass('tariff__button--active');
+        $('.tariff__button:nth-child(3)').addClass('tariff__button--active');  
+        $('.tariff__cards').css({
+            'display': 'flex',
+            'right': '638px'
+        });
+        $('.tariff__card').removeClass('tariff__card--active');
+        $('.tariff__card:nth-child(3)').addClass('tariff__card--active');
+        
+        $('.form__tariff').val($('.tariff__button:nth-child(3) p:first-of-type').text());
+    }
+ 
+    $('.tariff__submit').addClass('button--active');
+
+    $('.tariff__submit').on('click', function(e) {
+    e.preventDefault();
+    Ready();
+    
+    const dbRef = firebase.database().ref();
+
+    dbRef.child("rooms").get().then((snapshot) => {
+    if (snapshot.exists()) {
+        base = snapshot.val();
+        
+        let hours = base[key][year][month][day].freeTimes;
+
+        const startDel = hours.indexOf(timeFrom + ':00');
+        const countDel = timeTo - timeFrom + 1;
+
+        hours.splice(startDel, countDel);
+    
+        firebase.database().ref(`rooms/${key}/${year}/${month}/${day}/freeTimes`).set(
+            hours.length !== 0 ? hours : 'notFreeTime'
+        );
+    }
+}).catch((error) => {
+    console.error(error);
+});;
+
+    let base;
+
+    dbRef.child("booking").get().then((snapshot) => {
+        if (snapshot.exists()) {
+            base = snapshot.val();
+            
+            if (base[year][month] 
+                && base[year][month][day]) {
+                let n = '';
+                for (const key in base[year][month][day][room]) {
+                    n = key;
+                }
+                bookingN = 'booking ' + (+n.split(' ')[1] + 1);
+            } else {
+                bookingN = 'booking ' + 1;
+            }
+        } else {
+            bookingN = 'booking ' + 1;
+        }
+        
+        firebase.database().ref(`booking/${year}/${month}/${day}/${room}/${bookingN}`).set({
+            room,
+            day,
+            month,
+            timeFrom: timeFrom + ':00',
+            timeTo: timeTo + ':00',
+            tariff
+        });
+
+        let link = 'https://api.whatsapp.com/send?phone=380638373845&text=';
+        let textForLink = $('main').hasClass('form')
+            ? `Hi,%20I%20want%20to%20book%20${room}%20capsule%20in%20LR.%20${month}%20${day},%20from%20${timeFrom}:00%20to%20${timeTo}:00%20(${tariff}%20tariff).`
+            : `Hi,%20I%20want%20to%20book%20the%20${room}%20capsule%20in%20LR.%20${month}%20${day},%20on%20the%20event%20“${$('h1')}”%20(${tariff}%20tariff).`;
+        let reverseLink = $('main').hasClass('form')
+            ? `${livingRoomAddress}/capsule-ticket.html?${key}=${month}=${day}=${timeFrom}=${timeTo}`
+            : `${livingRoomAddress}/event-ticket.html?${key}=${month}=${day}=${timeFrom}=${timeTo}=${thisE.id}`;
+
+        document.location.href = `${link}${textForLink}%20My%20ticket%20is%20-->%20${reverseLink}`;
+    }).catch((error) => {
+        console.error(error);
+    });
+});
+});;
+});;
+    }
+}).catch((error) => {
+    console.log(error);
+});
+
+            $('.tariff__button, .tariff__card').on('click', function () {
+    $('.tariff__button').removeClass('tariff__button--active');
+    $(this).addClass('tariff__button--active');   
+
+    // let start = +$(this).attr('class').split(' ')[0] - 1;
+
+    if ($(this).hasClass('1') || $(this).hasClass('tariff__card:nth-child(1)')) {
+        $('.tariff__cards').slideDown();
+        $('.tariff__button').removeClass('tariff__button--active');
+        $('.tariff__button:nth-child(1)').addClass('tariff__button--active');  
+        $('.tariff__cards').css({
+            'display': 'flex',
+            'right': '0px'
+        });
+        $('.tariff__card').removeClass('tariff__card--active');
+        $('.tariff__card:nth-child(1)').addClass('tariff__card--active');
+
+        $('.form__tariff').val($('.tariff__button:nth-child(1) p:first-of-type').text());
+    }
+ 
+    if ($(this).hasClass('2') || $(this).hasClass('tariff__card:nth-child(2)')) {
+        $('.tariff__cards').slideDown();
+        $('.tariff__button').removeClass('tariff__button--active');
+        $('.tariff__button:nth-child(2)').addClass('tariff__button--active');  
+        $('.tariff__cards').css({
+            'display': 'flex',
+            'right': '319px'
+        });
+        $('.tariff__card').removeClass('tariff__card--active');
+        $('.tariff__card:nth-child(2)').addClass('tariff__card--active');
+
+        $('.form__tariff').val($('.tariff__button:nth-child(2) p:first-of-type').text());
+    }
+ 
+    if ($(this).hasClass('3') || $(this).hasClass('tariff__card:nth-child(3)')) {
+        $('.tariff__cards').slideDown();
+        $('.tariff__button').removeClass('tariff__button--active');
+        $('.tariff__button:nth-child(3)').addClass('tariff__button--active');  
+        $('.tariff__cards').css({
+            'display': 'flex',
+            'right': '638px'
+        });
+        $('.tariff__card').removeClass('tariff__card--active');
+        $('.tariff__card:nth-child(3)').addClass('tariff__card--active');
+        
+        $('.form__tariff').val($('.tariff__button:nth-child(3) p:first-of-type').text());
+    }
+ 
+    $('.tariff__submit').addClass('button--active');
+
+    $('.tariff__submit').on('click', function(e) {
+    e.preventDefault();
+    Ready();
+    
+    const dbRef = firebase.database().ref();
+
+    dbRef.child("rooms").get().then((snapshot) => {
+    if (snapshot.exists()) {
+        base = snapshot.val();
+        
+        let hours = base[key][year][month][day].freeTimes;
+
+        const startDel = hours.indexOf(timeFrom + ':00');
+        const countDel = timeTo - timeFrom + 1;
+
+        hours.splice(startDel, countDel);
+    
+        firebase.database().ref(`rooms/${key}/${year}/${month}/${day}/freeTimes`).set(
+            hours.length !== 0 ? hours : 'notFreeTime'
+        );
+    }
+}).catch((error) => {
+    console.error(error);
+});;
+
+    let base;
+
+    dbRef.child("booking").get().then((snapshot) => {
+        if (snapshot.exists()) {
+            base = snapshot.val();
+            
+            if (base[year][month] 
+                && base[year][month][day]) {
+                let n = '';
+                for (const key in base[year][month][day][room]) {
+                    n = key;
+                }
+                bookingN = 'booking ' + (+n.split(' ')[1] + 1);
+            } else {
+                bookingN = 'booking ' + 1;
+            }
+        } else {
+            bookingN = 'booking ' + 1;
+        }
+        
+        firebase.database().ref(`booking/${year}/${month}/${day}/${room}/${bookingN}`).set({
+            room,
+            day,
+            month,
+            timeFrom: timeFrom + ':00',
+            timeTo: timeTo + ':00',
+            tariff
+        });
+
+        let link = 'https://api.whatsapp.com/send?phone=380638373845&text=';
+        let textForLink = $('main').hasClass('form')
+            ? `Hi,%20I%20want%20to%20book%20${room}%20capsule%20in%20LR.%20${month}%20${day},%20from%20${timeFrom}:00%20to%20${timeTo}:00%20(${tariff}%20tariff).`
+            : `Hi,%20I%20want%20to%20book%20the%20${room}%20capsule%20in%20LR.%20${month}%20${day},%20on%20the%20event%20“${$('h1')}”%20(${tariff}%20tariff).`;
+        let reverseLink = $('main').hasClass('form')
+            ? `${livingRoomAddress}/capsule-ticket.html?${key}=${month}=${day}=${timeFrom}=${timeTo}`
+            : `${livingRoomAddress}/event-ticket.html?${key}=${month}=${day}=${timeFrom}=${timeTo}=${thisE.id}`;
+
+        document.location.href = `${link}${textForLink}%20My%20ticket%20is%20-->%20${reverseLink}`;
+    }).catch((error) => {
+        console.error(error);
+    });
+});
+});;
+        }
+    }).catch((error) => {
+        console.log(error);
+    });
+};
