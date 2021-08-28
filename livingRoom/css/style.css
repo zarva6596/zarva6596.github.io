@@ -717,8 +717,10 @@ textarea {
   right: 20px;
   padding-left: 20px;
   padding-right: 10px;
+  overflow-y: hidden;
   overflow-x: auto;
   width: 100vw;
+  min-width: 100%;
 }
 
 .events__item {
