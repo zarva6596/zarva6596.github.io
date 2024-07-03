@@ -1,20 +1,29 @@
-[Webtune - DEMO LINK](https://zarva6596.github.io/webtune/)
+Here are my projects at the beginning of my career as a Front-end developer.
 <br>
-[Combi corm - DEMO LINK](https://zarva6596.github.io/combi-corm/)
+<i>Ось мої проекти на початку моєї кар'єри Front-end розробника.</i>
 <br>
-[Elevator - DEMO LINK](https://zarva6596.github.io/elevator/)
+These projects were implemented using only HTML, SCSS and partially Java Script (jQuery). I used Gulp to build them. Back then, it was still popular...
 <br>
-[Incubation - DEMO LINK](https://zarva6596.github.io/incubation/)
+<i>Ці проекти були реалізовані з використанням лише HTML, SCSS та частково Java Script (jQuery). Я використовував Gulp для їх створення. Тоді він ще був популярним...</i>
 <br>
-[Indest - DEMO LINK](https://zarva6596.github.io/indest-last/)
+
+Webtune - [DEMO LINK](https://zarva6596.github.io/webtune/)
 <br>
-[livingRoom (only mobile) - DEMO LINK](https://zarva6596.github.io/livingRoom/)
+Combi corm - [DEMO LINK](https://zarva6596.github.io/combi-corm/)
 <br>
-[Ular - DEMO LINK](https://zarva6596.github.io/ular-last/)
+Elevator - [DEMO LINK](https://zarva6596.github.io/elevator/)
 <br>
-[Optic - DEMO LINK](https://zarva6596.github.io/optic/)
+Incubation - [DEMO LINK](https://zarva6596.github.io/incubation/)
 <br>
-[Plit - DEMO LINK](https://plit.ua/)
+Indest - DEMO LINK](https://zarva6596.github.io/indest-last/)
 <br>
-[Svit Mandriv - DEMO LINK](https://zarva6596.github.io/svit-mandriv/)
+Living Room (only mobile) - [DEMO LINK](https://zarva6596.github.io/livingRoom/)
+<br>
+Ular - [DEMO LINK](https://zarva6596.github.io/ular-last/)
+<br>
+Optic - [DEMO LINK](https://zarva6596.github.io/optic/)
+<br>
+Plit - [DEMO LINK](https://plit.ua/)
+<br>
+Svit Mandriv - [DEMO LINK](https://zarva6596.github.io/svit-mandriv/)
 <br>
