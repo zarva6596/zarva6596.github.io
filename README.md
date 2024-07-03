@@ -14,7 +14,7 @@
 <br>
 [Optic - DEMO LINK](https://zarva6596.github.io/optic/)
 <br>
-[Plit - DEMO LINK](https://zarva6596.github.io/plit/)
+[Plit - DEMO LINK](https://plit.ua/)
 <br>
 [Svit Mandriv - DEMO LINK](https://zarva6596.github.io/svit-mandriv/)
 <br>
