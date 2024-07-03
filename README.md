@@ -2,6 +2,7 @@ Here are my projects at the beginning of my career as a Front-end developer.
 <br>
 <i>Ось мої проекти на початку моєї кар'єри Front-end розробника.</i>
 <br>
+<br>
 These projects were implemented using only HTML, SCSS and partially Java Script (jQuery). I used Gulp to build them. Back then, it was still popular...
 <br>
 <i>Ці проекти були реалізовані з використанням лише HTML, SCSS та частково Java Script (jQuery). Я використовував Gulp для їх створення. Тоді він ще був популярним...</i>
