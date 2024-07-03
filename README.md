@@ -25,22 +25,25 @@
 </p>
 <br>
 
-<br>
-Combi corm - [DEMO LINK](https://zarva6596.github.io/combi-corm/)
-<br>
-Elevator - [DEMO LINK](https://zarva6596.github.io/elevator/)
-<br>
-Incubation - [DEMO LINK](https://zarva6596.github.io/incubation/)
-<br>
-Indest - DEMO LINK](https://zarva6596.github.io/indest-last/)
-<br>
-Living Room (only mobile) - [DEMO LINK](https://zarva6596.github.io/livingRoom/)
-<br>
-Ular - [DEMO LINK](https://zarva6596.github.io/ular-last/)
-<br>
-Optic - [DEMO LINK](https://zarva6596.github.io/optic/)
-<br>
-Plit - [DEMO LINK](https://plit.ua/)
-<br>
-Svit Mandriv - [DEMO LINK](https://zarva6596.github.io/svit-mandriv/)
-<br>
+<h2><a href="https://zarva6596.github.io/ular-last/" target="_blank">Ular</a></h2>
+<h3><a href="https://zarva6596.github.io/combi-corm/" target="_blank">Combi Corm</a></h3>
+<h3><a href="https://zarva6596.github.io/elevator/" target="_blank">Elevator</a></h3>
+<h3><a href="https://zarva6596.github.io/incubation/" target="_blank">Incubation</a></h3>
+
+<p>
+  A series of projects for a company engaged in the agricultural industry in Ukraine.
+</p>
+
+<p>
+  <i>
+    Серія проектів для компанії, що займається сільськогосподарською галуззю в Україні.
+  </i>
+</p>
+
+<h2><a href="https://zarva6596.github.io/indest-last/" target="_blank">Indest</a></h2>
+
+<h2><a href="https://zarva6596.github.io/livingRoom/" target="_blank">Living Room (only mobile)</a></h2>
+
+<h2><a href="https://zarva6596.github.io/optic/" target="_blank">Optic</a></h2>
+
+<h2><a href="https://plit.ua/" target="_blank">Plit</a></h2>
