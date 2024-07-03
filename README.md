@@ -1,3 +1,6 @@
+<h1>Start of my career</h1>
+<i>November 2020 - June 2021</i>
+
 <p>Here are my projects at the beginning of my career as a Front-end developer.</p>
 <p><i>Ось мої проекти на початку моєї кар'єри Front-end розробника.</i></p>
 <br>
