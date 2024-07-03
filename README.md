@@ -5,7 +5,8 @@
 <p><i>Ці проекти були реалізовані з використанням лише HTML, SCSS та частково Java Script (jQuery). Я використовував Gulp для їх створення. Тоді він ще був популярним...</i></p>
 <br>
 
-[<h2>Webtune</h2> - DEMO LINK](https://zarva6596.github.io/webtune/)
+<h2>Webtune</h2>
+<a href="https://zarva6596.github.io/webtune/" target="_blank">DEMO LINK</a>
 <br>
 
 <p>
