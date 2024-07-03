@@ -5,16 +5,23 @@
 <p><i>Ці проекти були реалізовані з використанням лише HTML, SCSS та частково Java Script (jQuery). Я використовував Gulp для їх створення. Тоді він ще був популярним...</i></p>
 <br>
 
-<h2>Webtune</h2>
-<a href="https://zarva6596.github.io/webtune/" target="_blank">DEMO LINK</a>
+<h2><a href="https://zarva6596.github.io/webtune/" target="_blank">Webtune</a></h2>
 <br>
 
 <p>
   A project of a web design studio, I implemented beautiful solutions for displaying the main page, animations for opening menus, cool effects on portfolio pages, and others.
 </p>
+<p>
+  <i>Проект студії веб-дизайну, я реалізував красиві рішення для відображення головної сторінки, анімації для відкриття меню, круті ефекти на сторінках портфоліо та інші.</i>
+</p>
 <br>
 <p>
   The project was recreated using HTML, SCSS and JavaScript (jQuery). Implemented according to the design presented in Figma.
+</p>
+<p>
+  <i>
+    Проект було відтворено за допомогою HTML, SCSS та JavaScript (jQuery). Реалізовано згідно дизайну представленого в Figma.
+  </i>
 </p>
 <br>
 
